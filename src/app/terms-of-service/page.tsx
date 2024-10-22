@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-export default function Disclaimer() {
+export default function TermsOfService() {
   return (
     <div>
       <main className="container mx-auto mt-6">
