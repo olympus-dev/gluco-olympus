@@ -1,4 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
+
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms of Service | Endoterec©",
+  description:
+    "The Herbal Science Breakthrough to Maximize Men's Sexual Performance",
+};
+
 export default function TermsOfService() {
   return (
     <div>

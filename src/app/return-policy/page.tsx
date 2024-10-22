@@ -1,4 +1,12 @@
+import { Metadata } from "next";
+
 /* eslint-disable react/no-unescaped-entities */
+export const metadata: Metadata = {
+  title: "Return Policy | Endoterec©",
+  description:
+    "The Herbal Science Breakthrough to Maximize Men's Sexual Performance",
+};
+
 export default function ReturnPolicy() {
   return (
     <div>
