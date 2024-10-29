@@ -5,7 +5,7 @@ import { Konkhmer_Sleokchher, Montserrat } from "next/font/google";
 import { Header } from "@/components/header";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
-export const konkhmerSleokchher = Konkhmer_Sleokchher({
+const konkhmerSleokchher = Konkhmer_Sleokchher({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-konk",
