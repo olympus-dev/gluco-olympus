@@ -1,17 +1,22 @@
-import { HeroSection } from "@/components/hero";
+import { Container } from "@/components/container";
+import { FormulaSection } from "@/components/sections/formula";
+import { HeroSection } from "@/components/sections/hero";
 
 export default function Home() {
   return (
     <main
-      className="pt-16 text-white bg-cover bg-fixed"
+      className="pt-16 bg-repeat-round bg-fixed
+      lg:bg-contain"
       style={{ backgroundImage: 'url("bg.png")' }}
     >
-      <div className="px-8 max-w-6xl mx-auto lg:px-0 relative drop-shadow-2xl">
+      <Container className="drop-shadow-2xl text-white">
         <HeroSection />
-      </div>
+      </Container>
 
-      <div className="z-10">
-
+      <div className="bg-background top-0 bottom-0 left-0 right-0">
+        <Container className="py-8">
+          <FormulaSection />
+        </Container>
       </div>
     </main>
   );
