@@ -16,6 +16,7 @@ const config: Config = {
 				brand: 'var(--brand)',
 				brandLight: 'var(--light-brand)',
 				brandDark: 'var(--dark-brand)',
+				brandExtraDark: 'var(--extra-dark-brand)',
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'

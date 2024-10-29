@@ -1,4 +1,5 @@
 import { Container } from "@/components/container";
+import { BenefitsSection } from "@/components/sections/benefits";
 import { FormulaSection } from "@/components/sections/formula";
 import { HeroSection } from "@/components/sections/hero";
 
@@ -18,6 +19,10 @@ export default function Home() {
           <FormulaSection />
         </Container>
       </div>
+
+      <Container className="text-white py-8">
+        <BenefitsSection />
+      </Container>
     </main>
   );
 }
