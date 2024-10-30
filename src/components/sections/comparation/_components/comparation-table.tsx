@@ -37,15 +37,11 @@ export default function Component() {
   return (
     <div className="min-h-[500px]">
       <Card className="w-full max-w-3xl mx-auto overflow-hidden border-0 shadow-xl">
-        <div className="bg-gradient-to-r from-purple-600 to-blue-600 p-6 text-white">
-          <h2 className="text-2xl font-semibold text-center">Product Comparison</h2>
-          <p className="text-sm opacity-90 text-center mt-2">See how we stack up against the competition</p>
-        </div>
         <Table>
           <TableHeader>
             <TableRow className="bg-gradient-to-r from-purple-50 to-blue-50">
               <TableHead className="w-[50%] py-6 text-base font-medium text-gray-700"></TableHead>
-              <TableHead className="text-center py-6 text-base font-medium text-gray-700">Endoterec©</TableHead>
+              <TableHead className="text-center py-6 text-base font-bold text-brand">Endoterec©</TableHead>
               <TableHead className="text-center py-6 text-base font-medium text-gray-700">Competitors</TableHead>
             </TableRow>
           </TableHeader>
