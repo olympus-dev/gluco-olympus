@@ -40,7 +40,7 @@ export function BenefitsSection() {
           title="Combats Stress and Fatigue"
           description="Adaptogenic ingredients help reduce stress and fatigue, factors that often negatively impact performance. This brings back your energy, confidence, and mental clarity."
         />
-        <div className="hidden lg:flex justify-center max-h-[363px] col-span-3 bg-black gap-4">
+        <div className="hidden lg:flex justify-center max-h-[363px] col-span-3 gap-4">
           <BenefitItem
             imgPath="health.svg"
             title="Improves Sexual and Vascular Health"
