@@ -5,6 +5,7 @@ import {
   FormulaSection,
   HeroSection,
 } from "@/components/sections";
+import { SocialProofSection } from "@/components/sections/social-proof";
 
 export default function Home() {
   return (
@@ -29,6 +30,10 @@ export default function Home() {
 
       <Container className="text-white pb-8 overflow-hidden">
         <ComparationSection />
+      </Container>
+
+      <Container className="text-white pb-12 overflow-hidden">
+        <SocialProofSection />
       </Container>
     </main>
   );

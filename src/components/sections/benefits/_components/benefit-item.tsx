@@ -1,3 +1,4 @@
+import { Subtitle } from "@/components/subtitle";
 import Image from "next/image";
 
 interface BenefitItemProps {
@@ -21,7 +22,7 @@ export function BenefitItem({
       }
     >
       <Image src={imgPath} alt="Ilustration icon" width={80} height={80} />
-      <h2 className="text-2xl font-bold">{title}</h2>
+      <Subtitle>{title}</Subtitle>
       <p>{description}</p>
     </article>
   );

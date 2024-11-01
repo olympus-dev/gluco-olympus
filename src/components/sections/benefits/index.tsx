@@ -1,12 +1,13 @@
+import { Subtitle } from "@/components/subtitle";
 import { BenefitItem } from "./_components/benefit-item";
 
 export function BenefitsSection() {
   return (
     <section>
-      <h2 className="text-2xl font-bold text-center">
+      <Subtitle>
         How <span className="text-brandLight">Endoterec©</span>
         <br /> works?
-      </h2>
+      </Subtitle>
       <p className="font-medium text-center py-8">
         Endoterec is a
         <span className="font-bold">powerful natural supplement</span>

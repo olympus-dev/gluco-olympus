@@ -1,4 +1,5 @@
 import { OrderButton } from "@/components/order-button";
+import { Subtitle } from "@/components/subtitle";
 
 /* eslint-disable react/no-unescaped-entities */
 export function FormulaSection() {
@@ -11,12 +12,12 @@ export function FormulaSection() {
         className="col-start-2 
       lg:self-start"
       >
-        <h2 className="text-2xl font-bold text-center pb-12">
+        <Subtitle className="pb-12">
           Discover the <span className="text-brand">Exclusive</span> Formula
           That Will Transform Your
           <span className="text-brand"> Confidence</span> and
           <span className="text-brand">Performance</span>!
-        </h2>
+        </Subtitle>
         <div
           className="text-center sr-only
         lg:not-sr-only"
