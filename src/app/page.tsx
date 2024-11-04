@@ -5,6 +5,7 @@ import {
   FormulaSection,
   HeroSection,
 } from "@/components/sections";
+import CheckoutSection from "@/components/sections/checkout";
 import { SocialProofSection } from "@/components/sections/social-proof";
 
 export default function Home() {
@@ -35,6 +36,12 @@ export default function Home() {
       <Container className="text-white pb-12 overflow-hidden">
         <SocialProofSection />
       </Container>
+
+      <div className="bg-background top-0 bottom-0 left-0 right-0">
+        <Container className="py-8">
+          <CheckoutSection />
+        </Container>
+      </div>
     </main>
   );
 }

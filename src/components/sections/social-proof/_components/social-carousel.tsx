@@ -45,7 +45,7 @@ const testimonials: Testimonial[] = [
     ),
     author: "Tom Stevenson",
     location: "New York, USA",
-    image: "proof3.png",
+    image: "proof1.jpg",
     rating: 5,
   },
   {
@@ -64,7 +64,7 @@ const testimonials: Testimonial[] = [
     ),
     author: "Charlie Williams",
     location: "Chicago, USA",
-    image: "proof1.png",
+    image: "proof3.jpg",
     rating: 5,
   },
   {
@@ -81,7 +81,7 @@ const testimonials: Testimonial[] = [
     ),
     author: "James Richards",
     location: "Wyoming, USA",
-    image: "proof2.png",
+    image: "proof2.jpg",
     rating: 5,
   },
   // Add more testimonials as needed
@@ -128,7 +128,7 @@ export default function Component() {
                         <img
                           src={testimonial.image}
                           alt=""
-                          className="w-12 h-12 rounded-full"
+                          className="w-12 h-12 rounded-full object-center"
                         />
                         <div>
                           <div className="font-semibold">

@@ -17,6 +17,7 @@ const config: Config = {
 				brandLight: 'var(--light-brand)',
 				brandDark: 'var(--dark-brand)',
 				brandExtraDark: 'var(--extra-dark-brand)',
+				positive: 'var(--positive)',
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
@@ -68,7 +69,7 @@ const config: Config = {
         },
       },
       animation: {
-        float: 'float 5s ease-in-out infinite',
+        float: 'float 4s ease-in-out infinite',
       },
   	}
   },
