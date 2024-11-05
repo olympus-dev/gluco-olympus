@@ -3,11 +3,12 @@ import {
   BenefitsSection,
   ComparationSection,
   FormulaSection,
+  Guarantee,
   HeroSection,
+  SocialProofSection,
 } from "@/components/sections";
 import CheckoutSection from "@/components/sections/checkout";
 import CheckoutDesktop from "@/components/sections/checkout/_components/content-desktop";
-import { SocialProofSection } from "@/components/sections/social-proof";
 
 export default function Home() {
   return (
@@ -30,22 +31,36 @@ export default function Home() {
         <BenefitsSection />
       </Container>
 
-      <Container className="text-white pb-8 overflow-hidden 
-      lg:py-4">
+      <Container
+        className="text-white pb-8 overflow-hidden 
+      lg:py-4"
+      >
         <ComparationSection />
       </Container>
 
-      <Container className="text-white pb-12 overflow-hidden
-      lg:py-8">
+      <Container
+        className="text-white pb-12 overflow-hidden
+      lg:py-8"
+      >
         <SocialProofSection />
       </Container>
 
-      <div className="bg-background top-0 bottom-0 left-0 right-0" id="checkout">
+      <div
+        className="bg-background pb-10"
+        id="checkout"
+      >
         <Container className="py-8">
           <CheckoutSection />
           <CheckoutDesktop />
         </Container>
       </div>
+
+      <Container
+        className="text-white pb-12
+      lg:py-8"
+      >
+        <Guarantee />
+      </Container>
     </main>
   );
 }
