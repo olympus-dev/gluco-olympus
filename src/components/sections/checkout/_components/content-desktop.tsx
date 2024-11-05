@@ -13,6 +13,43 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { ShoppingCart, Package, Truck, Shield } from "lucide-react";
 
+interface ButtonProps {
+  quantity: number;
+  bestWhat?: string;
+  selected: boolean;
+  htmlFor: string;
+}
+
+function ButtonCustom({ quantity, bestWhat, selected, htmlFor }: ButtonProps) {
+  return (
+    <Label
+      htmlFor={htmlFor}
+      className={
+        "flex flex-col items-center justify-center rounded-lg p-7 relative text-center cursor-pointer " +
+        (selected ? "bg-brand text-white" : "bg-[#C4C7C7] text-[#4E4E4E]")
+      }
+    >
+      {bestWhat && (
+        <div
+          className={
+            "absolute top-0 left-0 right-0 rounded-t-lg text-xs font-semibold py-1 " +
+            (selected ? "bg-brandDark" : "text-white bg-[#4E4E4E]")
+          }
+        >
+          {bestWhat}
+        </div>
+      )}
+      <p className="font-bold text-3xl leading-4 mt-4">
+        {quantity}
+        <br />
+        <span className="font-medium text-base">
+          {quantity > 1 ? `Bottles` : `Bottle`}
+        </span>
+      </p>
+    </Label>
+  );
+}
+
 export default function ContentDesktop() {
   const [selectedPackage, setSelectedPackage] = useState("6");
   const [purchaseType, setPurchaseType] = useState("subscribe");
@@ -49,7 +86,7 @@ export default function ContentDesktop() {
           Claim Your{" "}
           <span className="text-blue-600">Discounted Endoterec©</span>
         </CardTitle>
-        <p className="text-xl mt-2">Below While Stocks Last!</p>
+        <p className="text-xl mt-2 font-semibold">Below While Stocks Last!</p>
       </CardHeader>
       <CardContent>
         <div className="flex flex-col md:flex-row items-center gap-8">
@@ -70,7 +107,66 @@ export default function ContentDesktop() {
             />
           </div>
           <div className="w-full md:w-1/2 space-y-6">
-            <div className="flex justify-between items-center">
+            <div className="flex gap-4">
+              <Button
+                variant={purchaseType === "subscribe" ? "default" : "outline"}
+                className={`flex-1 ${
+                  purchaseType === "subscribe"
+                    ? "bg-brand hover:bg-brandDark"
+                    : ""
+                }`}
+                onClick={() => setPurchaseType("subscribe")}
+              >
+                Subscribe
+              </Button>
+              <Button
+                variant={purchaseType === "onetime" ? "default" : "outline"}
+                className={`flex-1 ${
+                  purchaseType === "subscribe"
+                    ? ""
+                    : "bg-brand hover:bg-brandDark"
+                }`}
+                onClick={() => setPurchaseType("onetime")}
+              >
+                One-time purchase
+              </Button>
+            </div>
+            <RadioGroup
+              value={selectedPackage}
+              onValueChange={setSelectedPackage}
+              className="grid grid-cols-3 gap-4"
+            >
+              <div>
+                <RadioGroupItem value="3" id="3-bottles" className="sr-only" />
+                <ButtonCustom
+                  key={0}
+                  quantity={3}
+                  bestWhat={"Most Popular"}
+                  selected={selectedPackage === "3"}
+                  htmlFor="3-bottles"
+                />
+              </div>
+              <div>
+                <RadioGroupItem value="6" id="6-bottles" className="sr-only" />
+                <ButtonCustom
+                  key={1}
+                  quantity={6}
+                  bestWhat={"Best Value"}
+                  selected={selectedPackage === "6"}
+                  htmlFor="6-bottles"
+                />
+              </div>
+              <div>
+                <RadioGroupItem value="1" id="1-bottle" className="sr-only" />
+                <ButtonCustom
+                  key={2}
+                  quantity={1}
+                  selected={selectedPackage === "1"}
+                  htmlFor="1-bottle"
+                />
+              </div>
+            </RadioGroup>
+            <div className="flex flex-col justify-between items-center gap-2">
               <span className="text-2xl font-semibold">
                 {selectedPackage === "6"
                   ? prices[1].supply
@@ -107,85 +203,6 @@ export default function ContentDesktop() {
                     : prices[2].total}
                 </p>
               </div>
-            </div>
-            <RadioGroup
-              value={selectedPackage}
-              onValueChange={setSelectedPackage}
-              className="grid grid-cols-3 gap-4"
-            >
-              <div>
-                <RadioGroupItem value="3" id="3-bottles" className="sr-only" />
-                <Label
-                  htmlFor="3-bottles"
-                  className={`flex flex-col items-center justify-center p-4 border rounded-lg cursor-pointer transition-all ${
-                    selectedPackage === "3"
-                      ? "bg-blue-100 border-blue-500"
-                      : "hover:bg-gray-100"
-                  }`}
-                >
-                  <span className="text-lg font-semibold">3</span>
-                  <span>Bottles</span>
-                  <span className="text-xs text-blue-600 font-semibold mt-1 text-center">
-                    Most Popular
-                  </span>
-                </Label>
-              </div>
-              <div>
-                <RadioGroupItem value="6" id="6-bottles" className="sr-only" />
-                <Label
-                  htmlFor="6-bottles"
-                  className={`flex flex-col items-center justify-center p-4 border rounded-lg cursor-pointer transition-all ${
-                    selectedPackage === "6"
-                      ? "bg-blue-100 border-blue-500"
-                      : "hover:bg-gray-100"
-                  }`}
-                >
-                  <span className="text-lg font-semibold">6</span>
-                  <span>Bottles</span>
-                  <span className="text-xs text-blue-600 font-semibold mt-1">
-                    Best
-                    <br /> Value
-                  </span>
-                </Label>
-              </div>
-              <div>
-                <RadioGroupItem value="1" id="1-bottle" className="sr-only" />
-                <Label
-                  htmlFor="1-bottle"
-                  className={`flex flex-col items-center justify-center p-4 border rounded-lg cursor-pointer transition-all ${
-                    selectedPackage === "1"
-                      ? "bg-blue-100 border-blue-500"
-                      : "hover:bg-gray-100"
-                  }`}
-                >
-                  <span className="text-lg font-semibold">1</span>
-                  <span>Bottle</span>
-                </Label>
-              </div>
-            </RadioGroup>
-            <div className="flex gap-4">
-              <Button
-                variant={purchaseType === "subscribe" ? "default" : "outline"}
-                className={`flex-1 ${
-                  purchaseType === "subscribe"
-                    ? "bg-brand hover:bg-brandDark"
-                    : ""
-                }`}
-                onClick={() => setPurchaseType("subscribe")}
-              >
-                Subscribe
-              </Button>
-              <Button
-                variant={purchaseType === "onetime" ? "default" : "outline"}
-                className={`flex-1 ${
-                  purchaseType === "subscribe"
-                    ? ""
-                    : "bg-brand hover:bg-brandDark"
-                }`}
-                onClick={() => setPurchaseType("onetime")}
-              >
-                One-time purchase
-              </Button>
             </div>
           </div>
         </div>
