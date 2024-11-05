@@ -114,7 +114,7 @@ export default function CheckoutDesktop() {
                 className={`flex-1 font-bold ${
                   purchaseType === "subscribe"
                     ? "bg-brand hover:bg-brandDark"
-                    : ""
+                    : "bg-gray-400 text-gray-700"
                 }`}
                 onClick={() => setPurchaseType("subscribe")}
               >
