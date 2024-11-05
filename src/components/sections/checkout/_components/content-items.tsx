@@ -5,7 +5,6 @@ import { Package, Shield, ShoppingCart, Truck } from "lucide-react";
 import { useState } from "react";
 
 interface ButtonProps {
-  // children: React.ReactNode;
   quantity: number;
   bestWhat?: string;
   selected: boolean;

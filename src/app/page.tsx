@@ -6,7 +6,7 @@ import {
   HeroSection,
 } from "@/components/sections";
 import CheckoutSection from "@/components/sections/checkout";
-import ContentDesktop from "@/components/sections/checkout/_components/content-desktop";
+import CheckoutDesktop from "@/components/sections/checkout/_components/content-desktop";
 import { SocialProofSection } from "@/components/sections/social-proof";
 
 export default function Home() {
@@ -43,7 +43,7 @@ export default function Home() {
       <div className="bg-background top-0 bottom-0 left-0 right-0">
         <Container className="py-8">
           <CheckoutSection />
-          <ContentDesktop />
+          <CheckoutDesktop />
         </Container>
       </div>
     </main>

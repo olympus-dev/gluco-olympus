@@ -12,6 +12,7 @@ import {
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { ShoppingCart, Package, Truck, Shield } from "lucide-react";
+import { Separator } from "@/components/Separator";
 
 interface ButtonProps {
   quantity: number;
@@ -50,7 +51,7 @@ function ButtonCustom({ quantity, bestWhat, selected, htmlFor }: ButtonProps) {
   );
 }
 
-export default function ContentDesktop() {
+export default function CheckoutDesktop() {
   const [selectedPackage, setSelectedPackage] = useState("6");
   const [purchaseType, setPurchaseType] = useState("subscribe");
 
@@ -110,7 +111,7 @@ export default function ContentDesktop() {
             <div className="flex gap-4">
               <Button
                 variant={purchaseType === "subscribe" ? "default" : "outline"}
-                className={`flex-1 ${
+                className={`flex-1 font-bold ${
                   purchaseType === "subscribe"
                     ? "bg-brand hover:bg-brandDark"
                     : ""
@@ -121,9 +122,9 @@ export default function ContentDesktop() {
               </Button>
               <Button
                 variant={purchaseType === "onetime" ? "default" : "outline"}
-                className={`flex-1 ${
+                className={`flex-1 font-bold ${
                   purchaseType === "subscribe"
-                    ? ""
+                    ? "bg-gray-400 text-gray-700"
                     : "bg-brand hover:bg-brandDark"
                 }`}
                 onClick={() => setPurchaseType("onetime")}
@@ -166,15 +167,17 @@ export default function ContentDesktop() {
                 />
               </div>
             </RadioGroup>
-            <div className="flex flex-col justify-between items-center gap-2">
-              <span className="text-2xl font-semibold">
+            <div className="flex flex-row-reverse justify-between items-center relative">
+              <span className="text-2xl font-semibold text-center">
                 {selectedPackage === "6"
                   ? prices[1].supply
                   : selectedPackage === "3"
                   ? prices[0].supply
-                  : prices[2].supply}{" "}
+                  : prices[2].supply}
+                  <br/>
                 Day Supply
               </span>
+              <Separator className="w-[2.5px] md:h-16 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
               <div className="text-right">
                 <span className="text-3xl font-bold text-blue-600">
                   $
@@ -222,12 +225,12 @@ export default function ContentDesktop() {
             <span>60 DAYS GUARANTEE</span>
           </div>
         </div>
-        <p className="text-sm text-gray-600">
+        <p className="text-sm font-semibold">
           Remaining Bottles in stock:{" "}
           <span className="font-bold text-red-400">112</span>
         </p>
         <Button
-          className="w-full max-w-md bg-brand hover:bg-brandDark"
+          className="w-full max-w-md bg-yellow-400 text-black font-semibold text-base hover:bg-yellow-500"
           size="lg"
           asChild
         >
