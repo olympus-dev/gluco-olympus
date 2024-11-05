@@ -10,7 +10,7 @@ export function FormulaSection() {
     >
       <article
         className="col-start-2 
-      lg:self-start"
+      lg:self-center"
       >
         <Subtitle className="pb-12">
           Discover the <span className="text-brand">Exclusive</span> Formula
@@ -43,7 +43,7 @@ export function FormulaSection() {
         src="plants.png"
         alt="Endoterec bottle with plants around."
         className="col-start-1 row-start-1
-      lg:mx-auto lg:w-96"
+      lg:mx-auto lg:w-4/5"
       />
 
       <div

@@ -111,7 +111,7 @@ export default function Component() {
           loop: true,
         }}
         setApi={setApi}
-        className="w-full max-w-sm sm:max-w-md md:max-w-lg"
+        className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-3xl"
       >
         <CarouselContent className="-ml-2 md:-ml-4">
           {testimonials.map((testimonial, index) => (
@@ -122,13 +122,16 @@ export default function Component() {
               <div className="p-1">
                 <Card className="bg-white rounded-3xl">
                   <CardContent className="p-6">
-                    <blockquote className="space-y-4 min-h-[475px] flex flex-col justify-between">
+                    <blockquote className="space-y-4 min-h-[475px] flex flex-col justify-between
+                    lg:min-h-[300px]">
                       {testimonial.quote}
                       <footer className="flex items-center gap-3 pt-2">
                         <img
                           src={testimonial.image}
                           alt=""
                           className="w-12 h-12 rounded-full object-center"
+                          width={48}
+                          height={48}
                         />
                         <div>
                           <div className="font-semibold">

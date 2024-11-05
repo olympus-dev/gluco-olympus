@@ -26,6 +26,8 @@ export function SocialProofSection() {
           src="3-bottles.png"
           className="-translate-y-4"
           alt="3 bottles of endoretec"
+          width={364}
+          height={364}
         />
         <div className="bg-white rounded-full text-black p-2 pl-8 pr-10 absolute -right-14 bottom-8">
           <div className="flex gap-2 items-center font-bold">

@@ -14,7 +14,7 @@ export default function CheckoutSection() {
   };
 
   return (
-    <section>
+    <section className="block lg:hidden">
       <Subtitle className="pb-4">
         Claim Your
         <br />
