@@ -177,7 +177,7 @@ export default function CheckoutDesktop() {
                   <br/>
                 Day Supply
               </span>
-              <Separator className="w-[2.5px] md:h-16 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+              <Separator className="md:w-[2.5px] md:h-16 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
               <div className="text-right">
                 <span className="text-3xl font-bold text-blue-600">
                   $
