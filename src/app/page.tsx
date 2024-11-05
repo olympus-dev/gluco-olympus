@@ -40,7 +40,7 @@ export default function Home() {
         <SocialProofSection />
       </Container>
 
-      <div className="bg-background top-0 bottom-0 left-0 right-0">
+      <div className="bg-background top-0 bottom-0 left-0 right-0" id="checkout">
         <Container className="py-8">
           <CheckoutSection />
           <CheckoutDesktop />

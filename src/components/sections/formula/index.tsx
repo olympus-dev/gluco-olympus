@@ -37,7 +37,7 @@ export function FormulaSection() {
         </div>
         <OrderButton
           className="mx-auto mt-8 hidden
-        lg:flex"
+        lg:flex "
         />
       </article>
 

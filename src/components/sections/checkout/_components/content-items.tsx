@@ -128,7 +128,7 @@ export function ContentItems({ subscribeMode }: ContentItemsProps) {
         <span className="text-red-400 font-bold">112</span>
       </p>
       <a
-        className="bg-brand rounded-lg text-white flex gap-2 py-4 px-7 mt-4 cursor-pointer hover:brightness-125 transition-all"
+        className="bg-yellow-300 rounded-lg text-black flex gap-2 py-4 px-7 mt-4 cursor-pointer hover:brightness-110 transition-all"
         href={
           subscribeMode
             ? subscribeLinks[itemSelected]
