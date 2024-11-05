@@ -65,6 +65,7 @@ export default function ContentDesktop() {
               alt="Endoterec Bottles"
               width={400}
               height={400}
+              loading="lazy"
               className="w-full h-auto"
             />
           </div>
@@ -231,7 +232,7 @@ export default function ContentDesktop() {
             <ShoppingCart className="mr-2" /> Add to Cart
           </a>
         </Button>
-        <img src="cards.svg" />
+        <img src="cards.svg" alt="cards" loading="lazy" />
       </CardFooter>
     </Card>
   );

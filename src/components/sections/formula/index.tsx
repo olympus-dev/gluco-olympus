@@ -35,8 +35,10 @@ export function FormulaSection() {
             and <b>unstoppable confidence!</b>
           </p>
         </div>
-        <OrderButton className="mx-auto mt-8 hidden
-        lg:flex" />
+        <OrderButton
+          className="mx-auto mt-8 hidden
+        lg:flex"
+        />
       </article>
 
       <img
@@ -44,6 +46,9 @@ export function FormulaSection() {
         alt="Endoterec bottle with plants around."
         className="col-start-1 row-start-1
       lg:mx-auto lg:w-4/5"
+        loading="lazy"
+        width={364}
+        height={374}
       />
 
       <div

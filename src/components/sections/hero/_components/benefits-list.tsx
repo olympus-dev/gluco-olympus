@@ -9,7 +9,7 @@ interface CheckBenefitsProps {
 function CheckBenefits({ children, className }: CheckBenefitsProps) {
   return (
     <div className={"flex gap-4 items-center " + className}>
-      <img src="check.svg" alt="*V" className="w-8 h-8" />
+      <img src="check.svg" alt="*V" className="w-8 h-8" width={32} height={32} />
       {children}
     </div>
   );
