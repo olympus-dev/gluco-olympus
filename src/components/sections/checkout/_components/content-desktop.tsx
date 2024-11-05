@@ -231,6 +231,7 @@ export default function ContentDesktop() {
             <ShoppingCart className="mr-2" /> Add to Cart
           </a>
         </Button>
+        <img src="cards.svg" />
       </CardFooter>
     </Card>
   );
