@@ -46,10 +46,7 @@ export default function Home() {
         <SocialProofSection />
       </Container>
 
-      <div
-        className="bg-background pb-10"
-        id="checkout"
-      >
+      <div className="bg-background pb-10" id="checkout">
         <Container className="py-8">
           <CheckoutSection />
           <CheckoutDesktop />
@@ -63,12 +60,22 @@ export default function Home() {
         <Guarantee />
       </Container>
 
-      <div
-        className="bg-background pb-10"
-        id="checkout"
-      >
+      <div className="bg-background pb-4">
         <Container className="py-8">
           <FAQ />
+        </Container>
+      </div>
+
+      <div className="bg-background pb-10">
+        <Container>
+          <img
+            src="science.png"
+            alt="Scientific Reference"
+            loading="lazy"
+            width={886}
+            height={146}
+            className="mx-auto w-[90%] sm:w-[746px]"
+          />
         </Container>
       </div>
     </main>
