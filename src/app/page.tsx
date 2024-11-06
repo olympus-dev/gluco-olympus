@@ -9,6 +9,7 @@ import {
 } from "@/components/sections";
 import CheckoutSection from "@/components/sections/checkout";
 import CheckoutDesktop from "@/components/sections/checkout/_components/content-desktop";
+import { FAQ } from "@/components/sections/faq";
 
 export default function Home() {
   return (
@@ -61,6 +62,15 @@ export default function Home() {
       >
         <Guarantee />
       </Container>
+
+      <div
+        className="bg-background pb-10"
+        id="checkout"
+      >
+        <Container className="py-8">
+          <FAQ />
+        </Container>
+      </div>
     </main>
   );
 }
