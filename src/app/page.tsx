@@ -18,6 +18,7 @@ export default function Home() {
   return (
     <>
       <Header />
+      <div id="portal"></div>
       <main
         className="pt-16 bg-repeat-round bg-fixed
       lg:bg-contain"
