@@ -58,14 +58,14 @@ export default function CheckoutDesktop() {
 
   const images: string[] = ["3-bottles.png", "6-bottles.png", "1-bottle.png"];
   const subscribeLinks: string[] = [
-    "https://www.youtube.com/watch?v=LeQBBAxrDdw&t=1164s",
-    "https://www.youtube.com/watch?v=LeQBBAxrDdw&t=1164s",
-    "https://www.youtube.com/watch?v=LeQBBAxrDdw&t=1164s",
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   ];
   const onePurchaseLinks: string[] = [
-    "https://www.google.com",
-    "https://www.google.com",
-    "https://www.google.com",
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   ];
 
   interface ItemProps {
@@ -73,13 +73,44 @@ export default function CheckoutDesktop() {
     total: number;
     discount: number;
     supply: number;
+    subscribeBottle: number;
+    subscribeTotal: number;
   }
 
   const prices: ItemProps[] = [
-    { price: 59, total: 177, discount: 447, supply: 90 },
-    { price: 49, total: 294, discount: 894, supply: 180 },
-    { price: 89, total: 89, discount: 149, supply: 30 },
+    {
+      price: 59,
+      total: 177,
+      discount: 447,
+      supply: 90,
+      subscribeBottle: 54.28,
+      subscribeTotal: 162.84,
+    },
+    {
+      price: 49,
+      total: 294,
+      discount: 894,
+      supply: 180,
+      subscribeBottle: 44.1,
+      subscribeTotal: 264.6,
+    },
+    {
+      price: 89,
+      total: 89,
+      discount: 149,
+      supply: 30,
+      subscribeBottle: 84.55,
+      subscribeTotal: 84.55,
+    },
   ];
+
+  interface ItemProps {
+    price: number;
+    total: number;
+    discount: number;
+    subscribeBottle: number;
+    subscribeTotal: number;
+  }
 
   return (
     <Card className="w-full max-w-3xl mx-auto hidden lg:block">
@@ -112,7 +143,7 @@ export default function CheckoutDesktop() {
             <div className="flex gap-4">
               <Button
                 variant={purchaseType === "subscribe" ? "default" : "outline"}
-                className={`flex-1 font-bold ${
+                className={`flex-1 flex-col py-8 gap-0 font-bold ${
                   purchaseType === "subscribe"
                     ? "bg-brand hover:bg-brandDark"
                     : "bg-gray-400 text-gray-700"
@@ -120,10 +151,11 @@ export default function CheckoutDesktop() {
                 onClick={() => setPurchaseType("subscribe")}
               >
                 Subscribe
+                <p className="text-xs">Save More 10% Today!</p>
               </Button>
               <Button
                 variant={purchaseType === "onetime" ? "default" : "outline"}
-                className={`flex-1 font-bold ${
+                className={`flex-1 py-8 font-bold ${
                   purchaseType === "subscribe"
                     ? "bg-gray-400 text-gray-700"
                     : "bg-brand hover:bg-brandDark"
@@ -175,14 +207,20 @@ export default function CheckoutDesktop() {
                   : selectedPackage === "3"
                   ? prices[0].supply
                   : prices[2].supply}
-                  <br/>
+                <br />
                 Day Supply
               </span>
               <Separator className="md:w-[2.5px] md:h-16 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
-              <div className="text-right">
+              <div className="text-center">
                 <span className="text-3xl font-bold text-blue-600">
                   $
-                  {selectedPackage === "6"
+                  {purchaseType === "subscribe"
+                    ? selectedPackage === "6"
+                      ? prices[1].subscribeBottle
+                      : selectedPackage === "3"
+                      ? prices[0].subscribeBottle
+                      : prices[2].subscribeBottle
+                    : selectedPackage === "6"
                     ? prices[1].price
                     : selectedPackage === "3"
                     ? prices[0].price
@@ -200,12 +238,29 @@ export default function CheckoutDesktop() {
                       : prices[2].discount}
                   </span>{" "}
                   $
-                  {selectedPackage === "6"
+                  {purchaseType === "subscribe"
+                    ? selectedPackage === "6"
+                      ? prices[1].subscribeTotal
+                      : selectedPackage === "3"
+                      ? prices[0].subscribeTotal
+                      : prices[2].subscribeTotal
+                    : selectedPackage === "6"
                     ? prices[1].total
                     : selectedPackage === "3"
                     ? prices[0].total
                     : prices[2].total}
                 </p>
+                {purchaseType === "subscribe" && (
+                  <p className="text-sm text-center text-gray-600">
+                    Ships every
+                    {selectedPackage === "3"
+                      ? " 3"
+                      : selectedPackage === "6"
+                      ? " 6"
+                      : ""}{" "}
+                    months
+                  </p>
+                )}
               </div>
             </div>
           </div>
@@ -253,7 +308,13 @@ export default function CheckoutDesktop() {
             <ShoppingCart className="mr-2" /> Add to Cart
           </a>
         </Button>
-        <Image src="cards.svg" alt="cards" loading="lazy" width={133} height={23} />
+        <Image
+          src="cards.svg"
+          alt="cards"
+          loading="lazy"
+          width={133}
+          height={23}
+        />
       </CardFooter>
     </Card>
   );

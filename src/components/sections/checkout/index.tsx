@@ -33,11 +33,12 @@ export default function CheckoutSection() {
             value="account"
             className={
               subscribeMode
-                ? "bg-brand text-white font-bold p-4 w-full rounded-lg"
-                : "bg-gray-400 text-gray-700 font-bold p-4 w-full rounded-lg"
+                ? "relative bg-brand text-white font-bold p-4 w-full rounded-lg"
+                : "relative bg-gray-400 text-gray-700 font-bold p-4 w-full rounded-lg"
             }
           >
             SUBSCRIBE
+            <p className="text-xs">Save More 10% Today!</p>
           </TabsTrigger>
           <TabsTrigger
             value="password"

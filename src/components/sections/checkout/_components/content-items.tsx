@@ -49,26 +49,46 @@ export function ContentItems({ subscribeMode }: ContentItemsProps) {
   const [itemSelected, setItemSelected] = useState(1);
   const images: string[] = ["3-bottles.png", "6-bottles.png", "1-bottle.png"];
   const subscribeLinks: string[] = [
-    "https://www.youtube.com/watch?v=LeQBBAxrDdw&t=1164s",
-    "https://www.youtube.com/watch?v=LeQBBAxrDdw&t=1164s",
-    "https://www.youtube.com/watch?v=LeQBBAxrDdw&t=1164s",
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   ];
   const onePurchaseLinks: string[] = [
-    "https://www.google.com",
-    "https://www.google.com",
-    "https://www.google.com",
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   ];
 
   interface ItemProps {
     price: number;
     total: number;
     discount: number;
+    subscribeBottle: number;
+    subscribeTotal: number;
   }
 
   const prices: ItemProps[] = [
-    { price: 59, total: 177, discount: 447 },
-    { price: 49, total: 294, discount: 894 },
-    { price: 89, total: 89, discount: 149 },
+    {
+      price: 59,
+      total: 177,
+      discount: 447,
+      subscribeBottle: 54.28,
+      subscribeTotal: 162.84,
+    },
+    {
+      price: 49,
+      total: 294,
+      discount: 894,
+      subscribeBottle: 44.1,
+      subscribeTotal: 264.6,
+    },
+    {
+      price: 89,
+      total: 89,
+      discount: 149,
+      subscribeBottle: 84.55,
+      subscribeTotal: 84.55,
+    },
   ];
 
   return (
@@ -81,18 +101,32 @@ export function ContentItems({ subscribeMode }: ContentItemsProps) {
         height={296}
         className="max-h-[296px] object-contain my-4"
       />
-      <p className="font-semibold text-[#5F5F5F]">· 180 Day Supply ·</p>
+      <p className="font-semibold text-[#5F5F5F]">
+        · {itemSelected === 0 ? 90 : itemSelected === 1 ? 180 : 30} Day Supply ·
+      </p>
       <p className="font-bold text-3xl text-brand">
-        ${prices[itemSelected].price}
+        $
+        {subscribeMode
+          ? prices[itemSelected].subscribeBottle
+          : prices[itemSelected].price}
         <span className="text-base text-[#898B8B]">/Bottle</span>
       </p>
       <p>
         TOTAL:
         <span className="line-through">${prices[itemSelected].discount}</span>
         <span className="font-bold text-positive">
-          ${prices[itemSelected].total}
+          $
+          {subscribeMode
+            ? prices[itemSelected].subscribeTotal
+            : prices[itemSelected].total}
         </span>
       </p>
+      {subscribeMode && (
+        <p>
+          Ships every
+          {itemSelected === 0 ? " 3" : itemSelected === 1 ? " 6" : ""} months
+        </p>
+      )}
       <div className="flex gap-1 py-4">
         {[
           { quantity: 3, bestWhat: "Most Popular" },
