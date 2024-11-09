@@ -18,6 +18,12 @@ export function Menu({ onClose, open }: MenuProps) {
   if (!isMounted) return null;
 
   if (open) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
+  }
+  
+  if (open) {
     return ReactDom.createPortal(
       <>
         <div
@@ -35,13 +41,13 @@ export function Menu({ onClose, open }: MenuProps) {
           <a href="#faq" className="hover:text-gray-400 cursor-pointer">
             FAQ
           </a>
-          <a href="#faq" className="hover:text-gray-400 cursor-pointer">
+          <a href="#checkout" className="hover:text-gray-400 cursor-pointer">
             Order Now
           </a>
           <p className="cursor-pointer">Close</p>
         </div>
       </>,
-      document.getElementById("portal")
+      document.getElementById("portal") as HTMLElement
     );
   } else {
     return <></>;

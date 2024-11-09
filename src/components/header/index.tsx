@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Menu } from "./_components/menu";
+import Image from "next/image";
 
 export function Header() {
   const [open, setIsOpen] = useState(false);
@@ -13,10 +14,12 @@ export function Header() {
     >
       <h1 className="text-2xl cursor-default">ENDOTEREC</h1>
       <button onClick={() => setIsOpen(true)}>
-        <img
+        <Image
           src="menu.svg"
           alt="menu"
           className="w-7 hover:cursor-pointer md:hidden"
+          width={28}
+          height={28}
         />
       </button>
       <Menu open={open} onClose={() => setIsOpen(false)} />

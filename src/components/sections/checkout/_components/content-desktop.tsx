@@ -13,6 +13,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { ShoppingCart, Package, Truck, Shield } from "lucide-react";
 import { Separator } from "@/components/Separator";
+import Image from "next/image";
 
 interface ButtonProps {
   quantity: number;
@@ -252,7 +253,7 @@ export default function CheckoutDesktop() {
             <ShoppingCart className="mr-2" /> Add to Cart
           </a>
         </Button>
-        <img src="cards.svg" alt="cards" loading="lazy" />
+        <Image src="cards.svg" alt="cards" loading="lazy" width={133} height={23} />
       </CardFooter>
     </Card>
   );
