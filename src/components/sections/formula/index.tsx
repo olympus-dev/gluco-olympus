@@ -59,7 +59,7 @@ export function FormulaSection() {
             <Search className="w-10 h-10 lg:w-12 lg:h-12 text-white" />
           </button>
           </DialogTrigger>
-          <DialogContent className="lg:max-w-7xl">
+          <DialogContent className="md:max-w-7xl lg:max-w-7xl">
             <DialogTitle>Nutrition Facts</DialogTitle>
             <DialogDescription>
               <img src="nutrition.png" alt="Nutrition Facts Image" />
