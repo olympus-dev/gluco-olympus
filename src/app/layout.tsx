@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import { Konkhmer_Sleokchher, Montserrat } from "next/font/google";
-import { Header } from "@/components/header";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 const konkhmerSleokchher = Konkhmer_Sleokchher({
@@ -27,7 +26,6 @@ export default function RootLayout({
       <body
         className={`${montserrat.className}} ${konkhmerSleokchher.variable} antialiased`}
       >
-        <Header />
         {children}
       </body>
     </html>

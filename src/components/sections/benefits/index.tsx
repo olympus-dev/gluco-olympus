@@ -3,7 +3,7 @@ import { BenefitItem } from "./_components/benefit-item";
 
 export function BenefitsSection() {
   return (
-    <section>
+    <section id="benefits">
       <Subtitle>
         How <span className="text-brandLight">Endoterec©</span>
         <br /> works?
