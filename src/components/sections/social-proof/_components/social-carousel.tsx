@@ -87,7 +87,7 @@ const testimonials: Testimonial[] = [
   // Add more testimonials as needed
 ];
 
-export default function Component() {
+export default function SocialProofCarousel() {
   const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
 
@@ -104,7 +104,7 @@ export default function Component() {
   }, [api]);
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center lg:hidden">
       <Carousel
         opts={{
           align: "center",

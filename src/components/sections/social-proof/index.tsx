@@ -1,6 +1,7 @@
 import { Subtitle } from "@/components/subtitle";
 import { Star } from "lucide-react";
 import SocialProofCarousel from "./_components/social-carousel";
+import { SocialDesktop } from "./_components/social-desktop";
 
 export function SocialProofSection() {
   return (
@@ -38,6 +39,7 @@ export function SocialProofSection() {
         </div>
       </div>
       <SocialProofCarousel />
+      <SocialDesktop />
     </section>
   );
 }
