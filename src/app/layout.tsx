@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import { Konkhmer_Sleokchher, Montserrat } from "next/font/google";
+import { BottlesProvider } from "@/hooks/bottles";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 const konkhmerSleokchher = Konkhmer_Sleokchher({
@@ -26,7 +27,7 @@ export default function RootLayout({
       <body
         className={`${montserrat.className}} ${konkhmerSleokchher.variable} antialiased`}
       >
-        {children}
+        <BottlesProvider>{children}</BottlesProvider>
       </body>
     </html>
   );

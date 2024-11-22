@@ -14,6 +14,7 @@ import { Label } from "@/components/ui/label";
 import { ShoppingCart, Package, Truck, Shield } from "lucide-react";
 import { Separator } from "@/components/Separator";
 import Image from "next/image";
+import { useBottles } from "@/hooks/bottles";
 
 interface ButtonProps {
   quantity: number;
@@ -55,6 +56,7 @@ function ButtonCustom({ quantity, bestWhat, selected, htmlFor }: ButtonProps) {
 export default function CheckoutDesktop() {
   const [selectedPackage, setSelectedPackage] = useState("6");
   const [purchaseType, setPurchaseType] = useState("subscribe");
+  const { remainingBottles } = useBottles();
 
   const images: string[] = ["3-bottles.png", "6-bottles.png", "1-bottle.png"];
   const subscribeLinks: string[] = [
@@ -283,7 +285,7 @@ export default function CheckoutDesktop() {
         </div>
         <p className="text-sm font-semibold">
           Remaining Bottles in stock:{" "}
-          <span className="font-bold text-red-400">112</span>
+          <span className="font-bold text-red-400">{remainingBottles}</span>
         </p>
         <Button
           className="w-full max-w-md bg-yellow-400 text-black font-semibold text-base hover:bg-yellow-500"

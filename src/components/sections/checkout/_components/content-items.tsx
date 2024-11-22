@@ -1,6 +1,7 @@
 "use client";
 
 import { Subtitle } from "@/components/subtitle";
+import { useBottles } from "@/hooks/bottles";
 import { Package, Shield, ShoppingCart, Truck } from "lucide-react";
 import { useState } from "react";
 
@@ -46,6 +47,7 @@ interface ContentItemsProps {
 }
 
 export function ContentItems({ subscribeMode }: ContentItemsProps) {
+  const { remainingBottles } = useBottles();
   const [itemSelected, setItemSelected] = useState(1);
   const images: string[] = ["3-bottles.png", "6-bottles.png", "1-bottle.png"];
   const subscribeLinks: string[] = [
@@ -159,7 +161,7 @@ export function ContentItems({ subscribeMode }: ContentItemsProps) {
       </div>
       <p className="pt-4">
         Remaining Bottles in stock:{" "}
-        <span className="text-red-400 font-bold">112</span>
+        <span className="text-red-400 font-bold">{remainingBottles}</span>
       </p>
       <a
         className="bg-yellow-300 rounded-lg text-black flex gap-2 py-4 px-7 mt-4 cursor-pointer hover:brightness-110 transition-all"

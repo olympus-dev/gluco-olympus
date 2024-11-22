@@ -19,6 +19,8 @@
 
 # production
 /build
+/out
+/testingRoutes.http
 
 # misc
 .DS_Store
