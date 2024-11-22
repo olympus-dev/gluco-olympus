@@ -49,8 +49,8 @@ function generateRandomState(): string {
 
 function generateRandomSale(): string {
   const sale = [
-    "3 bottles purchased of Endoterec!",
-    "6 bottles purchased of Endoterec!",
+    "purchased 3 bottles of Endoterec!",
+    "purchased 6 bottles of Endoterec!",
     "subscribed to the 3-bottle plan!",
     "subscribed to the 6-bottle plan!",
   ];
