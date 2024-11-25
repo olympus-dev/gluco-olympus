@@ -14,6 +14,8 @@ import { toast } from "sonner";
 
 type BottlesContextType = {
   remainingBottles: number;
+  turnOff: () => void;
+  turnOn: () => void;
 };
 
 const BottlesContext = createContext<BottlesContextType>(
@@ -65,7 +67,17 @@ function generateRandomNumber(): number {
 export const BottlesProvider = ({ children }: { children: ReactNode }) => {
   const [remainingBottles, setRemainingBottles] = useState(350);
   const bottlesRef = useRef(remainingBottles); // Usar ref para armazenar o valor mais recente
+  const [notificationEnabled, setNotificationEnabled] = useState(true);
+  const notificationRef = useRef(notificationEnabled); // Usar ref para armazenar o valor mais recente
 
+  function turnOff() {
+    setNotificationEnabled(false);
+  }
+
+  function turnOn() {
+    setNotificationEnabled(true);
+  }
+  
   function makeToast() {
     const interval = setInterval(() => {
       if (bottlesRef.current <= 22) {
@@ -73,43 +85,45 @@ export const BottlesProvider = ({ children }: { children: ReactNode }) => {
         return;
       }
 
-      fetch("https://randomuser.me/api/?gender=male&nat=us")
-        .then((response) => response.json())
-        .then((data) => {
-          const personName = `${
-            data.results[0].name.first || generateRandomName()
-          }`;
+      if (notificationRef.current) {
+        fetch("https://randomuser.me/api/?gender=male&nat=us")
+          .then((response) => response.json())
+          .then((data) => {
+            const personName = `${
+              data.results[0].name.first || generateRandomName()
+            }`;
 
-          const location = `${
-            data.results[0].location.state || generateRandomState()
-          }`;
+            const location = `${
+              data.results[0].location.state || generateRandomState()
+            }`;
 
-          toast(
-            <div className="font-semibold flex align-top">
-              <ShoppingBasket className="text-green-600 mr-2" />
-              <p>
-                <i>{personName}</i> from <i>{location}</i> just{" "}
-                <i>{generateRandomSale()}</i>
-              </p>
-            </div>
-          );
-        })
-        .catch(() => {
-          const personName = generateRandomName();
-          const location = generateRandomState();
+            toast(
+              <div className="font-semibold flex align-top">
+                <ShoppingBasket className="text-green-600 mr-2" />
+                <p>
+                  <i>{personName}</i> from <i>{location}</i> just{" "}
+                  <i>{generateRandomSale()}</i>
+                </p>
+              </div>
+            );
+          })
+          .catch(() => {
+            const personName = generateRandomName();
+            const location = generateRandomState();
 
-          toast(
-            <div className="font-semibold flex align-top">
-              <ShoppingBasket className="text-green-600 mr-2" />
-              <p>
-                <i>{personName}</i> from <i>{location}</i> just{" "}
-                <i>{generateRandomSale()}</i>
-              </p>
-            </div>
-          );
-        });
+            toast(
+              <div className="font-semibold flex align-top">
+                <ShoppingBasket className="text-green-600 mr-2" />
+                <p>
+                  <i>{personName}</i> from <i>{location}</i> just{" "}
+                  <i>{generateRandomSale()}</i>
+                </p>
+              </div>
+            );
+          });
 
-      setRemainingBottles((prevValue) => prevValue - 3);
+        setRemainingBottles((prevValue) => prevValue - 3);
+      }
     }, Math.floor(Math.random() * (110000 - 25000 + 1)) + 25000);
 
     return () => clearInterval(interval); // Garantir limpeza do intervalo ao desmontar
@@ -121,12 +135,16 @@ export const BottlesProvider = ({ children }: { children: ReactNode }) => {
   }, [remainingBottles]);
 
   useEffect(() => {
+    notificationRef.current = notificationEnabled;
+  }, [notificationEnabled]);
+  
+  useEffect(() => {
     setRemainingBottles(generateRandomNumber());
     makeToast();
   }, []);
 
   return (
-    <BottlesContext.Provider value={{ remainingBottles }}>
+    <BottlesContext.Provider value={{ remainingBottles, turnOff, turnOn }}>
       {children}
       <Toaster
         toastOptions={{
