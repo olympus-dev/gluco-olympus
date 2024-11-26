@@ -1,0 +1,95 @@
+"use client";
+
+import { useBottles } from "@/hooks/bottles";
+import { useEffect } from "react";
+
+export function VslSection() {
+  const { turnOff } = useBottles();
+
+  useEffect(() => {
+    turnOff();
+    const script = document.createElement("script");
+    script.src =
+      "https://scripts.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/players/673649b32eb080000b6d8a8c/player.js";
+    script.async = true;
+    document.head.appendChild(script);
+  }, []);
+
+  return (
+    <div className="flex flex-col overflow-hidden gap-8">
+      {/* Header Text Section */}
+      <div>
+        <h1
+          className="text-4xl text-center leading-10
+        lg:py-12"
+        >
+          IN 2025 ED IS<br/>
+          <span
+            className="text-[#222222] relative z-10
+          before:content-[' '] before:z-[-1] before:absolute before:bg-yellow-300 before:h-12 before:w-full before:top-1/2 before:-translate-y-1/2"
+          >
+            COMPLETELY
+          </span><br/>
+          OPTIONAL
+        </h1>
+      </div>
+
+      {/* Video Section */}
+      <div id="video-section" className="flex flex-col gap-8">
+        <div
+          id="vid_673649b32eb080000b6d8a8c"
+          style={{
+            position: "relative",
+            width: "100%",
+            padding: "133.33333333333331% 0 0",
+            border: "1px solid yellow",
+            borderRadius: "25px",
+          }}
+          className="rounded-full"
+        >
+          <img
+            id="thumb_673649b32eb080000b6d8a8c"
+            src="https://images.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/players/673649b32eb080000b6d8a8c/thumbnail.jpg"
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              display: "block",
+              borderRadius: "25px",
+            }}
+            alt="thumbnail"
+          />
+          <div
+            id="backdrop_673649b32eb080000b6d8a8c"
+            style={{
+              WebkitBackdropFilter: "blur(5px)",
+              backdropFilter: "blur(5px)",
+              position: "absolute",
+              top: 0,
+              height: "100%",
+              width: "100%",
+              borderRadius: "25px",
+            }}
+          />
+        </div>
+        <p className="text-center text-sm">
+          IMPORTANT UPDATE: PRESS PLAY and make sure your sound is ON. May take
+          up to 10 seconds to load...
+        </p>
+      </div>
+      {/* References */}
+      <div className="grid grid-cols-3 grid-rows-2 gap-y-2 justify-items-center items-center">
+        <img width={"70px"} src="./nature_news.svg" alt="" />
+        <img src="./science_daily.svg" alt="" />
+        <img width={"88px"} src="./webmd.svg" alt="" />
+        <div className="flex justify-center col-span-3 gap-4">
+          <img src="./cell.svg" alt="" />
+          <img src="./european.svg" alt="" />
+        </div>
+      </div>
+    </div>
+  );
+}
