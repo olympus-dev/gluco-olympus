@@ -1,4 +1,8 @@
 @media (min-width: 1000px) {
+  #vid_673649b32eb080000b6d8a8c {
+    border: none;
+  }
+
   .vsl-video {
     display: flex !important;
     justify-content: center !important;
@@ -8,7 +12,6 @@
     width: 600px !important;
     position: relative;
     align-self: baseline;
-    border: none;
   }
 
   .vsl-video svg {
@@ -19,7 +22,7 @@
   .smartplayer-mobile-container {
     max-width: 100% !important;
   }
-  
+
   [class*="smartplayer"] {
     /* width: 100% !important; */
     /* height: 100% !important; */

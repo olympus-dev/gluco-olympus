@@ -47,9 +47,7 @@ export function VslSection() {
           lives of men around the world.
         </p>
         {/* References Desktop */}
-        <div
-          className="hidden lg:flex gap-4 max-w-28 pt-12"
-        >
+        <div className="hidden lg:flex gap-4 max-w-28 pt-12">
           <img width={"70px"} src="./nature_news.svg" alt="" />
           <img src="./science_daily.svg" alt="" />
           <img width={"88px"} src="./webmd.svg" alt="" />
@@ -59,51 +57,54 @@ export function VslSection() {
       </div>
 
       {/* Video Section */}
-      <div
-        id="video-section"
-        className="flex flex-col gap-8 vsl-video max-w-[550px]"
-      >
+      <div>
         <div
-          id="vid_673649b32eb080000b6d8a8c"
-          style={{
-            position: "relative",
-            width: "100%",
-            height: "100%",
-            padding: "133.33333333333331% 0 0",
-            border: "1px solid yellow",
-            borderRadius: "25px",
-          }}
-          className="rounded-full"
+          id="video-section"
+          className="flex flex-col gap-8 vsl-video max-w-[550px] mx-auto
+          lg:border-2 lg:border-yellow-300 lg:rounded-[25px] lg:p-2"
         >
-          <img
-            id="thumb_673649b32eb080000b6d8a8c"
-            src="https://images.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/players/673649b32eb080000b6d8a8c/thumbnail.jpg"
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              display: "block",
-              borderRadius: "25px",
-            }}
-            alt="thumbnail"
-          />
           <div
-            id="backdrop_673649b32eb080000b6d8a8c"
+            id="vid_673649b32eb080000b6d8a8c"
             style={{
-              WebkitBackdropFilter: "blur(5px)",
-              backdropFilter: "blur(5px)",
-              position: "absolute",
-              top: 0,
-              height: "100%",
+              position: "relative",
               width: "100%",
+              height: "100%",
+              border: window.innerWidth < 1000 ? "1px solid yellow" : "",
+              padding: "133.33333333333331% 0 0",
               borderRadius: "25px",
             }}
-          />
+            className="rounded-full"
+          >
+            <img
+              id="thumb_673649b32eb080000b6d8a8c"
+              src="https://images.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/players/673649b32eb080000b6d8a8c/thumbnail.jpg"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                display: "block",
+                borderRadius: "25px",
+              }}
+              alt="thumbnail"
+            />
+            <div
+              id="backdrop_673649b32eb080000b6d8a8c"
+              style={{
+                WebkitBackdropFilter: "blur(5px)",
+                backdropFilter: "blur(5px)",
+                position: "absolute",
+                top: 0,
+                height: "100%",
+                width: "100%",
+                borderRadius: "25px",
+              }}
+            />
+          </div>
         </div>
-        <p className="text-center text-sm">
+        <p className="text-center text-sm pt-4">
           IMPORTANT UPDATE: PRESS PLAY and make sure your sound is ON. May take
           up to 10 seconds to load...
         </p>
