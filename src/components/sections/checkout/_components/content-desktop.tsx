@@ -115,7 +115,7 @@ export default function CheckoutDesktop() {
   }
 
   return (
-    <Card className="w-full max-w-3xl mx-auto hidden lg:block">
+    <Card className="w-full max-w-3xl mx-auto hidden lg:block shadow-[0_0_15px_5px_rgba(0,0,0,0.2)]">
       <CardHeader className="text-center">
         <CardTitle className="text-3xl font-bold">
           Claim Your{" "}
