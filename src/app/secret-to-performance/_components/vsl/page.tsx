@@ -1,14 +1,16 @@
 "use client";
 
 import { useBottles } from "@/hooks/bottles";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./video-style.css";
 
 export function VslSection() {
   const { turnOff } = useBottles();
-
+  const [ windowWidth, setWindowWidth ] = useState(0);
+  
   useEffect(() => {
     turnOff();
+    setWindowWidth(window.innerWidth)
     const script = document.createElement("script");
     script.src =
       "https://scripts.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/players/673649b32eb080000b6d8a8c/player.js";
@@ -69,7 +71,7 @@ export function VslSection() {
               position: "relative",
               width: "100%",
               height: "100%",
-              border: window.innerWidth < 1000 ? "1px solid yellow" : "",
+              border: windowWidth < 1000 ? "1px solid yellow" : "",
               padding: "133.33333333333331% 0 0",
               borderRadius: "25px",
             }}
@@ -125,3 +127,4 @@ export function VslSection() {
     </div>
   );
 }
+
