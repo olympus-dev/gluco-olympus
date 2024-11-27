@@ -34,13 +34,11 @@ export default function VslPage() {
         <link rel="dns-prefetch" href="https://api.vturb.com.br" />
       </Head>
       <main
-        className="py-12 bg-repeat-round bg-fixed
+        className="pt-12 bg-repeat-round bg-fixed
       lg:bg-contain"
         style={{ backgroundImage: 'url("bg.png")' }}
       >
-        <Container className="text-white">
-          <VslSection />
-        </Container>
+        <VslSection />
       </main>
       {/* Footer */}
       <div className="bg-gradient-to-b from-[#020817] to-[#03001E] text-white pt-8">
