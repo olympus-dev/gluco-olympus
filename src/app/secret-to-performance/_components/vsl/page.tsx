@@ -4,7 +4,7 @@ import { useBottles } from "@/hooks/bottles";
 import { useEffect, useRef, useState } from "react";
 import "./video-style.css";
 import { Container } from "@/components/container";
-import Dtc from "@/app/dtc/page";
+import Dtc from "@/components/sections/dtc";
 
 export function VslSection() {
   const { turnOff, turnOn } = useBottles();
