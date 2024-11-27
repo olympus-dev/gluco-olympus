@@ -1,21 +1,75 @@
 "use client";
 
 import { useBottles } from "@/hooks/bottles";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./video-style.css";
 
 export function VslSection() {
-  const { turnOff } = useBottles();
-  const [ windowWidth, setWindowWidth ] = useState(0);
-  
+  const { turnOff, turnOn } = useBottles();
+  const [windowWidth, setWindowWidth] = useState(0);
+  const [showContent, setShowContent] = useState(false);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  function insertVideoTimer() {
+    console.log(videoRef.current);
+    console.log(showContent);
+    if (!videoRef.current) {
+      console.error("Video Not Found!");
+      return;
+    }
+
+    const handleTimeUpdate = () => {
+      const targetTime = 1591; // 26 minutos e 31 segundos
+
+      if (Math.floor(videoRef.current!.currentTime) >= targetTime) {
+        turnOn();
+        setShowContent(true);
+        // Remove o evento para evitar chamadas repetidas
+        videoRef.current!.removeEventListener("timeupdate", handleTimeUpdate);
+      }
+    };
+
+    videoRef.current.addEventListener("timeupdate", handleTimeUpdate);
+
+    return () => {
+      // Limpa o evento ao desmontar o componente
+      videoRef.current?.removeEventListener("timeupdate", handleTimeUpdate);
+    };
+  }
+
+  function insertVideo() {
+    return new Promise<void>((resolve) => {
+      const script = document.createElement("script");
+      script.src =
+        "https://scripts.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/players/673649b32eb080000b6d8a8c/player.js";
+      script.async = true;
+
+      script.onload = () => {
+        const waitForVideoElement = setInterval(() => {
+          const videoElement = document.getElementsByTagName("video")[0];
+          if (videoElement) {
+            videoRef.current = videoElement;
+            insertVideoTimer();
+            clearInterval(waitForVideoElement); // Para a observação
+            resolve();
+          }
+        }, 100); // Verifique a cada 100ms
+      };
+
+      script.onerror = () => {
+        console.error("Erro ao carregar o script.");
+        resolve(); // Resolva mesmo em caso de erro para não travar
+      };
+
+      document.head.appendChild(script);
+    });
+  }
+
   useEffect(() => {
     turnOff();
-    setWindowWidth(window.innerWidth)
-    const script = document.createElement("script");
-    script.src =
-      "https://scripts.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/players/673649b32eb080000b6d8a8c/player.js";
-    script.async = true;
-    document.head.appendChild(script);
+    setWindowWidth(window.innerWidth);
+
+    insertVideo();
   }, []);
 
   return (
@@ -127,4 +181,3 @@ export function VslSection() {
     </div>
   );
 }
-
