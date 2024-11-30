@@ -28,7 +28,10 @@ export default function Home() {
           <HeroSection />
         </Container>
 
-        <div className="bg-background top-0 bottom-0 left-0 right-0" id="formula">
+        <div
+          className="bg-background top-0 bottom-0 left-0 right-0"
+          id="formula"
+        >
           <Container className="py-8">
             <FormulaSection />
           </Container>
@@ -45,12 +48,9 @@ export default function Home() {
           <ComparationSection />
         </Container>
 
-        <Container
-          className="text-white pb-12 overflow-hidden
-      lg:py-8"
-        >
+        <div className="text-white pb-8">
           <SocialProofSection />
-        </Container>
+        </div>
 
         <div className="bg-background pb-10" id="checkout">
           <Container className="py-8">
@@ -63,7 +63,7 @@ export default function Home() {
           className="text-white pb-12
       lg:py-8"
         >
-          <Guarantee />
+          <Guarantee isLandingPage />
         </Container>
 
         <div className="bg-background pb-4" id="faq">
