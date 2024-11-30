@@ -55,26 +55,27 @@ export default function Dtc({ withFooter = true }: IDtcProps) {
           </Container>
         </div>
 
-        <Container
+        <div
           className="text-white pt-12 pb-8 overflow-hidden
       lg:py-8 lg:pt-10"
         >
           <SocialProofSection />
-        </Container>
+        </div>
 
-        <div
+        {/* <div
           className="w-full flex justify-center pb-8
         lg:pt-4 lg:pb-8"
         >
           <OrderButton />
-        </div>
+        </div> */}
 
-        <Container
-          className="text-white py-12
-      lg:pt-24 lg:pb-16"
-        >
+        <Container className="text-white py-8">
           <Guarantee />
         </Container>
+
+        <div className="w-full flex justify-center pb-12">
+            <OrderButton />
+        </div>
 
         <div className="bg-background pb-4" id="faq">
           <Container className="py-8">
