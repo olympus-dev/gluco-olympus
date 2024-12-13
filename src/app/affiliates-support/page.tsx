@@ -8,7 +8,7 @@ import { AffiliatesNotes } from "./_sections/aff-note";
 export default function AffiliatesPage() {
   return (
     <>
-      <Header />
+      <Header showElements={false} />
       <div id="portal"></div>
       <main
         className="pt-16 bg-repeat-round bg-fixed

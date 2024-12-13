@@ -4,7 +4,11 @@ import { useState } from "react";
 import { Menu } from "./_components/menu";
 import Image from "next/image";
 
-export function Header() {
+interface IHeaderTempProps {
+  showElements?: boolean;
+}
+
+export function Header({ showElements = true }: IHeaderTempProps) {
   const [open, setIsOpen] = useState(false);
 
   return (
@@ -27,15 +31,19 @@ export function Header() {
         className="hidden 
       gap-4 text-lg  md:flex"
       >
-        <a href="#formula" className="hover:text-gray-400 cursor-pointer">
-          Formula
-        </a>
-        <a href="#benefits" className="hover:text-gray-400 cursor-pointer">
-          Benefits
-        </a>
-        <a href="#faq" className="hover:text-gray-400 cursor-pointer">
-          FAQ
-        </a>
+        {showElements && (
+          <>
+            <a href="#formula" className="hover:text-gray-400 cursor-pointer">
+              Formula
+            </a>
+            <a href="#benefits" className="hover:text-gray-400 cursor-pointer">
+              Benefits
+            </a>
+            <a href="#faq" className="hover:text-gray-400 cursor-pointer">
+              FAQ
+            </a>
+          </>
+        )}
       </nav>
     </header>
   );
