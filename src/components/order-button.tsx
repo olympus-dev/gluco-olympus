@@ -5,13 +5,15 @@ import { useState } from "react";
 
 interface OrderButtonProps {
   className?: string;
+  text?: string;
+  onClick?: () => void;
 }
 
-export function OrderButton({ className }: OrderButtonProps) {
+export function OrderButton({ className, text = "Order now", onClick }: OrderButtonProps) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className={"relative inline-block font-sans w-fit " + className}>
+    <div className={"relative inline-block font-sans w-fit " + className} onClick={onClick}>
       <a
         href="#checkout"
         className={`
@@ -35,7 +37,7 @@ export function OrderButton({ className }: OrderButtonProps) {
         aria-label="Order now"
       >
         <span className="absolute right-0 w-12 h-44 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
-        <span className="relative">Order now</span>
+        <span className="relative">{text}</span>
         <ArrowRight className="relative ml-2 w-5 h-5 transition-transform duration-300 ease-out group-hover:translate-x-1" />
       </a>
       <span
