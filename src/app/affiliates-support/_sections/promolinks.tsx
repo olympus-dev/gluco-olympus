@@ -20,15 +20,15 @@ export function Promolinks() {
   };
 
   function handleGenerate() {
-    if ( campaignId.length > 0 && affiliateId.length > 0 && boxChecked ) {
+    if ( affiliateId.length > 0 && boxChecked ) {
       setLinksVisible(true)
     }
   }
   
   return (
     <div className="flex flex-col items-center gap-2">
-      <h1 className="text-brand text-xl">Get your promolinks here</h1>
-      <h2 className="text-[#212121] font-bold text-2xl">
+      <h1 className="text-brand text-xl text-center">Get your promolinks here</h1>
+      <h2 className="text-[#212121] font-bold text-2xl text-center">
         GET YOUR PROMO LINKS HERE
       </h2>
       <div className="w-36 h-1 bg-brandDark mt-1" />
@@ -90,7 +90,7 @@ export function Promolinks() {
           <div>
             <div className="bg-[#06142B] w-full p-8 rounded-lg text-white flex flex-col gap-6">
               <Input
-                placeholder="Your Afilliate ID"
+                placeholder="Your Afilliate ID*"
                 onChange={(e) => setAffiliateId(e.target.value)}
               />
               <Input
@@ -122,19 +122,19 @@ export function Promolinks() {
                   <Input
                     placeholder="VSL Page ID"
                     readOnly
-                    value={`https://endoterec.com/ds24/reveal/?aff=${affiliateId}&cam=${campaignId}`}
+                    value={`https://endoterec.com/ds24/reveal/?aff=${affiliateId.trim()}` + (campaignId.length > 0 ? `&cam=${campaignId.trim()}` : "")}
                   />
                   <p className="font-semibold">Your Landing Page</p>
                   <Input
                     placeholder="Landing Page ID"
                     readOnly
-                    value={`https://endoterec.com/ds24/lp-af/?aff=${affiliateId}&cam=${campaignId}`}
+                    value={`https://endoterec.com/ds24/lp-af/?aff=${affiliateId.trim()}` + (campaignId.length > 0 ? `&cam=${campaignId.trim()}` : "")}
                   />
                   <p className="font-semibold">Your DTC Page</p>
                   <Input
                     placeholder="DTC Page ID"
                     readOnly
-                    value={`https://endoterec.com/ds24/dtc-af/?aff=${affiliateId}&cam=${campaignId}`}
+                    value={`https://endoterec.com/ds24/dtc-af/?aff=${affiliateId.trim()}` + (campaignId.length > 0 ? `&cam=${campaignId.trim()}` : "")}
                   />
                 </>
               )}

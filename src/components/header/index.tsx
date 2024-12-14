@@ -18,13 +18,15 @@ export function Header({ showElements = true }: IHeaderTempProps) {
     >
       <h1 className="text-2xl cursor-default">ENDOTEREC</h1>
       <button onClick={() => setIsOpen(true)}>
-        <Image
-          src="menu.svg"
-          alt="menu"
-          className="w-7 hover:cursor-pointer md:hidden"
-          width={28}
-          height={28}
-        />
+        {showElements && (
+          <Image
+            src="menu.svg"
+            alt="menu"
+            className="w-7 hover:cursor-pointer md:hidden"
+            width={28}
+            height={28}
+          />
+        )}
       </button>
       <Menu open={open} onClose={() => setIsOpen(false)} />
       <nav
