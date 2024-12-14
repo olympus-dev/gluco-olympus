@@ -19,7 +19,7 @@ export function HeroSection() {
 
   return (
     <div
-      className="mt-8 flex flex-col pb-12 items-center 
+      className="mt-8 flex flex-col pb-12 items-center
     lg:grid lg:grid-cols-2 lg:pb-24 lg:pt-12"
     >
       <motion.div
@@ -31,14 +31,15 @@ export function HeroSection() {
         className="flex-col flex gap-8"
       >
         {/* Aqui fica o texto */}
-        <h2 className="text-2xl">
+        <h2 className="text-2xl text-center lg:text-left">
           <span className="font-">Endoterec</span> is the HIGHEST EPC offer on
           the Digistore 24 Marketplace
         </h2>
-        <h1 className="text-6xl">
+        <h1 className="text-4xl text-center lg:text-6xl lg:text-left">
           DISCOVER WHY BY SENDING JUST A{" "}
           <span
-            className="text-[#222222] relative z-10
+            className="text-[#222222] relative z-10 block w-fit mx-auto
+            lg:mx-0
           before:content-[' '] before:z-[-1] before:absolute before:bg-yellow-300 before:h-12 before:w-full before:top-1/2 before:-translate-y-1/2
           lg:before:h-16"
           >
@@ -52,7 +53,7 @@ export function HeroSection() {
         viewport={{ once: true }}
         variants={variants}
         transition={{ duration: 0.5 }}
-        className="relative flex flex-col items-center
+        className="relative flex flex-col items-center pt-12
       lg:self-end"
       >
         <Image

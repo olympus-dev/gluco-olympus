@@ -11,11 +11,11 @@ export default function AffiliatesPage() {
       <Header showElements={false} />
       <div id="portal"></div>
       <main
-        className="pt-16 bg-repeat-round bg-fixed
+        className="pt-16 bg-repeat-round bg-fixed overflow-hidden
       lg:bg-contain"
         style={{ backgroundImage: 'url("bg.png")' }}
       >
-        <Container className="drop-shadow-2xl text-white py-20">
+        <Container className="drop-shadow-2xl text-white py-10 lg:py-20">
           <HeroSection />
         </Container>
 
