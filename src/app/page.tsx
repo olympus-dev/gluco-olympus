@@ -95,7 +95,7 @@ export default function Home() {
         <div className="bg-background pb-10" id="checkout">
           <Container className="py-8">
             <CheckoutSection images={images} items={items} onePurchaseLinks={onePurchaseLinks} />
-            <CheckoutDesktop />
+            <CheckoutDesktop images={images} items={items} onePurchaseLinks={onePurchaseLinks} />
           </Container>
         </div>
 
@@ -115,7 +115,7 @@ export default function Home() {
         <div className="bg-background pb-10">
           <Container>
             <Image
-              src="science.png"
+              src="/science.png"
               alt="Scientific Reference"
               loading="lazy"
               width={886}

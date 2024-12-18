@@ -15,6 +15,7 @@ import { ShoppingCart, Package, Truck, Shield } from "lucide-react";
 import { Separator } from "@/components/Separator";
 import Image from "next/image";
 import { useBottles } from "@/hooks/bottles";
+import { ItemProps } from "./content-items";
 
 interface ButtonProps {
   quantity: number;
@@ -53,66 +54,15 @@ function ButtonCustom({ quantity, bestWhat, selected, htmlFor }: ButtonProps) {
   );
 }
 
-export default function CheckoutDesktop() {
+interface ICheckoutDesktopProps {
+  items: ItemProps[],
+  onePurchaseLinks: string[];
+  images: string[];
+}
+
+export default function CheckoutDesktop({ images, items, onePurchaseLinks }: ICheckoutDesktopProps) {
   const [selectedPackage, setSelectedPackage] = useState("6");
-  const [purchaseType, setPurchaseType] = useState("subscribe");
   const { remainingBottles } = useBottles();
-
-  const images: string[] = ["3-bottles.png", "6-bottles.png", "1-bottle.png"];
-  const subscribeLinks: string[] = [
-    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-  ];
-  const onePurchaseLinks: string[] = [
-    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-  ];
-
-  interface ItemProps {
-    price: number;
-    total: number;
-    discount: number;
-    supply: number;
-    subscribeBottle: number;
-    subscribeTotal: number;
-  }
-
-  const prices: ItemProps[] = [
-    {
-      price: 59,
-      total: 177,
-      discount: 447,
-      supply: 90,
-      subscribeBottle: 54.28,
-      subscribeTotal: 162.84,
-    },
-    {
-      price: 49,
-      total: 294,
-      discount: 894,
-      supply: 180,
-      subscribeBottle: 44.1,
-      subscribeTotal: 264.6,
-    },
-    {
-      price: 89,
-      total: 89,
-      discount: 149,
-      supply: 30,
-      subscribeBottle: 84.55,
-      subscribeTotal: 84.55,
-    },
-  ];
-
-  interface ItemProps {
-    price: number;
-    total: number;
-    discount: number;
-    subscribeBottle: number;
-    subscribeTotal: number;
-  }
 
   return (
     <Card className="w-full max-w-3xl mx-auto hidden lg:block shadow-[0_0_15px_5px_rgba(0,0,0,0.2)]">
@@ -126,14 +76,13 @@ export default function CheckoutDesktop() {
       <CardContent>
         <div className="flex flex-col md:flex-row items-center gap-8">
           <div className="w-full md:w-1/2">
-            <img
-              src={
+            <Image
+              src={`/${
                 selectedPackage === "6"
                   ? images[1]
                   : selectedPackage === "3"
                   ? images[0]
-                  : images[2]
-              }
+                  : images[2]}`}
               alt="Endoterec Bottles"
               width={400}
               height={400}
@@ -142,31 +91,6 @@ export default function CheckoutDesktop() {
             />
           </div>
           <div className="w-full md:w-1/2 space-y-6">
-            <div className="flex gap-4">
-              <Button
-                variant={purchaseType === "subscribe" ? "default" : "outline"}
-                className={`flex-1 flex-col py-8 gap-0 font-bold ${
-                  purchaseType === "subscribe"
-                    ? "bg-brand hover:bg-brandDark"
-                    : "bg-gray-400 text-gray-700"
-                }`}
-                onClick={() => setPurchaseType("subscribe")}
-              >
-                Subscribe
-                <p className="text-xs">Save More 10% Today!</p>
-              </Button>
-              <Button
-                variant={purchaseType === "onetime" ? "default" : "outline"}
-                className={`flex-1 py-8 font-bold ${
-                  purchaseType === "subscribe"
-                    ? "bg-gray-400 text-gray-700"
-                    : "bg-brand hover:bg-brandDark"
-                }`}
-                onClick={() => setPurchaseType("onetime")}
-              >
-                One-time purchase
-              </Button>
-            </div>
             <RadioGroup
               value={selectedPackage}
               onValueChange={setSelectedPackage}
@@ -176,7 +100,7 @@ export default function CheckoutDesktop() {
                 <RadioGroupItem value="3" id="3-bottles" className="sr-only" />
                 <ButtonCustom
                   key={0}
-                  quantity={3}
+                  quantity={items[0].quantity}
                   bestWhat={"Most Popular"}
                   selected={selectedPackage === "3"}
                   htmlFor="3-bottles"
@@ -186,7 +110,7 @@ export default function CheckoutDesktop() {
                 <RadioGroupItem value="6" id="6-bottles" className="sr-only" />
                 <ButtonCustom
                   key={1}
-                  quantity={6}
+                  quantity={items[1].quantity}
                   bestWhat={"Best Value"}
                   selected={selectedPackage === "6"}
                   htmlFor="6-bottles"
@@ -196,7 +120,7 @@ export default function CheckoutDesktop() {
                 <RadioGroupItem value="1" id="1-bottle" className="sr-only" />
                 <ButtonCustom
                   key={2}
-                  quantity={1}
+                  quantity={items[2].quantity}
                   selected={selectedPackage === "1"}
                   htmlFor="1-bottle"
                 />
@@ -205,10 +129,10 @@ export default function CheckoutDesktop() {
             <div className="flex flex-row-reverse justify-between items-center relative">
               <span className="text-2xl font-semibold text-center">
                 {selectedPackage === "6"
-                  ? prices[1].supply
+                  ? items[1].daysSupply
                   : selectedPackage === "3"
-                  ? prices[0].supply
-                  : prices[2].supply}
+                  ? items[0].daysSupply
+                  : items[2].daysSupply}
                 <br />
                 Day Supply
               </span>
@@ -216,17 +140,11 @@ export default function CheckoutDesktop() {
               <div className="text-center">
                 <span className="text-3xl font-bold text-blue-600">
                   $
-                  {purchaseType === "subscribe"
-                    ? selectedPackage === "6"
-                      ? prices[1].subscribeBottle
-                      : selectedPackage === "3"
-                      ? prices[0].subscribeBottle
-                      : prices[2].subscribeBottle
-                    : selectedPackage === "6"
-                    ? prices[1].price
+                  {selectedPackage === "6"
+                    ? items[1].price
                     : selectedPackage === "3"
-                    ? prices[0].price
-                    : prices[2].price}
+                    ? items[0].price
+                    : items[2].price}
                 </span>
                 <span className="text-lg">/Bottle</span>
                 <p className="text-sm font-semibold text-green-500">
@@ -234,35 +152,18 @@ export default function CheckoutDesktop() {
                   <span className="line-through text-red-400">
                     $
                     {selectedPackage === "6"
-                      ? prices[1].discount
+                      ? items[1].discount
                       : selectedPackage === "3"
-                      ? prices[0].discount
-                      : prices[2].discount}
+                      ? items[0].discount
+                      : items[2].discount}
                   </span>{" "}
                   $
-                  {purchaseType === "subscribe"
-                    ? selectedPackage === "6"
-                      ? prices[1].subscribeTotal
-                      : selectedPackage === "3"
-                      ? prices[0].subscribeTotal
-                      : prices[2].subscribeTotal
-                    : selectedPackage === "6"
-                    ? prices[1].total
+                  {selectedPackage === "6"
+                    ? items[1].total
                     : selectedPackage === "3"
-                    ? prices[0].total
-                    : prices[2].total}
+                    ? items[0].total
+                    : items[2].total}
                 </p>
-                {purchaseType === "subscribe" && (
-                  <p className="text-sm text-center text-gray-600">
-                    Ships every
-                    {selectedPackage === "3"
-                      ? " 3"
-                      : selectedPackage === "6"
-                      ? " 6"
-                      : ""}{" "}
-                    months
-                  </p>
-                )}
               </div>
             </div>
           </div>
@@ -293,14 +194,7 @@ export default function CheckoutDesktop() {
           asChild
         >
           <a
-            href={
-              purchaseType === "subscribe"
-                ? selectedPackage === "6"
-                  ? subscribeLinks[1]
-                  : selectedPackage === "3"
-                  ? subscribeLinks[1]
-                  : subscribeLinks[0]
-                : selectedPackage === "6"
+            href={selectedPackage === "6"
                 ? onePurchaseLinks[1]
                 : selectedPackage === "3"
                 ? onePurchaseLinks[1]
