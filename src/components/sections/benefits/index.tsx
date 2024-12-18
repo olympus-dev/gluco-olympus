@@ -9,9 +9,9 @@ export function BenefitsSection() {
         <br /> works?
       </Subtitle>
       <p className="font-medium text-center py-8">
-        Endoterec is a
-        <span className="font-bold">powerful natural supplement</span>
-        formulated with
+        Endoterec is a{" "}
+        <span className="font-bold">powerful natural supplement{" "}</span>
+        formulated with{" "}
         <span className="font-bold">
           high-quality ingredients that target the root causes of low potency
           and decreased sexual desire
