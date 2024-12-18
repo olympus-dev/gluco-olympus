@@ -26,7 +26,7 @@ export default function Upsell() {
   const [showContent, setShowContent] = useState(false);
   const [vslVideo, setVslVideo] = useState<IVideoProps>({} as IVideoProps);
   const videoRef = useRef<HTMLVideoElement | null>(null);
-  const urlPath = window.location.pathname;
+  const [urlPath, setUrlPath] = useState("");
 
   const images: string[] = ["6-bottles.png", "9-bottles.png", "3-bottles.png"];
   const onePurchaseLinks: string[] = [
@@ -137,6 +137,7 @@ export default function Upsell() {
   }
 
   useEffect(() => {
+    setUrlPath(window.location.pathname);
     turnOff();
 
     setVideo();
