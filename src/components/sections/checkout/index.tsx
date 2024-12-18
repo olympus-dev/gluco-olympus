@@ -2,13 +2,24 @@
 
 import { Separator } from "@/components/Separator";
 import { Subtitle } from "@/components/subtitle";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@radix-ui/react-tabs";
+import { Tabs } from "@radix-ui/react-tabs";
 import React from "react";
-import { ContentItems } from "./_components/content-items";
+import { ContentItems, ContentItemsProps } from "./_components/content-items";
 
-export default function CheckoutSection() {
+type ICheckoutSectionProps = {
+  items: ContentItemsProps["items"];
+  onePurchaseLinks: ContentItemsProps["onePurchaseLinks"];
+  images: ContentItemsProps["images"];
+  isAlternative?: boolean;
+}
+
+export default function CheckoutSection({ isAlternative = false, images, items, onePurchaseLinks }: ICheckoutSectionProps) {
   const [subscribeMode, setSubscribeMode] = React.useState(true);
 
+  const currentDate = new Date();
+  const day = currentDate.getDate();
+  const month = currentDate.toLocaleString('en-US', { month: 'long' });
+  const offerEndsMessage = `Offer ends on ${day} of ${month}`;
   const handleSubscribeMode = () => {
     setSubscribeMode(!subscribeMode);
   };
@@ -20,7 +31,7 @@ export default function CheckoutSection() {
         <br />
         <span className="text-brand">Discounted Endoterec©</span>
         <br />
-        Below While Stocks Last!
+        { isAlternative ? offerEndsMessage : "Below While Stocks Last!" }
         <Separator className="h-[2.5px] w-44 mx-auto mt-2 bg-brand" />
       </Subtitle>
       <Tabs
@@ -28,36 +39,7 @@ export default function CheckoutSection() {
         className="w-full"
         onValueChange={handleSubscribeMode}
       >
-        <TabsList className="flex justify-center gap-4">
-          <TabsTrigger
-            value="account"
-            className={
-              subscribeMode
-                ? "relative bg-brand text-white font-bold p-4 w-full rounded-lg"
-                : "relative bg-gray-400 text-gray-700 font-bold p-4 w-full rounded-lg"
-            }
-          >
-            SUBSCRIBE
-            <p className="text-xs">Save More 10% Today!</p>
-          </TabsTrigger>
-          <TabsTrigger
-            value="password"
-            className={
-              subscribeMode
-                ? "bg-gray-400 text-gray-700 font-bold p-4 w-full rounded-lg"
-                : "bg-brand text-white font-bold p-4 w-full rounded-lg"
-            }
-          >
-            One-time <br />
-            purchase
-          </TabsTrigger>
-        </TabsList>
-        <TabsContent value="account">
-          <ContentItems subscribeMode={true} />
-        </TabsContent>
-        <TabsContent value="password">
-          <ContentItems subscribeMode={false} />
-        </TabsContent>
+          <ContentItems images={images} items={items} onePurchaseLinks={onePurchaseLinks} />
       </Tabs>
     </section>
   );

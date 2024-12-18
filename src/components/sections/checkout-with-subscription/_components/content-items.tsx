@@ -3,7 +3,6 @@
 import { Subtitle } from "@/components/subtitle";
 import { useBottles } from "@/hooks/bottles";
 import { Package, Shield, ShoppingCart, Truck } from "lucide-react";
-import Image from "next/image";
 import { useState } from "react";
 
 interface ButtonProps {
@@ -43,55 +42,99 @@ function Button({ quantity, bestWhat, selected, onClick }: ButtonProps) {
   );
 }
 
-export interface ItemProps {
-  price: number;
-  total: number;
-  discount: number;
-  subscribeBottle: number;
-  subscribeTotal: number;
-  quantity: number;
-  bestWhat?: string;
-  daysSupply: number;
+interface ContentItemsProps {
+  subscribeMode: boolean;
 }
 
-export interface ContentItemsProps {
-  items: ItemProps[];
-  onePurchaseLinks: string[];
-  images: string[];
-}
-
-export function ContentItems({ items, onePurchaseLinks, images }: ContentItemsProps) {
+export function ContentItems({ subscribeMode }: ContentItemsProps) {
   const { remainingBottles } = useBottles();
   const [itemSelected, setItemSelected] = useState(1);
+  const images: string[] = ["3-bottles.png", "6-bottles.png", "1-bottle.png"];
+  const subscribeLinks: string[] = [
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  ];
+  const onePurchaseLinks: string[] = [
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  ];
+
+  interface ItemProps {
+    price: number;
+    total: number;
+    discount: number;
+    subscribeBottle: number;
+    subscribeTotal: number;
+  }
+
+  const prices: ItemProps[] = [
+    {
+      price: 59,
+      total: 177,
+      discount: 447,
+      subscribeBottle: 54.28,
+      subscribeTotal: 162.84,
+    },
+    {
+      price: 49,
+      total: 294,
+      discount: 894,
+      subscribeBottle: 44.1,
+      subscribeTotal: 264.6,
+    },
+    {
+      price: 89,
+      total: 89,
+      discount: 149,
+      subscribeBottle: 84.55,
+      subscribeTotal: 84.55,
+    },
+  ];
 
   return (
     <div className="flex flex-col items-center">
-      <Image
-        src={`/${images[itemSelected]}`}
+      <img
+        src={images[itemSelected]}
         alt=""
         loading="lazy"
         width={296}
         height={296}
-        className="max-h-[296px] object-contain"
+        className="max-h-[296px] object-contain my-4"
       />
       <p className="font-semibold text-[#5F5F5F]">
-        · {itemSelected === 0 ? items[0].daysSupply : itemSelected === 1 ? items[1].daysSupply : items[2].daysSupply} Day Supply ·
+        · {itemSelected === 0 ? 90 : itemSelected === 1 ? 180 : 30} Day Supply ·
       </p>
       <p className="font-bold text-3xl text-brand">
         $
-        {items[itemSelected].price}
+        {subscribeMode
+          ? prices[itemSelected].subscribeBottle
+          : prices[itemSelected].price}
         <span className="text-base text-[#898B8B]">/Bottle</span>
       </p>
       <p>
         TOTAL:
-        <span className="line-through">${items[itemSelected].discount}</span>
+        <span className="line-through">${prices[itemSelected].discount}</span>
         <span className="font-bold text-positive">
           $
-          {items[itemSelected].total}
+          {subscribeMode
+            ? prices[itemSelected].subscribeTotal
+            : prices[itemSelected].total}
         </span>
       </p>
+      {subscribeMode && (
+        <p>
+          Ships every
+          {itemSelected === 0 ? " 3" : itemSelected === 1 ? " 6" : ""} months
+        </p>
+      )}
       <div className="flex gap-1 py-4">
-        {items.map((item, index) => (
+        {[
+          { quantity: 3, bestWhat: "Most Popular" },
+          { quantity: 6, bestWhat: "Best Value" },
+          { quantity: 1 },
+        ].map((item, index) => (
           <Button
             key={index}
             quantity={item.quantity}
@@ -122,7 +165,11 @@ export function ContentItems({ items, onePurchaseLinks, images }: ContentItemsPr
       </p>
       <a
         className="bg-yellow-300 rounded-lg text-black flex gap-2 py-4 px-7 mt-4 cursor-pointer hover:brightness-110 transition-all"
-        href={onePurchaseLinks[itemSelected]}
+        href={
+          subscribeMode
+            ? subscribeLinks[itemSelected]
+            : onePurchaseLinks[itemSelected]
+        }
         target="_blank"
       >
         <ShoppingCart />

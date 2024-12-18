@@ -7,28 +7,95 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import "../../app/secret-to-performance/_components/vsl/video-style.css"
+import "../../app/secret-to-performance/_components/vsl/video-style.css";
+import CheckoutSection from "@/components/sections/checkout";
+import CheckoutDesktop from "@/components/sections/checkout/_components/content-desktop";
+import { ItemProps } from "@/components/sections/checkout/_components/content-items";
 
-export default function Upsell1() {
-  const { turnOff } = useBottles();
+interface IVideoProps {
+  src: string;
+  backdrop: string;
+  id: string;
+  thumb: string;
+}
+
+export default function Upsell() {
+  const { turnOff, turnOn } = useBottles();
 
   const [windowWidth, setWindowWidth] = useState(0);
   const [showContent, setShowContent] = useState(false);
+  const [vslVideo, setVslVideo] = useState<IVideoProps>({} as IVideoProps);
   const videoRef = useRef<HTMLVideoElement | null>(null);
+  const urlPath = window.location.pathname;
+
+  const images: string[] = ["6-bottles.png", "9-bottles.png", "3-bottles.png"];
+  const onePurchaseLinks: string[] = [
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  ];
+  const items: ItemProps[] = [
+    {
+      price: 39,
+      total: 234,
+      discount: 354,
+      subscribeBottle: 54.28, // Sem uso
+      subscribeTotal: 162.84, // Sem uso
+      quantity: 6,
+      bestWhat: "Most Popular",
+      daysSupply: 180,
+    },
+    {
+      price: 29,
+      total: 261,
+      discount: 621,
+      subscribeBottle: 44.1, // Sem uso
+      subscribeTotal: 264.6, // Sem uso
+      quantity: 9,
+      bestWhat: "Best Value",
+      daysSupply: 270,
+    },
+    {
+      price: 59,
+      total: 177,
+      discount: 117,
+      subscribeBottle: 84.55, // Sem uso
+      subscribeTotal: 84.55, // Sem uso
+      quantity: 3,
+      daysSupply: 90,
+    },
+  ];
+
+  function setVideo() {
+    if (urlPath === "/exclusive-offer") {
+      setVslVideo({
+        backdrop: "backdrop_6751b5b6769b3c2a9e98d753",
+        id: "vid_6751b5b6769b3c2a9e98d753",
+        src: "https://scripts.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/players/6751b5b6769b3c2a9e98d753/player.js",
+        thumb: "thumb_6751b5b6769b3c2a9e98d753",
+      } as IVideoProps);
+    } else {
+      setVslVideo({
+        backdrop: "backdrop_6751bf5970ca8d7e4fa49e1d",
+        id: "vid_6751bf5970ca8d7e4fa49e1d",
+        src: "https://scripts.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/players/6751bf5970ca8d7e4fa49e1d/player.js",
+        thumb: "thumb_6751bf5970ca8d7e4fa49e1d",
+      } as IVideoProps);
+    }
+  }
 
   function insertVideoTimer() {
-    console.log(videoRef.current);
-    console.log(showContent);
     if (!videoRef.current) {
       console.error("Video Not Found!");
       return;
     }
 
     const handleTimeUpdate = () => {
-      const targetTime = 1591; // 26 minutos e 31 segundos
+      const targetTime = 264; // 26 minutos e 31 segundos
 
       if (Math.floor(videoRef.current!.currentTime) >= targetTime) {
         setShowContent(true);
+        turnOn();
         // Remove o evento para evitar chamadas repetidas
         videoRef.current!.removeEventListener("timeupdate", handleTimeUpdate);
       }
@@ -45,8 +112,7 @@ export default function Upsell1() {
   function insertVideo() {
     return new Promise<void>((resolve) => {
       const script = document.createElement("script");
-      script.src =
-        "https://scripts.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/players/6751b5b6769b3c2a9e98d753/player.js";
+      script.src = vslVideo.src;
       script.async = true;
 
       script.onload = () => {
@@ -73,14 +139,54 @@ export default function Upsell1() {
   useEffect(() => {
     turnOff();
 
+    setVideo();
     insertVideo();
     setWindowWidth(window.innerWidth);
-  }, []);
+  }, [vslVideo.id]);
 
   return (
     <>
       <Head>
         <title>Stock Up - Exclusive Offer</title>
+        <link
+          rel="preload"
+          href="https://scripts.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/players/6751b5b6769b3c2a9e98d753/player.js"
+          as="script"
+        />
+        <link
+          rel="preload"
+          href="https://scripts.converteai.net/lib/js/smartplayer/v1/smartplayer.min.js"
+          as="script"
+        />
+        <link
+          rel="preload"
+          href="https://images.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/players/6751b5b6769b3c2a9e98d753/thumbnail.jpg"
+          as="image"
+        />
+        <link
+          rel="preload"
+          href="https://cdn.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/6751b55f28e5bef581fadd9f/main.m3u8"
+          as="fetch"
+        />
+        <link
+          rel="preload"
+          href="https://scripts.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/players/6751bf5970ca8d7e4fa49e1d/player.js"
+          as="script"
+        />
+        <link
+          rel="preload"
+          href="https://images.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/players/6751bf5970ca8d7e4fa49e1d/thumbnail.jpg"
+          as="image"
+        />
+        <link
+          rel="preload"
+          href="https://cdn.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/6751bee13ed02d63e31b199e/main.m3u8"
+          as="fetch"
+        />
+        <link rel="dns-prefetch" href="https://cdn.converteai.net" />
+        <link rel="dns-prefetch" href="https://scripts.converteai.net" />
+        <link rel="dns-prefetch" href="https://images.converteai.net" />
+        <link rel="dns-prefetch" href="https://api.vturb.com.br" />
       </Head>
       <main
         className="pb-16 lg:py-16 bg-repeat-round bg-fixed overflow-hidden
@@ -129,22 +235,22 @@ export default function Upsell1() {
             <div
               id="video-section"
               className="flex flex-col gap-8 vsl-video max-w-[550px] mx-auto my-4
-          lg:border-2 lg:border-yellow-300 lg:rounded-[25px] lg:p-2"
+          lg:border-2 lg:border-brand lg:rounded-[25px] lg:p-2"
             >
               <div
-                id="vid_6751b5b6769b3c2a9e98d753"
+                id={vslVideo.id}
                 style={{
                   position: "relative",
                   width: "100%",
                   height: "100%",
-                  border: windowWidth < 1000 ? "1px solid yellow" : "",
+                  border: windowWidth < 1000 ? "2px solid #315AE0" : "",
                   padding: "133.33333333333331% 0 0",
                   borderRadius: "25px",
                 }}
                 className="rounded-full"
               >
                 <img
-                  id="thumb_6751b5b6769b3c2a9e98d753"
+                  id={vslVideo.thumb}
                   src="https://images.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/players/673649b32eb080000b6d8a8c/thumbnail.jpg"
                   style={{
                     position: "absolute",
@@ -159,7 +265,7 @@ export default function Upsell1() {
                   alt="thumbnail"
                 />
                 <div
-                  id="backdrop_6751b5b6769b3c2a9e98d753"
+                  id={vslVideo.backdrop}
                   style={{
                     WebkitBackdropFilter: "blur(5px)",
                     backdropFilter: "blur(5px)",
@@ -172,12 +278,35 @@ export default function Upsell1() {
                 />
               </div>
             </div>
-            <p className="text-center">
+            <p
+              className={`text-center pb-4 lg:max-w-[550px] lg:mx-auto lg:pb-8 ${
+                showContent ? "pt-4" : ""
+              }`}
+            >
               <b>If you are not satisfied with your purchase</b> for any reason,
-              contact us within sixty days at any time and <b>we will refund every
-              penny of your investment.</b> You don&lsquo;t even need to return the
-              bottles.{" "}
+              contact us within sixty days at any time and{" "}
+              <b>we will refund every penny of your investment.</b> <br />
+              You don&lsquo;t even need to return the bottles.{" "}
             </p>
+            {showContent && (
+              <>
+                <CheckoutSection
+                  images={images}
+                  items={items}
+                  onePurchaseLinks={onePurchaseLinks}
+                />
+                <CheckoutDesktop
+                  images={images}
+                  items={items}
+                  onePurchaseLinks={onePurchaseLinks}
+                />
+                <p className="font-bold max-w-[550px] mx-auto pt-4 text-center cursor-pointer underline">
+                  NO THANKS I understand that this is my only opportunity to get
+                  access to this special offer, and I’m okay with missing out.
+                  I’ll pass on this chance forever.
+                </p>
+              </>
+            )}
           </div>
         </Container>
         <Container>
