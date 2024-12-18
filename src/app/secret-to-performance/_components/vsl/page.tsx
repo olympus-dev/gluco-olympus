@@ -13,8 +13,6 @@ export function VslSection() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   function insertVideoTimer() {
-    console.log(videoRef.current);
-    console.log(showContent);
     if (!videoRef.current) {
       console.error("Video Not Found!");
       return;
