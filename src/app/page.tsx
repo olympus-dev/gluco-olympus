@@ -10,11 +10,51 @@ import {
 } from "@/components/sections";
 import CheckoutSection from "@/components/sections/checkout";
 import CheckoutDesktop from "@/components/sections/checkout/_components/content-desktop";
+import { ItemProps } from "@/components/sections/checkout/_components/content-items";
 import { FAQ } from "@/components/sections/faq";
 import Footer from "@/components/sections/footer";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
+  const images: string[] = ["3-bottles.png", "6-bottles.png", "1-bottle.png"];
+  const onePurchaseLinks: string[] = [
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  ];
+  const items: ItemProps[] = [
+    {
+      price: 59,
+      total: 177,
+      discount: 447,
+      subscribeBottle: 54.28,
+      subscribeTotal: 162.84,
+      quantity: 3,
+      bestWhat: "Most Popular",
+      daysSupply: 90
+    },
+    {
+      price: 49,
+      total: 294,
+      discount: 894,
+      subscribeBottle: 44.1,
+      subscribeTotal: 264.6,
+      quantity: 6,
+      bestWhat: "Best Value",
+      daysSupply: 180
+    },
+    {
+      price: 89,
+      total: 89,
+      discount: 149,
+      subscribeBottle: 84.55,
+      subscribeTotal: 84.55,
+      quantity: 1,
+      daysSupply: 30
+    },
+  ];
+  
   return (
     <>
       <Header />
@@ -54,7 +94,7 @@ export default function Home() {
 
         <div className="bg-background pb-10" id="checkout">
           <Container className="py-8">
-            <CheckoutSection />
+            <CheckoutSection images={images} items={items} onePurchaseLinks={onePurchaseLinks} />
             <CheckoutDesktop />
           </Container>
         </div>
@@ -74,7 +114,7 @@ export default function Home() {
 
         <div className="bg-background pb-10">
           <Container>
-            <img
+            <Image
               src="science.png"
               alt="Scientific Reference"
               loading="lazy"

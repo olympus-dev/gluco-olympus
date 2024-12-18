@@ -10,6 +10,7 @@ import { useEffect, useRef, useState } from "react";
 import "../../app/secret-to-performance/_components/vsl/video-style.css";
 import CheckoutSection from "@/components/sections/checkout";
 import CheckoutDesktop from "@/components/sections/checkout/_components/content-desktop";
+import { ItemProps } from "@/components/sections/checkout/_components/content-items";
 
 interface IVideoProps {
   src: string;
@@ -26,6 +27,44 @@ export default function Upsell() {
   const [vslVideo, setVslVideo] = useState<IVideoProps>({} as IVideoProps);
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const urlPath = window.location.pathname;
+
+    const images: string[] = ["6-bottles.png", "9-bottles.png", "3-bottles.png"];
+    const onePurchaseLinks: string[] = [
+      "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    ];
+    const items: ItemProps[] = [
+      {
+        price: 39,
+        total: 234,
+        discount: 354,
+        subscribeBottle: 54.28, // Sem uso
+        subscribeTotal: 162.84, // Sem uso
+        quantity: 6,
+        bestWhat: "Most Popular",
+        daysSupply: 180
+      },
+      {
+        price: 29,
+        total: 261,
+        discount: 621,
+        subscribeBottle: 44.1, // Sem uso
+        subscribeTotal: 264.6, // Sem uso
+        quantity: 9,
+        bestWhat: "Best Value",
+        daysSupply: 270
+      },
+      {
+        price: 59,
+        total: 177,
+        discount: 117,
+        subscribeBottle: 84.55, // Sem uso
+        subscribeTotal: 84.55, // Sem uso
+        quantity: 3,
+        daysSupply: 90
+      },
+    ];
 
   function setVideo() {
     if (urlPath === "/exclusive-offer") {
@@ -168,7 +207,7 @@ export default function Upsell() {
             <div
               id="video-section"
               className="flex flex-col gap-8 vsl-video max-w-[550px] mx-auto my-4
-          lg:border-2 lg:border-yellow-300 lg:rounded-[25px] lg:p-2"
+          lg:border-2 lg:border-brand lg:rounded-[25px] lg:p-2"
             >
               <div
                 id={vslVideo.id}
@@ -176,7 +215,7 @@ export default function Upsell() {
                   position: "relative",
                   width: "100%",
                   height: "100%",
-                  border: windowWidth < 1000 ? "1px solid yellow" : "",
+                  border: windowWidth < 1000 ? "2px solid #315AE0" : "",
                   padding: "133.33333333333331% 0 0",
                   borderRadius: "25px",
                 }}
@@ -213,7 +252,7 @@ export default function Upsell() {
             </div>
             {showContent && (
               <>
-                <CheckoutSection />
+                <CheckoutSection images={images} items={items} onePurchaseLinks={onePurchaseLinks} />
                 <CheckoutDesktop />
               </>
             )}

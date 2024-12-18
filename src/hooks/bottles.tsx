@@ -53,8 +53,6 @@ function generateRandomSale(): string {
   const sale = [
     "purchased 3 bottles of Endoterec!",
     "purchased 6 bottles of Endoterec!",
-    "subscribed to the 3-bottle plan!",
-    "subscribed to the 6-bottle plan!",
   ];
 
   return sale[Math.floor(Math.random() * 2)];
