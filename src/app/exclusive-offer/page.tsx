@@ -28,41 +28,46 @@ export default function Upsell() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [urlPath, setUrlPath] = useState("");
 
-  const images: string[] = ["6-bottles.png", "9-bottles.png", "3-bottles.png"];
+  const images: string[] =
+    urlPath === "/exclusive-offer"
+      ? ["6-bottles.png", "9-bottles.png", "3-bottles.png"]
+      : ["3-botlles-up.png", "6-botlles-up.png", "1-botlle-up.png"];
+  
   const onePurchaseLinks: string[] = [
     "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   ];
+  
   const items: ItemProps[] = [
     {
       price: 39,
-      total: 234,
-      discount: 354,
+      total: urlPath === "/exclusive-offer" ? 234 : 117,
+      discount: urlPath === "/exclusive-offer" ? 354 : 597,
       subscribeBottle: 54.28, // Sem uso
       subscribeTotal: 162.84, // Sem uso
-      quantity: 6,
+      quantity: urlPath === "/exclusive-offer" ? 6 : 3,
       bestWhat: "Most Popular",
-      daysSupply: 180,
+      daysSupply: urlPath === "/exclusive-offer" ? 180 : 90,
     },
     {
-      price: 29,
-      total: 261,
-      discount: 621,
+      price: urlPath === "/exclusive-offer" ? 29 : 27,
+      total: urlPath === "/exclusive-offer" ? 261 : 162,
+      discount: urlPath === "/exclusive-offer" ? 621 : 1194,
       subscribeBottle: 44.1, // Sem uso
       subscribeTotal: 264.6, // Sem uso
-      quantity: 9,
+      quantity: urlPath === "/exclusive-offer" ? 9 : 6,
       bestWhat: "Best Value",
-      daysSupply: 270,
+      daysSupply: urlPath === "/exclusive-offer" ? 270 : 180,
     },
     {
       price: 59,
-      total: 177,
-      discount: 117,
+      total: urlPath === "/exclusive-offer" ? 177 : 59,
+      discount: urlPath === "/exclusive-offer" ? 117 : 199,
       subscribeBottle: 84.55, // Sem uso
       subscribeTotal: 84.55, // Sem uso
-      quantity: 3,
-      daysSupply: 90,
+      quantity: urlPath === "/exclusive-offer" ? 3 : 1,
+      daysSupply: urlPath === "/exclusive-offer" ? 90 : 30,
     },
   ];
 
@@ -192,7 +197,12 @@ export default function Upsell() {
       <main
         className="pb-16 lg:py-16 bg-repeat-round bg-fixed overflow-hidden
         lg:bg-contain"
-        style={{ backgroundImage: 'url("bg.png")' }}
+        style={{
+          backgroundImage:
+            urlPath !== "/exclusive-offer"
+              ? 'url("bg-red.jpg")'
+              : 'url("bg.png")',
+        }}
       >
         <Container className="bg-background rounded-lg px-2">
           <div className="py-8 lg:p-8">
@@ -226,7 +236,11 @@ export default function Upsell() {
                 </p>
               </li>
             </ul>
-            <h1 className="text-brand text-center mt-8 text-2xl lg:text-4xl">
+            <h1
+              className={`text-center mt-8 text-2xl lg:text-4xl ${
+                urlPath === "/exclusive-offer" ? "text-brand" : "text-red-600"
+              }`}
+            >
               Your Order Is Not Complete Yet
             </h1>
             <h1 className="mt-2 text-center text-xl lg:text-4xl">
@@ -235,8 +249,11 @@ export default function Upsell() {
             {/* VIdeo */}
             <div
               id="video-section"
-              className="flex flex-col gap-8 vsl-video max-w-[550px] mx-auto my-4
-          lg:border-2 lg:border-brand lg:rounded-[25px] lg:p-2"
+              className={`flex flex-col gap-8 vsl-video max-w-[550px] mx-auto my-4 lg:border-2 lg:rounded-[25px] lg:p-2 ${
+                urlPath === "/exclusive-offer"
+                  ? "lg:border-brand"
+                  : "lg:border-red-600"
+              }`}
             >
               <div
                 id={vslVideo.id}
@@ -244,7 +261,12 @@ export default function Upsell() {
                   position: "relative",
                   width: "100%",
                   height: "100%",
-                  border: windowWidth < 1000 ? "2px solid #315AE0" : "",
+                  border:
+                    windowWidth < 1000
+                      ? `2px solid ${
+                          urlPath === "/exclusive-offer" ? "#315AE0" : "#dc2626"
+                        }`
+                      : "",
                   padding: "133.33333333333331% 0 0",
                   borderRadius: "25px",
                 }}
@@ -295,11 +317,17 @@ export default function Upsell() {
                   images={images}
                   items={items}
                   onePurchaseLinks={onePurchaseLinks}
+                  isPrimeBoostUpsell={
+                    urlPath !== "/exclusive-offer" ? true : false
+                  }
                 />
                 <CheckoutDesktop
                   images={images}
                   items={items}
                   onePurchaseLinks={onePurchaseLinks}
+                  isPrimeBoostUpsell={
+                    urlPath !== "/exclusive-offer" ? true : false
+                  }
                 />
                 <p className="font-bold max-w-[550px] mx-auto pt-4 text-center cursor-pointer underline">
                   NO THANKS I understand that this is my only opportunity to get
@@ -338,7 +366,13 @@ export default function Upsell() {
               Contact
             </Link>
           </div>
-          <div className="hidden text-gray-400 text-center text-xs flex-col gap-8 mt-8 lg:flex">
+          <div
+            className={`hidden text-center text-xs flex-col gap-8 mt-8 lg:flex ${
+              urlPath === "/exclusive-offer"
+                ? "text-gray-400"
+                : "text-gray-100 font-semibold"
+            }`}
+          >
             <p>
               All statements and results presented on this website are for
               informational purposes only. They are not specific medical advice

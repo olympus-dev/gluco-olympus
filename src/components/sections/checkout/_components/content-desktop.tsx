@@ -58,9 +58,10 @@ interface ICheckoutDesktopProps {
   items: ItemProps[],
   onePurchaseLinks: string[];
   images: string[];
+  isPrimeBoostUpsell?: boolean;
 }
 
-export default function CheckoutDesktop({ images, items, onePurchaseLinks }: ICheckoutDesktopProps) {
+export default function CheckoutDesktop({ images, items, onePurchaseLinks, isPrimeBoostUpsell = false }: ICheckoutDesktopProps) {
   const [selectedPackage, setSelectedPackage] = useState("6");
   const { remainingBottles } = useBottles();
 
@@ -69,7 +70,7 @@ export default function CheckoutDesktop({ images, items, onePurchaseLinks }: ICh
       <CardHeader className="text-center">
         <CardTitle className="text-3xl font-bold">
           Claim Your{" "}
-          <span className="text-blue-600">Discounted Endoterec©</span>
+          <span className={isPrimeBoostUpsell ? "text-red-600" : "text-blue-600"}>Discounted {isPrimeBoostUpsell ? "PrimeBoost" : "Endoterec©"}</span>
         </CardTitle>
         <p className="text-xl mt-2 font-semibold">Below While Stocks Last!</p>
       </CardHeader>
