@@ -261,6 +261,7 @@ export default function Upsell() {
                   position: "relative",
                   width: "100%",
                   height: "100%",
+                  backgroundColor: `${urlPath === "/exclusive-offer" ? "#06142B" : "#dc2626"}`,
                   border:
                     windowWidth < 1000
                       ? `2px solid ${
