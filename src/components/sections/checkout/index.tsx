@@ -11,9 +11,10 @@ type ICheckoutSectionProps = {
   onePurchaseLinks: ContentItemsProps["onePurchaseLinks"];
   images: ContentItemsProps["images"];
   isAlternative?: boolean;
+  isPrimeBoostUpsell?: boolean;
 }
 
-export default function CheckoutSection({ isAlternative = false, images, items, onePurchaseLinks }: ICheckoutSectionProps) {
+export default function CheckoutSection({ isAlternative = false, images, items, onePurchaseLinks, isPrimeBoostUpsell = false }: ICheckoutSectionProps) {
   const [subscribeMode, setSubscribeMode] = React.useState(true);
 
   const currentDate = new Date();
@@ -29,7 +30,7 @@ export default function CheckoutSection({ isAlternative = false, images, items, 
       <Subtitle className="pb-4">
         Claim Your
         <br />
-        <span className="text-brand">Discounted Endoterec©</span>
+        <span className={isPrimeBoostUpsell ? "text-red-600" : "text-blue-600"}>Discounted {isPrimeBoostUpsell ? "PrimeBoost" : "Endoterec©"}</span>
         <br />
         { isAlternative ? offerEndsMessage : "Below While Stocks Last!" }
         <Separator className="h-[2.5px] w-44 mx-auto mt-2 bg-brand" />
