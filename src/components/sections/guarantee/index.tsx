@@ -1,4 +1,5 @@
 import { Subtitle } from "@/components/subtitle";
+import Image from "next/image";
 
 interface IGuarantee {
   isLandingPage?: boolean;
@@ -9,8 +10,8 @@ export function Guarantee({ isLandingPage = false }: IGuarantee) {
     <>
       {isLandingPage ? (
         <section className="flex flex-col items-center relative max-w-md mx-auto">
-          <img
-            src="guarantee.png"
+          <Image
+            src="/guarantee.png"
             alt="60-days guarantee badge"
             loading="lazy"
             width={136}
@@ -37,8 +38,8 @@ export function Guarantee({ isLandingPage = false }: IGuarantee) {
         <>
           {/* desktop */}
           <section className="hidden lg:flex items-center relative mx-auto max-w-4xl gap-8">
-            <img
-              src="guarantee.png"
+            <Image
+              src="/guarantee.png"
               alt="60-days guarantee badge"
               loading="lazy"
               width={136}
@@ -65,8 +66,8 @@ export function Guarantee({ isLandingPage = false }: IGuarantee) {
           </section>
           {/* mobile */}
           <section className="flex flex-col items-center relative max-w-md mx-auto mt-4 lg:hidden">
-            <img
-              src="guarantee.png"
+            <Image
+              src="/guarantee.png"
               alt="60-days guarantee badge"
               loading="lazy"
               width={136}

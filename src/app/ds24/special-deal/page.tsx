@@ -7,7 +7,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import "../ds24/reveal/_components/vsl/video-style.css";
+import "../reveal/_components/vsl/video-style.css";
 import CheckoutSection from "@/components/sections/checkout";
 import CheckoutDesktop from "@/components/sections/checkout/_components/content-desktop";
 import { ItemProps } from "@/components/sections/checkout/_components/content-items";
@@ -195,7 +195,7 @@ export default function Upsell() {
         className="pb-16 lg:py-16 bg-repeat-round bg-fixed overflow-hidden
         lg:bg-contain"
         style={{
-          backgroundImage: 'url("bg-red.jpg")'
+          backgroundImage: 'url("/bg-red.jpg")'
         }}
       >
         <Container className="bg-background rounded-lg px-2">

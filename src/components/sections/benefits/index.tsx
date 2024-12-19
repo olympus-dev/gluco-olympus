@@ -27,29 +27,29 @@ export function BenefitsSection() {
       lg:grid-cols-3 lg:justify-items-center lg:justify-center"
       >
         <BenefitItem
-          imgPath="heart.svg"
+          imgPath="/heart.svg"
           title="Boosts Blood Flow"
           description="The active components in the formula enhance blood circulation, especially in strategic areas. This means firmer, stronger, and longer-lasting erections, without failure."
         />
         <BenefitItem
-          imgPath="graph.svg"
+          imgPath="/graph.svg"
           title="Increases Natural Testosterone Production"
           description="The formula includes extracts that stimulate testosterone production, the key hormone for male vitality. With higher levels, you experience a significant boost in libido and energy."
         />
         <BenefitItem
-          imgPath="stress.svg"
+          imgPath="/stress.svg"
           title="Combats Stress and Fatigue"
           description="Adaptogenic ingredients help reduce stress and fatigue, factors that often negatively impact performance. This brings back your energy, confidence, and mental clarity."
         />
         <div className="hidden lg:flex justify-center max-h-[363px] col-span-3 gap-4">
           <BenefitItem
-            imgPath="health.svg"
+            imgPath="/health.svg"
             title="Improves Sexual and Vascular Health"
             description="The combination of natural ingredients directly supports the health of blood vessels and overall vitality, providing fast and noticeable results."
             className="max-w-[373px]"
           />
           <BenefitItem
-            imgPath="natural.svg"
+            imgPath="/natural.svg"
             title="100% Natural and Safe Formula"
             description="The active components in the formula enhance blood circulation, especially in strategic areas. This means firmer, stronger, and longer-lasting erections, without failure."
             className="md:col-span-2 md:mx-auto md:max-w-[365px]
@@ -57,13 +57,13 @@ export function BenefitsSection() {
           />
         </div>
         <BenefitItem
-          imgPath="health.svg"
+          imgPath="/health.svg"
           title="Improves Sexual and Vascular Health"
           description="The combination of natural ingredients directly supports the health of blood vessels and overall vitality, providing fast and noticeable results."
           className="lg:hidden"
         />
         <BenefitItem
-          imgPath="natural.svg"
+          imgPath="/natural.svg"
           title="100% Natural and Safe Formula"
           description="The active components in the formula enhance blood circulation, especially in strategic areas. This means firmer, stronger, and longer-lasting erections, without failure."
           className="md:col-span-2 md:mx-auto md:max-w-[365px]

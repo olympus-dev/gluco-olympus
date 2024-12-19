@@ -128,7 +128,7 @@ export function ContentItems({ items, onePurchaseLinks, images }: ContentItemsPr
         <ShoppingCart />
         <Subtitle>Add to Cart</Subtitle>
       </a>
-      <img src="cards.svg" className="pt-2" />
+      <img src="/cards.svg" className="pt-2" />
     </div>
   );
 }

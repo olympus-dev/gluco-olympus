@@ -64,7 +64,7 @@ export default function Dtc({ withFooter = true }: IDtcProps) {
       <main
         className="bg-repeat-round bg-fixed
       lg:bg-contain"
-        style={{ backgroundImage: 'url("bg.png")' }}
+        style={{ backgroundImage: 'url("/bg.png")' }}
       >
         <div className="bg-background pb-4" id="checkout">
           <Container className="py-8">
@@ -101,13 +101,6 @@ export default function Dtc({ withFooter = true }: IDtcProps) {
         >
           <SocialProofSection />
         </div>
-
-        {/* <div
-          className="w-full flex justify-center pb-8
-        lg:pt-4 lg:pb-8"
-        >
-          <OrderButton />
-        </div> */}
 
         <Container className="text-white py-8">
           <Guarantee />

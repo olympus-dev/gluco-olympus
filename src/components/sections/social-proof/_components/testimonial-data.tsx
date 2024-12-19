@@ -17,7 +17,7 @@ export const testimonials: ITestimonial[] = [
     ),
     author: "Charlie Williams",
     location: "Chicago, USA",
-    image: "proof3.jpg",
+    image: "/proof3.jpg",
     rating: 5,
   },
   {
@@ -31,7 +31,7 @@ export const testimonials: ITestimonial[] = [
     ),
     author: "Tom Stevenson",
     location: "New York, USA",
-    image: "proof1.jpg",
+    image: "/proof1.jpg",
     rating: 5,
   },
   {
@@ -44,7 +44,7 @@ export const testimonials: ITestimonial[] = [
     ),
     author: "James Richards",
     location: "Wyoming, USA",
-    image: "proof2.jpg",
+    image: "/proof2.jpg",
     rating: 5,
   },
 ];

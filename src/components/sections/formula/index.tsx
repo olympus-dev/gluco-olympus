@@ -3,6 +3,7 @@ import { Subtitle } from "@/components/subtitle";
 import { DialogContent, DialogDescription, DialogTrigger } from "@/components/ui/dialog";
 import { Dialog, DialogTitle } from "@radix-ui/react-dialog";
 import { Search } from "lucide-react";
+import Image from "next/image";
 
 /* eslint-disable react/no-unescaped-entities */
 export function FormulaSection() {
@@ -46,8 +47,8 @@ export function FormulaSection() {
 
       <div className="col-start-1 row-start-1 lg:mx-auto lg:w-4/5 relative">
         <Dialog>
-          <img
-            src="plants.png"
+          <Image
+            src="/plants.png"
             alt="Endoterec bottle with plants around."
             className="h-full w-full"
             loading="lazy"
@@ -62,7 +63,7 @@ export function FormulaSection() {
           <DialogContent className="md:max-w-7xl lg:max-w-7xl">
             <DialogTitle>Nutrition Facts</DialogTitle>
             <DialogDescription>
-              <img src="nutrition.png" alt="Nutrition Facts Image" />
+              <img src="/nutrition.png" alt="Nutrition Facts Image" />
             </DialogDescription>
           </DialogContent>
         </Dialog>

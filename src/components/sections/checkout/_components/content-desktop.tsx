@@ -206,7 +206,7 @@ export default function CheckoutDesktop({ images, items, onePurchaseLinks, isPri
           </a>
         </Button>
         <Image
-          src="cards.svg"
+          src="/cards.svg"
           alt="cards"
           loading="lazy"
           width={133}

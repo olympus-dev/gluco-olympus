@@ -8,7 +8,7 @@ export function Testimonial({ author, image, location, quote, rating }: ITestimo
     lg:max-w-[445px] lg:min-w-[415px] lg:mt-0 lg:pt-0">
       <CardContent className="h-full flex flex-col justify-between">
         <img
-          src="quotes.svg"
+          src="/quotes.svg"
           alt="Quote Ornament"
           className="absolute top-[130px] left-[50px]"
         />

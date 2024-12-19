@@ -41,7 +41,7 @@ export function VslSection() {
     return new Promise<void>((resolve) => {
       const script = document.createElement("script");
       script.src =
-        "https://scripts.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/players/673649b32eb080000b6d8a8c/player.js";
+        "https://scripts.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/players/67521900c719ba80491393ac/player.js";
       script.async = true;
 
       script.onload = () => {
@@ -121,7 +121,7 @@ export function VslSection() {
           lg:border-2 lg:border-yellow-300 lg:rounded-[25px] lg:p-2"
           >
             <div
-              id="vid_673649b32eb080000b6d8a8c"
+              id="vid_67521900c719ba80491393ac"
               style={{
                 position: "relative",
                 width: "100%",
@@ -133,7 +133,7 @@ export function VslSection() {
               className="rounded-full"
             >
               <img
-                id="thumb_673649b32eb080000b6d8a8c"
+                id="thumb_67521900c719ba80491393ac"
                 src="https://images.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/players/673649b32eb080000b6d8a8c/thumbnail.jpg"
                 style={{
                   position: "absolute",
@@ -148,7 +148,7 @@ export function VslSection() {
                 alt="thumbnail"
               />
               <div
-                id="backdrop_673649b32eb080000b6d8a8c"
+                id="backdrop_67521900c719ba80491393ac"
                 style={{
                   WebkitBackdropFilter: "blur(5px)",
                   backdropFilter: "blur(5px)",

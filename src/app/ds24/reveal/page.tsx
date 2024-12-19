@@ -36,7 +36,7 @@ export default function VslPage() {
       <main
         className="pt-12 bg-repeat-round bg-fixed
       lg:bg-contain"
-        style={{ backgroundImage: 'url("bg.png")' }}
+        style={{ backgroundImage: 'url("/bg.png")' }}
       >
         <VslSection />
       </main>

@@ -54,7 +54,7 @@ export function HeroSection() {
         variants={variants}
         transition={{ duration: 0.5 }}
         className="relative flex flex-col items-center pt-12
-      lg:self-end"
+      lg:self-end lg:p-0"
       >
         <Image
           width={75}
@@ -62,7 +62,7 @@ export function HeroSection() {
           src="/pill_1.svg"
           alt="Pill far"
           className="absolute left-[-26px] animate-float 
-        lg:left-16"
+        lg:left-8"
         />
         <Image
           width={75}
@@ -70,14 +70,14 @@ export function HeroSection() {
           src="/pill_2.svg"
           alt="Pill near"
           className="absolute right-[-26px] bottom-14 animate-float delay-1000 
-        lg:right-16"
+        lg:right-14"
         />
         <Image
           src="/hero.png"
           alt="Endoterec Bottles"
           width={364}
           height={364}
-          className="lg:w-[378px] lg:h-[378px]"
+          className="lg:w-[475px] lg:h-[475px]"
         />
       </motion.div>
       {/*  */}
