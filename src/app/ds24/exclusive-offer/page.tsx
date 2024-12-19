@@ -7,7 +7,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import "../../app/secret-to-performance/_components/vsl/video-style.css";
+import "../ds24/reveal/_components/vsl/video-style.css";
 import CheckoutSection from "@/components/sections/checkout";
 import CheckoutDesktop from "@/components/sections/checkout/_components/content-desktop";
 import { ItemProps } from "@/components/sections/checkout/_components/content-items";
@@ -28,7 +28,7 @@ export default function Upsell() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [urlPath, setUrlPath] = useState("");
 
-  const images: string[] = ["3-botlles-up.png", "6-botlles-up.png", "1-botlle-up.png"];
+  const images: string[] = ["6-bottles.png", "9-bottles.png", "3-bottles.png"];
   
   const onePurchaseLinks: string[] = [
     "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
@@ -39,51 +39,42 @@ export default function Upsell() {
   const items: ItemProps[] = [
     {
       price: 39,
-      total: 117,
-      discount: 597,
+      total: 234,
+      discount: 354,
       subscribeBottle: 54.28, // Sem uso
       subscribeTotal: 162.84, // Sem uso
-      quantity: 3,
-      bestWhat: "Most Popular",
-      daysSupply: 90,
-    },
-    {
-      price: 27,
-      total: 162,
-      discount: 1194,
-      subscribeBottle: 44.1, // Sem uso
-      subscribeTotal: 264.6, // Sem uso
       quantity: 6,
-      bestWhat: "Best Value",
+      bestWhat: "Most Popular",
       daysSupply: 180,
     },
     {
+      price: 29,
+      total: 261,
+      discount: 621,
+      subscribeBottle: 44.1, // Sem uso
+      subscribeTotal: 264.6, // Sem uso
+      quantity: 9,
+      bestWhat: "Best Value",
+      daysSupply: 270,
+    },
+    {
       price: 59,
-      total: 59,
-      discount: 199,
+      total: 177,
+      discount: 117,
       subscribeBottle: 84.55, // Sem uso
       subscribeTotal: 84.55, // Sem uso
-      quantity: 1,
-      daysSupply: 30,
+      quantity: 3,
+      daysSupply: 90,
     },
   ];
 
   function setVideo() {
-    if (urlPath === "/exclusive-offer") {
       setVslVideo({
         backdrop: "backdrop_6751b5b6769b3c2a9e98d753",
         id: "vid_6751b5b6769b3c2a9e98d753",
         src: "https://scripts.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/players/6751b5b6769b3c2a9e98d753/player.js",
         thumb: "thumb_6751b5b6769b3c2a9e98d753",
       } as IVideoProps);
-    } else {
-      setVslVideo({
-        backdrop: "backdrop_6751bf5970ca8d7e4fa49e1d",
-        id: "vid_6751bf5970ca8d7e4fa49e1d",
-        src: "https://scripts.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/players/6751bf5970ca8d7e4fa49e1d/player.js",
-        thumb: "thumb_6751bf5970ca8d7e4fa49e1d",
-      } as IVideoProps);
-    }
   }
 
   function insertVideoTimer() {
@@ -195,7 +186,7 @@ export default function Upsell() {
         className="pb-16 lg:py-16 bg-repeat-round bg-fixed overflow-hidden
         lg:bg-contain"
         style={{
-          backgroundImage: 'url("bg-red.jpg")'
+          backgroundImage: 'url("bg.png")',
         }}
       >
         <Container className="bg-background rounded-lg px-2">
@@ -231,9 +222,7 @@ export default function Upsell() {
               </li>
             </ul>
             <h1
-              className={`text-center mt-8 text-2xl lg:text-4xl ${
-                urlPath === "/exclusive-offer" ? "text-brand" : "text-red-600"
-              }`}
+              className={`text-center mt-8 text-2xl lg:text-4xl text-brand`}
             >
               Your Order Is Not Complete Yet
             </h1>
@@ -243,7 +232,7 @@ export default function Upsell() {
             {/* VIdeo */}
             <div
               id="video-section"
-              className={`flex flex-col gap-8 vsl-video max-w-[550px] mx-auto my-4 lg:border-2 lg:rounded-[25px] lg:p-2 lg:border-red-600`}
+              className={`flex flex-col gap-8 vsl-video max-w-[550px] mx-auto my-4 lg:border-2 lg:rounded-[25px] lg:p-2 lg:border-brand`}
             >
               <div
                 id={vslVideo.id}
@@ -251,10 +240,10 @@ export default function Upsell() {
                   position: "relative",
                   width: "100%",
                   height: "100%",
-                  backgroundColor: "#dc2626",
+                  backgroundColor: "#06142B",
                   border:
                     windowWidth < 1000
-                      ? "#dc2626"
+                      ? `2px solid #315AE0`
                       : "",
                   padding: "133.33333333333331% 0 0",
                   borderRadius: "25px",
@@ -356,7 +345,11 @@ export default function Upsell() {
             </Link>
           </div>
           <div
-            className={`hidden text-center text-xs flex-col gap-8 mt-8 lg:flex text-gray-100 font-semibold`}
+            className={`hidden text-center text-xs flex-col gap-8 mt-8 lg:flex ${
+              urlPath === "/exclusive-offer"
+                ? "text-gray-400"
+                : "text-gray-100 font-semibold"
+            }`}
           >
             <p>
               All statements and results presented on this website are for
