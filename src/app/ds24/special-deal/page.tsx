@@ -13,6 +13,7 @@ import CheckoutDesktop from "@/components/sections/checkout/_components/content-
 import { ItemProps } from "@/components/sections/checkout/_components/content-items";
 import { BottomBadge } from "@/components/digi-badge/bottom-badge";
 import { TopBadge } from "@/components/digi-badge/top-badge";
+import UpsellDownsellLoader from "@/utils/downsell-upsell-script";
 
 interface IVideoProps {
   src: string;
@@ -155,6 +156,7 @@ export default function Upsell() {
 
   return (
     <>
+      <UpsellDownsellLoader />
       <Head>
         <title>Stock Up - Exclusive Offer</title>
         <link
