@@ -16,7 +16,6 @@ export default function MainProductsLoader() {
           adjust_all_urls: true,
           adjust_domain: true,
         });
-        console.log("TO AQUIDNAJKBDJABJDHDAIJHIKJ")
       }
     };
 

@@ -11,6 +11,8 @@ import "../reveal/_components/vsl/video-style.css";
 import CheckoutSection from "@/components/sections/checkout";
 import CheckoutDesktop from "@/components/sections/checkout/_components/content-desktop";
 import { ItemProps } from "@/components/sections/checkout/_components/content-items";
+import { BottomBadge } from "@/components/digi-badge/bottom-badge";
+import { TopBadge } from "@/components/digi-badge/top-badge";
 
 interface IVideoProps {
   src: string;
@@ -403,6 +405,8 @@ export default function Upsell() {
           </div>
         </Container>
       </main>
+      <TopBadge />
+      <BottomBadge />
     </>
   );
 }

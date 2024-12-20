@@ -3,6 +3,8 @@ import { VslSection } from "./_components/vsl/page";
 import Head from "next/head";
 import Footer from "@/components/sections/footer";
 import Link from "next/link";
+import { BottomBadge } from "@/components/digi-badge/bottom-badge";
+import { TopBadge } from "@/components/digi-badge/top-badge";
 
 export default function VslPage() {
   return (
@@ -65,6 +67,8 @@ export default function VslPage() {
         </div>
       </div>
       {/* End Footer */}
+      <TopBadge />
+      <BottomBadge />
     </>
   );
 }

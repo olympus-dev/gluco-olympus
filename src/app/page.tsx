@@ -18,6 +18,8 @@ import Footer from "@/components/sections/footer";
 import Image from "next/image";
 import Link from "next/link";
 import MainPageLoader from "@/utils/main-products-script";
+import { BottomBadge } from "@/components/digi-badge/bottom-badge";
+import { TopBadge } from "@/components/digi-badge/top-badge";
 
 export default function Home() {
   const images: string[] = ["3-bottles.png", "6-bottles.png", "1-bottle.png"];
@@ -152,6 +154,8 @@ export default function Home() {
           </div>
         </div>
       </main>
+      <TopBadge />
+      <BottomBadge/>
     </>
   );
 }
