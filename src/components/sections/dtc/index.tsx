@@ -22,9 +22,9 @@ interface IDtcProps {
 export default function Dtc({ withFooter = true }: IDtcProps) {
     const images: string[] = ["3-bottles.png", "6-bottles.png", "1-bottle.png"];
     const onePurchaseLinks: string[] = [
-      "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-      "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-      "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "https://www.checkout-ds24.com/product/581467", // 3 bottles
+      "https://www.checkout-ds24.com/product/581468", // 6 bottles
+      "https://www.checkout-ds24.com/product/581466", // 1 bottles
     ];
     const items: ItemProps[] = [
       {

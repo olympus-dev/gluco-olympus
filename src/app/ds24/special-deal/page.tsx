@@ -28,14 +28,18 @@ export default function Upsell() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [urlPath, setUrlPath] = useState("");
 
-  const images: string[] = ["3-botlles-up.png", "6-botlles-up.png", "1-botlle-up.png"];
-  
-  const onePurchaseLinks: string[] = [
-    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  const images: string[] = [
+    "3-botlles-up.png",
+    "6-botlles-up.png",
+    "1-botlle-up.png",
   ];
-  
+
+  const onePurchaseLinks: string[] = [
+    "https://www.checkout-ds24.com/answer/yes?template=light&product=581480", // 3 bottles
+    "https://www.checkout-ds24.com/answer/yes?template=light&product=581482", // 6 bottles
+    "https://www.checkout-ds24.com/answer/yes?template=light&product=581479", // 1 bottle
+  ];
+
   const items: ItemProps[] = [
     {
       price: 39,
@@ -195,7 +199,7 @@ export default function Upsell() {
         className="pb-16 lg:py-16 bg-repeat-round bg-fixed overflow-hidden
         lg:bg-contain"
         style={{
-          backgroundImage: 'url("/bg-red.jpg")'
+          backgroundImage: 'url("/bg-red.jpg")',
         }}
       >
         <Container className="bg-background rounded-lg px-2">
@@ -252,10 +256,7 @@ export default function Upsell() {
                   width: "100%",
                   height: "100%",
                   backgroundColor: "#dc2626",
-                  border:
-                    windowWidth < 1000
-                      ? "#dc2626"
-                      : "",
+                  border: windowWidth < 1000 ? "#dc2626" : "",
                   padding: "133.33333333333331% 0 0",
                   borderRadius: "25px",
                 }}
@@ -306,22 +307,20 @@ export default function Upsell() {
                   images={images}
                   items={items}
                   onePurchaseLinks={onePurchaseLinks}
-                  isPrimeBoostUpsell={
-                    urlPath !== "/exclusive-offer" ? true : false
-                  }
+                  isPrimeBoostUpsell
                 />
                 <CheckoutDesktop
                   images={images}
                   items={items}
                   onePurchaseLinks={onePurchaseLinks}
-                  isPrimeBoostUpsell={
-                    urlPath !== "/exclusive-offer" ? true : false
-                  }
+                  isPrimeBoostUpsell
                 />
                 <p className="font-bold max-w-[550px] mx-auto pt-4 text-center cursor-pointer underline">
-                  NO THANKS I understand that this is my only opportunity to get
-                  access to this special offer, and I’m okay with missing out.
-                  I’ll pass on this chance forever.
+                  <Link href="https://www.checkout-ds24.com/answer/no">
+                    NO THANKS I understand that this is my only opportunity to
+                    get access to this special offer, and I’m okay with missing
+                    out. I’ll pass on this chance forever.
+                  </Link>
                 </p>
               </>
             )}

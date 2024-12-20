@@ -11,6 +11,7 @@ import "../reveal/_components/vsl/video-style.css";
 import CheckoutSection from "@/components/sections/checkout";
 import CheckoutDesktop from "@/components/sections/checkout/_components/content-desktop";
 import { ItemProps } from "@/components/sections/checkout/_components/content-items";
+import UpsellDownsellLoader from "@/utils/downsell-upsell-script";
 
 interface IVideoProps {
   src: string;
@@ -29,13 +30,13 @@ export default function Upsell() {
   const [urlPath, setUrlPath] = useState("");
 
   const images: string[] = ["6-bottles.png", "9-bottles.png", "3-bottles.png"];
-  
+
   const onePurchaseLinks: string[] = [
-    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "https://www.checkout-ds24.com/answer/yes?template=light&product=581474", // 6 bottles
+    "https://www.checkout-ds24.com/answer/yes?template=light&product=581475", // 9 bottles
+    "https://www.checkout-ds24.com/answer/yes?template=light&product=581473", // 3 bottles
   ];
-  
+
   const items: ItemProps[] = [
     {
       price: 39,
@@ -69,12 +70,12 @@ export default function Upsell() {
   ];
 
   function setVideo() {
-      setVslVideo({
-        backdrop: "backdrop_6751b5b6769b3c2a9e98d753",
-        id: "vid_6751b5b6769b3c2a9e98d753",
-        src: "https://scripts.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/players/6751b5b6769b3c2a9e98d753/player.js",
-        thumb: "thumb_6751b5b6769b3c2a9e98d753",
-      } as IVideoProps);
+    setVslVideo({
+      backdrop: "backdrop_6751b5b6769b3c2a9e98d753",
+      id: "vid_6751b5b6769b3c2a9e98d753",
+      src: "https://scripts.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/players/6751b5b6769b3c2a9e98d753/player.js",
+      thumb: "thumb_6751b5b6769b3c2a9e98d753",
+    } as IVideoProps);
   }
 
   function insertVideoTimer() {
@@ -140,6 +141,7 @@ export default function Upsell() {
 
   return (
     <>
+      <UpsellDownsellLoader />
       <Head>
         <title>Stock Up - Exclusive Offer</title>
         <link
@@ -221,9 +223,7 @@ export default function Upsell() {
                 </p>
               </li>
             </ul>
-            <h1
-              className={`text-center mt-8 text-2xl lg:text-4xl text-brand`}
-            >
+            <h1 className={`text-center mt-8 text-2xl lg:text-4xl text-brand`}>
               Your Order Is Not Complete Yet
             </h1>
             <h1 className="mt-2 text-center text-xl lg:text-4xl">
@@ -241,10 +241,7 @@ export default function Upsell() {
                   width: "100%",
                   height: "100%",
                   backgroundColor: "#06142B",
-                  border:
-                    windowWidth < 1000
-                      ? `2px solid #315AE0`
-                      : "",
+                  border: windowWidth < 1000 ? `2px solid #315AE0` : "",
                   padding: "133.33333333333331% 0 0",
                   borderRadius: "25px",
                 }}
@@ -295,22 +292,18 @@ export default function Upsell() {
                   images={images}
                   items={items}
                   onePurchaseLinks={onePurchaseLinks}
-                  isPrimeBoostUpsell={
-                    urlPath !== "/exclusive-offer" ? true : false
-                  }
                 />
                 <CheckoutDesktop
                   images={images}
                   items={items}
                   onePurchaseLinks={onePurchaseLinks}
-                  isPrimeBoostUpsell={
-                    urlPath !== "/exclusive-offer" ? true : false
-                  }
                 />
                 <p className="font-bold max-w-[550px] mx-auto pt-4 text-center cursor-pointer underline">
-                  NO THANKS I understand that this is my only opportunity to get
-                  access to this special offer, and I’m okay with missing out.
-                  I’ll pass on this chance forever.
+                  <Link href="https://www.checkout-ds24.com/answer/no">
+                    NO THANKS I understand that this is my only opportunity to
+                    get access to this special offer, and I’m okay with missing
+                    out. I’ll pass on this chance forever.
+                  </Link>
                 </p>
               </>
             )}

@@ -1,3 +1,5 @@
+"use client";
+
 import { Container } from "@/components/container";
 import { Header } from "@/components/header";
 import {
@@ -15,13 +17,14 @@ import { FAQ } from "@/components/sections/faq";
 import Footer from "@/components/sections/footer";
 import Image from "next/image";
 import Link from "next/link";
+import MainPageLoader from "@/utils/main-products-script";
 
 export default function Home() {
   const images: string[] = ["3-bottles.png", "6-bottles.png", "1-bottle.png"];
   const onePurchaseLinks: string[] = [
-    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "https://www.checkout-ds24.com/product/581467", // 3 bottles
+    "https://www.checkout-ds24.com/product/581468", // 6 bottles
+    "https://www.checkout-ds24.com/product/581466", // 1 bottles
   ];
   const items: ItemProps[] = [
     {
@@ -57,6 +60,7 @@ export default function Home() {
   
   return (
     <>
+      <MainPageLoader/>
       <Header />
       <div id="portal"></div>
       <main

@@ -123,7 +123,6 @@ export function ContentItems({ items, onePurchaseLinks, images }: ContentItemsPr
       <a
         className="bg-yellow-300 rounded-lg text-black flex gap-2 py-4 px-7 mt-4 cursor-pointer hover:brightness-110 transition-all"
         href={onePurchaseLinks[itemSelected]}
-        target="_blank"
       >
         <ShoppingCart />
         <Subtitle>Add to Cart</Subtitle>

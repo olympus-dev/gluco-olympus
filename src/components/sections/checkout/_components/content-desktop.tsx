@@ -198,8 +198,8 @@ export default function CheckoutDesktop({ images, items, onePurchaseLinks, isPri
             href={selectedPackage === "6"
                 ? onePurchaseLinks[1]
                 : selectedPackage === "3"
-                ? onePurchaseLinks[1]
-                : onePurchaseLinks[0]
+                ? onePurchaseLinks[0]
+                : onePurchaseLinks[2]
             }
           >
             <ShoppingCart className="mr-2" /> Add to Cart
