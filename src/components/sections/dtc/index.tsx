@@ -164,11 +164,13 @@ export default function Dtc({ withFooter = true }: IDtcProps) {
                 </p>
               </div>
             </div>
+            <div className="text-black">
+            <TopBadge />
+            <BottomBadge />
+            </div>
           </div>
         )}
       </main>
-      <TopBadge />
-      <BottomBadge />
     </>
   );
 }
