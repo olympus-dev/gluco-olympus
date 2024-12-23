@@ -20,14 +20,16 @@ export function Promolinks() {
   };
 
   function handleGenerate() {
-    if ( affiliateId.length > 0 && boxChecked ) {
-      setLinksVisible(true)
+    if (affiliateId.length > 0 && boxChecked) {
+      setLinksVisible(true);
     }
   }
-  
+
   return (
     <div className="flex flex-col items-center gap-2">
-      <h1 className="text-brand text-xl text-center">Get your promolinks here</h1>
+      <h1 className="text-brand text-xl text-center">
+        Get your promolinks here
+      </h1>
       <h2 className="text-[#212121] font-bold text-2xl text-center">
         GET YOUR PROMO LINKS HERE
       </h2>
@@ -49,9 +51,7 @@ export function Promolinks() {
           </h2>
           <p className="pt-2">
             You can request for an immediate upgrade to 65% revshare commission
-            on the initial product and 60% commission on the 4 upsells! CPA is
-            available for high volume affiliates, contact us to put in a
-            request.
+            across the entire funnel of 4 upsells and downsell!
           </p>
         </div>
         <div>
@@ -111,7 +111,11 @@ export function Promolinks() {
                 </label>
               </div>
               {boxChecked && (
-                <OrderButton text="Generate Promolinks" className="mx-auto" onClick={handleGenerate} />
+                <OrderButton
+                  text="Generate Promolinks"
+                  className="mx-auto"
+                  onClick={handleGenerate}
+                />
               )}
               {linksVisible && (
                 <>
@@ -122,19 +126,28 @@ export function Promolinks() {
                   <Input
                     placeholder="VSL Page ID"
                     readOnly
-                    value={`https://endoterec.com/ds24/reveal/?aff=${affiliateId.trim()}` + (campaignId.length > 0 ? `&cam=${campaignId.trim()}` : "")}
+                    value={
+                      `https://endoterec.com/ds24/reveal/?aff=${affiliateId.trim()}` +
+                      (campaignId.length > 0 ? `&cam=${campaignId.trim()}` : "")
+                    }
                   />
                   <p className="font-semibold">Your Landing Page</p>
                   <Input
                     placeholder="Landing Page ID"
                     readOnly
-                    value={`https://endoterec.com/ds24/lp-af/?aff=${affiliateId.trim()}` + (campaignId.length > 0 ? `&cam=${campaignId.trim()}` : "")}
+                    value={
+                      `https://endoterec.com/ds24/lp-af/?aff=${affiliateId.trim()}` +
+                      (campaignId.length > 0 ? `&cam=${campaignId.trim()}` : "")
+                    }
                   />
                   <p className="font-semibold">Your DTC Page</p>
                   <Input
                     placeholder="DTC Page ID"
                     readOnly
-                    value={`https://endoterec.com/ds24/dtc-af/?aff=${affiliateId.trim()}` + (campaignId.length > 0 ? `&cam=${campaignId.trim()}` : "")}
+                    value={
+                      `https://endoterec.com/ds24/dtc-af/?aff=${affiliateId.trim()}` +
+                      (campaignId.length > 0 ? `&cam=${campaignId.trim()}` : "")
+                    }
                   />
                 </>
               )}
