@@ -300,15 +300,19 @@ export default function Upsell() {
                   items={items}
                   onePurchaseLinks={onePurchaseLinks}
                 />
-                <p className="font-bold max-w-[550px] mx-auto pt-4 text-center cursor-pointer underline">
-                  <Link href="https://www.checkout-ds24.com/answer/no">
-                    NO THANKS I understand that this is my only opportunity to
-                    get access to this special offer, and I’m okay with missing
-                    out. I’ll pass on this chance forever.
-                  </Link>
-                </p>
               </>
             )}
+            <div
+              className={`font-bold max-w-[550px] mx-auto pt-4 text-center cursor-pointer underline ${
+                !showContent && "sr-only"
+              }`}
+            >
+              <a href="https://www.checkout-ds24.com/answer/no">
+                NO THANKS I understand that this is my only opportunity to get
+                access to this special offer, and I’m okay with missing out.
+                I’ll pass on this chance forever.
+              </a>
+            </div>
           </div>
         </Container>
         <Container>
