@@ -338,7 +338,7 @@ export default function Upsell() {
             </Link>
             <Link
               className="hover:underline"
-              href="mailto:support@endoterec.com"
+              href="mailto:support@getglucoguardian.com"
             >
               Contact
             </Link>

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 /* eslint-disable react/no-unescaped-entities */
 export const metadata: Metadata = {
-  title: "Return Policy | Endoterec©",
+  title: "Return Policy | Gluco Guardian©",
   description:
     "The Herbal Science Breakthrough to Maximize Men's Sexual Performance",
 };
@@ -21,10 +21,10 @@ export default function ReturnPolicy() {
             If you are unsatisfied with your product for any reason you will
             have 60 days from the date of purchase to return the product and
             request a refund. You may return any Product (as defined below)
-            purchased on endoterec.online in accordance with the terms below: A
+            purchased on Gluco Guardian.online in accordance with the terms below: A
             return authorization must be requested and approved within 60 days
             of your date of purchase. You must contact us at
-            support@endoterec.com The return authorization number must be
+            support@getglucoguardian.com.com The return authorization number must be
             included along with your returned product. Once an please return the
             item and email us back with the and the tracking so we can track
             your return. You will have to pay for shipping. You must return the
@@ -32,7 +32,7 @@ export default function ReturnPolicy() {
             within 14 days. Returned Product(s) must be in good physical
             condition (not physically broken or damaged). All accessories
             originally included with your purchase must be included with your
-            return. For your convenience, the return address for Endoterec is:
+            return. For your convenience, the return address for Gluco Guardian is:
             7780 49th St North Box 513 Pinellas Park FL 33718
           </p>
         </section>
@@ -84,7 +84,7 @@ export default function ReturnPolicy() {
             before your refund is officially posted. Next contact your bank.
             There is often some processing time before a refund is posted. If
             you’ve done all of this and you still have not received your refund
-            yet, please contact us at support@endoterec.com
+            yet, please contact us at support@getglucoguardian.com.com
           </p>
         </section>
 
@@ -95,7 +95,7 @@ export default function ReturnPolicy() {
           <p className="px-6 mt-8 leading-loose md:px-0">
             We only replace items if they are defective or damaged. If you need
             to exchange it for the same item, send us an email at
-            support@endoterec.com and we will provide you further instructions
+            support@getglucoguardian.com.com and we will provide you further instructions
             on where to return the item for an exchange. Please note that we
             cannot accept exchanges beyond 60 days from the date of delivery.
           </p>
@@ -111,7 +111,7 @@ export default function ReturnPolicy() {
             or the gift giver had the order shipped to themselves to give to you
             later, we will send a refund to the gift giver and he will find out
             about your return. Still have questions about your return? Contact
-            customer service at support@endoterec.com
+            customer service at support@getglucoguardian.com.com
           </p>
         </section>
       </main>
@@ -123,7 +123,7 @@ export default function ReturnPolicy() {
             diagnose, treat, cure or prevent any disease.
           </p>
           <p className="px-6 mt-4 text-sm md:px-0">
-            © Endoterec Research 2024 All Rights Reserved. 7780 49th St North
+            © Gluco Guardian Research 2024 All Rights Reserved. 7780 49th St North
             Box 513 Pinellas Park FL 33718
           </p>
         </div>

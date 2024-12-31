@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 /* eslint-disable react/no-unescaped-entities */
 export const metadata: Metadata = {
-  title: "Disclaimer | Endoterec©",
+  title: "Disclaimer | Gluco Guardian©",
   description:
     "The Herbal Science Breakthrough to Maximize Men's Sexual Performance",
 };
@@ -14,13 +14,13 @@ export default function Disclaimer() {
         <section>
           <h1 className="text-5xl text-center mt-16">Disclaimer</h1>
           <p className="px-6 mt-16 leading-loose md:px-0">
-            The Endoterec site (the "Site") is an online information service,
+            The Gluco Guardian site (the "Site") is an online information service,
             subject to your compliance with the terms and conditions set forth
             below. PLEASE READ THIS DOCUMENT CAREFULLY BEFORE ACCESSING OR USING
             THE SITE. BY ACCESSING OR USING THE SITE, YOU AGREE TO BE BOUND BY
             THE TERMS AND CONDITIONS SET FORTH BELOW. IF YOU DO NOT WISH TO BE
             BOUND BY THESE TERMS AND CONDITIONS, YOU MAY NOT ACCESS OR USE THE
-            SITE. Endoterec MAY MODIFY THIS AGREEMENT AT ANY TIME, AND SUCH
+            SITE. Gluco Guardian MAY MODIFY THIS AGREEMENT AT ANY TIME, AND SUCH
             MODIFICATIONS SHALL BE EFFECTIVE IMMEDIATELY UPON POSTING OF THE
             MODIFIED AGREEMENT ON THE SITE. YOU AGREE TO REVIEW THE AGREEMENT
             PERIODICALLY TO BE AWARE OF SUCH MODIFICATIONS AND YOUR OF THE
@@ -35,28 +35,28 @@ export default function Disclaimer() {
           <p className="px-6 mt-8 leading-loose md:px-0">
             The entire contents of the Site are protected by international
             copyright and trademark laws. The owner of the copyrights and
-            trademarks are Endoterec, its affiliates or other third party
+            trademarks are Gluco Guardian, its affiliates or other third party
             licensors. YOU MAY NOT MODIFY, COPY, REPRODUCE, REPUBLISH, UPLOAD,
             POST, TRANSMIT, OR DISTRIBUTE, IN ANY MANNER, THE MATERIAL ON THE
             SITE, INCLUDING TEXT, GRAPHICS, CODE AND/OR SOFTWARE. You may print
             and download portions of material from the different areas of the
             Site solely for your own non-commercial use provided that you agree
             not to change or delete any copyright or proprietary notices from
-            the materials. You agree to grant to Endoterec a non-exclusive,
+            the materials. You agree to grant to Gluco Guardian a non-exclusive,
             royalty-free, worldwide, perpetual license, with the right to
             sub-license, to reproduce, distribute, transmit, create derivative
             works of, publicly display and publicly perform any materials and
             other information (including, without limitation, ideas contained
             therein for new or improved products and services) you submit to any
             public areas of the Site (such as bulletin boards, forums and
-            newsgroups) or by e-mail to Endoterec by all means and in any media
-            now known or hereafter developed. You also grant to Endoterec the
+            newsgroups) or by e-mail to Gluco Guardian by all means and in any media
+            now known or hereafter developed. You also grant to Gluco Guardian the
             right to use your name in connection with the submitted materials
             and other information as well as in connection with all advertising,
             marketing and promotional material related thereto. You agree that
-            you shall have no recourse against Endoterec for any alleged or
+            you shall have no recourse against Gluco Guardian for any alleged or
             actual infringement or misappropriation of any proprietary right in
-            your communications to Endoterec.
+            your communications to Gluco Guardian.
           </p>
         </section>
 
@@ -64,7 +64,7 @@ export default function Disclaimer() {
           <h1 className="px-6 text-4xl mt-6 md:px-0">TRADEMARKS.</h1>
           <p className="px-6 mt-4 leading-loose md:px-0">
             Publications, products, content or services referenced herein or on
-            the Site are the exclusive trademarks or service marks of Endoterec.
+            the Site are the exclusive trademarks or service marks of Gluco Guardian.
             Other product and company names mentioned in the Site may be the
             trademarks of their respective owners.
           </p>
@@ -74,13 +74,13 @@ export default function Disclaimer() {
           <h1 className="px-6 text-4xl mt-6 md:px-0">2. Use of the Site.</h1>
           <p className="px-6 mt-8 leading-loose md:px-0">
             You understand that, except for information, products or services
-            clearly identified as being supplied by Endoterec, Endoterec does
+            clearly identified as being supplied by Gluco Guardian, Gluco Guardian does
             not operate, control or endorse any information, products or
-            services on the Internet in any way. Except for Endoterec -
+            services on the Internet in any way. Except for Gluco Guardian -
             identified information, products or services, all information,
             products and services offered through the Site or on the Internet
             generally are offered by third parties, which are not affiliated
-            with Endoterec. You also understand that Endoterec cannot and does
+            with Gluco Guardian. You also understand that Gluco Guardian cannot and does
             not guarantee or warrant that files available for downloading
             through the Site will be free of infection or viruses, worms, Trojan
             horses or other code that manifest contaminating or destructive
@@ -89,14 +89,14 @@ export default function Disclaimer() {
             for accuracy of data input and output, and for maintaining a means
             external to the Site for the reconstruction of any lost data. YOU
             ASSUME TOTAL RESPONSIBILITY AND RISK FOR YOUR USE OF THE SITE AND
-            THE INTERNET. Endoterec PROVIDES THE SITE AND RELATED INFORMATION
+            THE INTERNET. Gluco Guardian PROVIDES THE SITE AND RELATED INFORMATION
             "AS IS" AND DOES NOT MAKE ANY EXPRESS OR IMPLIED WARRANTIES,
             REPRESENTATIONS OR ENDORSEMENTS WHATSOEVER (INCLUDING WITHOUT
             LIMITATION WARRANTIES OF TITLE OR NONINFRINGEMENT, OR THE IMPLIED
             WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE)
             WITH REGARD TO THE SERVICE, ANY MERCHANDISE INFORMATION OR SERVICE
             PROVIDED THROUGH THE SERVICE OR ON THE INTERNET GENERALLY, AND
-            Endoterec SHALL NOT BE LIABLE FOR ANY COST OR DAMAGE ARISING EITHER
+            Gluco Guardian SHALL NOT BE LIABLE FOR ANY COST OR DAMAGE ARISING EITHER
             DIRECTLY OR INDIRECTLY FROM ANY SUCH TRANSACTION. IT IS SOLELY YOUR
             RESPONSIBILITY TO EVALUATE THE ACCURACY, COMPLETENESS AND USEFULNESS
             OF ALL OPINIONS, ADVICE, SERVICES, MERCHANDISE AND OTHER INFORMATION
@@ -105,7 +105,7 @@ export default function Disclaimer() {
             DEFECTS IN THE SERVICE WILL BE CORRECTED. YOU UNDERSTAND FURTHER
             THAT THE PURE NATURE OF THE INTERNET CONTAINS UNEDITED MATERIALS
             SOME OF WHICH ARE SEXUALLY EXPLICIT OR MAY BE OFFENSIVE TO YOU. YOUR
-            ACCESS TO SUCH MATERIALS IS AT YOUR RISK. Endoterec HAS NO CONTROL
+            ACCESS TO SUCH MATERIALS IS AT YOUR RISK. Gluco Guardian HAS NO CONTROL
             OVER AND ACCEPTS NO RESPONSIBILITY WHATSOEVER FOR SUCH MATERIALS.
           </p>
         </section>
@@ -115,13 +115,13 @@ export default function Disclaimer() {
             LIMITATION OF LIABILITY
           </h1>
           <p className="px-6 mt-8 leading-loose md:px-0">
-            IN NO EVENT WILL Endoterec BE LIABLE FOR (I) ANY INCIDENTAL,
+            IN NO EVENT WILL Gluco Guardian BE LIABLE FOR (I) ANY INCIDENTAL,
             CONSEQUENTIAL, OR INDIRECT DAMAGES (INCLUDING, BUT NOT LIMITED TO,
             DAMAGES FOR LOSS OF PROFITS, BUSINESS INTERRUPTION, LOSS OF PROGRAMS
             OR INFORMATION, AND THE LIKE) ARISING OUT OF THE USE OF OR INABILITY
             TO USE THE SERVICE, OR ANY INFORMATION, OR TRANSACTIONS PROVIDED ON
             THE SERVICE, OR DOWNLOADED FROM THE SERVICE, OR ANY DELAY OF SUCH
-            INFORMATION OR SERVICE. EVEN Endoterec OR ITS AUTHORIZED
+            INFORMATION OR SERVICE. EVEN Gluco Guardian OR ITS AUTHORIZED
             REPRESENTATIVES HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH
             DAMAGES, OR (II) ANY CLAIM ATTRIBUTABLE TO ERRORS, OMISSIONS, OR
             OTHER INACCURACIES IN THE SERVICE AND/OR MATERIALS OR INFORMATION
@@ -129,13 +129,13 @@ export default function Disclaimer() {
             EXCLUSION OR LIMITATION OF LIABILITY FOR CONSEQUENTIAL OR INCIDENTAL
             DAMAGES, THE ABOVE LIMITATION MAY NOT APPLY TO YOU. IN SUCH STATES
             Daily Health LIABILITY IS LIMITED TO THE GREATEST EXTENT PERMITTED
-            BY LAW. Endoterec makes no representations whatsoever about any
+            BY LAW. Gluco Guardian makes no representations whatsoever about any
             other web site which you may access through this one or which may
             link to this Site. When you access a non- Daily Health web site,
-            please understand that it is independent from Endoterec, and that
-            Endoterec has no control over the content on that web site. In
-            addition, a link to a Endoterec web site does not mean that
-            Endoterec endorses or accepts any responsibility for the content, or
+            please understand that it is independent from Gluco Guardian, and that
+            Gluco Guardian has no control over the content on that web site. In
+            addition, a link to a Gluco Guardian web site does not mean that
+            Gluco Guardian endorses or accepts any responsibility for the content, or
             the use, of such web site.
           </p>
         </section>
@@ -143,7 +143,7 @@ export default function Disclaimer() {
         <section>
           <h1 className="px-6 text-4xl mt-6 md:px-0">3. Indemnification.</h1>
           <p className="px-6 mt-8 leading-loose md:px-0">
-            You agree to indemnify, defend and hold harmless Endoterec, its
+            You agree to indemnify, defend and hold harmless Gluco Guardian, its
             officers, directors, employees, agents, licensors, suppliers and any
             third party information providers to the Service from and against
             all losses, expenses, damages and costs, including reasonable
@@ -159,7 +159,7 @@ export default function Disclaimer() {
           </h1>
           <p className="px-6 mt-8 leading-loose md:px-0">
             The provisions of paragraphs 2 (Use of the Service), and 3
-            (Indemnification) are for the benefit of Endoterec and its officers,
+            (Indemnification) are for the benefit of Gluco Guardian and its officers,
             directors, employees, agents, licensors, suppliers, and any third
             party information providers to the Service. Each of these
             individuals or entities shall have the right to assert and enforce
@@ -191,7 +191,7 @@ export default function Disclaimer() {
             of America . Any cause of action or claim you may have with respect
             to the Service must be commenced within one (1) year after the claim
             or cause of action arises or such claim or cause of action is
-            barred. Endoterec failure to insist upon or enforce strict
+            barred. Gluco Guardian failure to insist upon or enforce strict
             performance of any provision of this Agreement shall not be
             construed as a waiver of any provision or right. Neither the course
             of conduct between the parties nor trade practice shall act to
@@ -212,7 +212,7 @@ export default function Disclaimer() {
             diagnose, treat, cure or prevent any disease.
           </p>
           <p className="px-6 mt-4 text-sm md:px-0">
-            © Endoterec Research 2024 All Rights Reserved. 7780 49th St North
+            © Gluco Guardian Research 2024 All Rights Reserved. 7780 49th St North
             Box 513 Pinellas Park FL 33718
           </p>
         </div>

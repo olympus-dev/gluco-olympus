@@ -15,7 +15,7 @@ export default function Footer() {
             TERMS OF SERVICE
           </Link>
           <span className="text-gray-500 hidden sm:inline-block">|</span>
-          <a href="mailto:support@endoterec.com" className="hidden hover:text-gray-400 sm:inline-block">
+          <a href="mailto:support@getglucoguardian.com" className="hidden hover:text-gray-400 sm:inline-block">
             CONTACT
           </a>
         </nav>
@@ -31,7 +31,7 @@ export default function Footer() {
         </nav>
 
         <nav className="mb-4 text-sm block sm:hidden">
-          <a href="mailto:support@endoterec.com" className="hover:text-gray-400">
+          <a href="mailto:support@getglucoguardian.com" className="hover:text-gray-400">
             CONTACT
           </a>
         </nav>
