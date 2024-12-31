@@ -41,7 +41,7 @@ export function VslSection() {
     return new Promise<void>((resolve) => {
       const script = document.createElement("script");
       script.src =
-        "https://scripts.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/players/67521900c719ba80491393ac/player.js";
+        "https://scripts.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/players/67731c0f1aaa74b67916f69d/player.js";
       script.async = true;
 
       script.onload = () => {
@@ -74,54 +74,40 @@ export function VslSection() {
 
   return (
     <>
-      <Container
-        className="flex flex-col overflow-hidden gap-8
-    lg:flex-row items-center justify-between text-background"
-      >
+      <Container className="flex flex-col overflow-hidden text-background text-center">
         {/* Header Text Section */}
-        <div className="lg:max-w-[550px] lg:gap-4 lg:flex lg:flex-col">
+        <div className="lg:gap-4 lg:flex lg:flex-col">
           <h1
-            className="text-4xl text-center leading-10
-        lg:text-6xl lg:text-left"
+            className="text-4xl leading-10
+        lg:text-6xl lg:max-w-[600px] mx-auto"
           >
-            IN 2025 ED IS
+            IN 2025, BLOOD SUGAR BALANCE IS{" "}
             <br />
             <span
               className="text-[#222222] relative z-10
           before:content-[' '] before:z-[-1] before:absolute before:bg-yellow-300 before:h-12 before:w-full before:top-1/2 before:-translate-y-1/2
           lg:before:h-16"
             >
-              COMPLETELY
+              SIMPLE!
             </span>
-            <br />
-            OPTIONAL
           </h1>
           <p
             className="hidden text-2xl
-        lg:block"
+        lg:block pt-4 pb-8"
           >
-            No gimmicks, no hassle. Discover the shift that’s quietly changing
-            the lives of men around the world.
+            No fads, no frustrations. Uncover the natural solution that’s reshaping lives and boosting vitality worldwide.
           </p>
-          {/* References Desktop */}
-          <div className="hidden lg:flex gap-4 max-w-28 pt-12">
-            <img width={"70px"} src="./nature_news.svg" alt="" />
-            <img src="./science_daily.svg" alt="" />
-            <img width={"88px"} src="./webmd.svg" alt="" />
-            <img src="./cell.svg" alt="" />
-            <img src="./european.svg" alt="" />
-          </div>
         </div>
 
         {/* Video Section */}
-        <div>
+        <div className="pt-6 lg:pt-0">
           <div
             id="video-section"
-            className="flex flex-col gap-8 vsl-video max-w-[550px] mx-auto
-          lg:border-2 lg:border-yellow-300 lg:rounded-[25px] lg:p-2"
+            className="flex flex-col gap-8 vsl-video mx-auto
+          lg:border-2 lg:border-yellow-300 lg:rounded-[25px] p-2"
           >
             <div
-              id="vid_67521900c719ba80491393ac"
+              id="vid_67731c0f1aaa74b67916f69d"
               style={{
                 position: "relative",
                 width: "100%",
@@ -133,7 +119,7 @@ export function VslSection() {
               className="rounded-full"
             >
               <img
-                id="thumb_67521900c719ba80491393ac"
+                id="thumb_67731c0f1aaa74b67916f69d"
                 src="https://images.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/players/673649b32eb080000b6d8a8c/thumbnail.jpg"
                 style={{
                   position: "absolute",
@@ -148,7 +134,7 @@ export function VslSection() {
                 alt="thumbnail"
               />
               <div
-                id="backdrop_67521900c719ba80491393ac"
+                id="backdrop_67731c0f1aaa74b67916f69d"
                 style={{
                   WebkitBackdropFilter: "blur(5px)",
                   backdropFilter: "blur(5px)",
@@ -165,6 +151,14 @@ export function VslSection() {
             IMPORTANT UPDATE: PRESS PLAY and make sure your sound is ON. May
             take up to 10 seconds to load...
           </p>
+          {/* References Desktop */}
+          <div className="hidden lg:flex gap-4 py-12 w-full justify-center">
+            <img width={"70px"} src="/nature_news.svg" alt="" />
+            <img src="/science_daily.svg" alt="" />
+            <img width={"88px"} src="/webmd.svg" alt="" />
+            <img src="/cell.svg" alt="" />
+            <img src="/european.svg" alt="" />
+          </div>
         </div>
         {/* References Mobile*/}
         {!showContent && (

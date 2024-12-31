@@ -12,7 +12,7 @@ export default function VslPage() {
       <Head>
         <link
           rel="preload"
-          href="https://scripts.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/players/673649b32eb080000b6d8a8c/player.js"
+          href="https://scripts.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/players/67731c0f1aaa74b67916f69d/player.js"
           as="script"
         />
         <link
@@ -22,12 +22,12 @@ export default function VslPage() {
         />
         <link
           rel="preload"
-          href="https://images.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/players/673649b32eb080000b6d8a8c/thumbnail.jpg"
+          href="https://images.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/players/67731c0f1aaa74b67916f69d/thumbnail.jpg"
           as="image"
         />
         <link
           rel="preload"
-          href="https://cdn.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/67364879dc7073000cacf2e6/main.m3u8"
+          href="https://cdn.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/67731a301c6c5ff744a98127/main.m3u8"
           as="fetch"
         />
         <link rel="dns-prefetch" href="https://cdn.converteai.net" />
@@ -51,15 +51,15 @@ export default function VslPage() {
           <div className="px-8">
             <p className="text-sm text-gray-400 max-w-2xl mb-4 mx-auto">
               Disclaimer: This official website is the only authorized place to
-              purchase Endoterec! We are not responsible for purchases made from
-              unknown and unreliable sites. Avoid piracy and cheap, illegal
+              purchase Gluco Guardian! We are not responsible for purchases made
+              from unknown and unreliable sites. Avoid piracy and cheap, illegal
               imitations.
             </p>
 
             <p className="text-sm text-gray-400">
               Copyright © 2023,{" "}
               <Link href="/" className="text-[#3B82F6] hover:text-[#60A5FA]">
-                Endoterec
+                Gluco Guardian
               </Link>
               .
             </p>

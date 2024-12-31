@@ -187,7 +187,7 @@ export default function PrivacyPolicy() {
             receive notifications of advertising, products, offers, services.
             You can change your marketing preferences or remove yourself from
             our mailing lists by clicking the "unsubscribe" link in the footer
-            of promotional emails, sending an email to support@endoterec.com.
+            of promotional emails, sending an email to support@getglucoguardian.com.
             Sometimes it takes time for our system to completely remove it from
             the database, so we invite you to wait a reasonable time, in which
             you may receive service-related announcements. We take all measures
@@ -284,7 +284,7 @@ export default function PrivacyPolicy() {
           <h1 className="px-6 text-4xl mt-6 md:px-0">Contact Information</h1>
           <p className="px-6 mt-8 leading-loose md:px-0">
             If you have any queries regarding this Privacy Policy, please
-            contact us by clicking in this contact <u><a className="text-blue-500" href="mailto:support@endoterec.com">link</a></u>.
+            contact us by clicking in this contact <u><a className="text-blue-500" href="mailto:support@getglucoguardian.com">link</a></u>.
           </p>
         </section>
       </main>
