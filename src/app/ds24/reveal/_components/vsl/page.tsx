@@ -79,31 +79,28 @@ export function VslSection() {
         <div className="lg:gap-4 lg:flex lg:flex-col">
           <h1
             className="text-4xl leading-10
-        lg:text-6xl"
+        lg:text-6xl lg:max-w-[600px] mx-auto"
           >
-            IN 2025 ED IS
+            IN 2025, BLOOD SUGAR BALANCE IS{" "}
             <br />
             <span
               className="text-[#222222] relative z-10
           before:content-[' '] before:z-[-1] before:absolute before:bg-yellow-300 before:h-12 before:w-full before:top-1/2 before:-translate-y-1/2
           lg:before:h-16"
             >
-              COMPLETELY
+              SIMPLE!
             </span>
-            <br />
-            OPTIONAL
           </h1>
           <p
             className="hidden text-2xl
         lg:block pt-4 pb-8"
           >
-            No gimmicks, no hassle. Discover the shift that’s quietly changing
-            the lives of men around the world.
+            No fads, no frustrations. Uncover the natural solution that’s reshaping lives and boosting vitality worldwide.
           </p>
         </div>
 
         {/* Video Section */}
-        <div>
+        <div className="pt-6 lg:pt-0">
           <div
             id="video-section"
             className="flex flex-col gap-8 vsl-video mx-auto
