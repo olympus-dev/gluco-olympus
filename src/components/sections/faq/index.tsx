@@ -65,7 +65,7 @@ export function FAQ() {
 const faqItems = [
   {
     id: "item-1",
-    question: "Can I take Endoterec?",
+    question: "Can I take Gluco Guardian?",
     answer: (
       <>
         <p>
@@ -85,45 +85,44 @@ const faqItems = [
   },
   {
     id: "item-2",
-    question: "Is Endoterec right for me?",
+    question: "Is Gluco Guardian right for me?",
     answer: (
       <>
         <p>
-          That’s a great question. Endoterec is different to other solutions
-          because it targets the root cause of men’s failure to perform at
-          optimal levels.
+          Gluco Guardian offers remarkable support for blood sugar levels,
+          benefiting men and women between the ages of 30 and 70.
         </p>
         <p>
-          Endoterec is also based on proven science and allow you to boost your
-          performance quickly and effectively. The ingredients you will find in
-          Endoterec are some of the most potent on the planet.
+          Developed on the principles of modern science, Gluco Guardian’s
+          formula is smooth and incredibly powerful, utilizing pure plant
+          ingredients and natural minerals.
         </p>
         <p>
-          Now, Endoterec works for almost everyone, but as you know, nothing
-          works for 100% of people. And that’s why we provide you with a
-          rock-solid satisfaction guarantee.
+          In addition, you can trust fully, as it is manufactured in the United
+          States in state-of-the-art facilities, registered by the FDA and
+          certified by the GMP.
         </p>
       </>
     ),
   },
   {
     id: "item-3",
-    question: "How Many Bottles of Endoterec Should I Order?",
+    question: "How Many Bottles of Gluco Guardian Should I Order?",
     answer: (
       <>
         <p>
-          To enjoy the peak benefits of Endoterec, it’s best to continue taking
-          it.
+          To enjoy the peak benefits of Gluco Guardian, it’s best to continue
+          taking it.
         </p>
         <p>
-          Most people we personally know have been taking Endoterec for years
-          because quite simply, the tremendous increase in sex drive and added
-          energy makes it an easy decision.
+          Most people we know personally take Gluco Guardian for years because
+          simply reducing the levels of accuracy and weight reduction makes the
+          decision an easy one..
         </p>
         <p>
-          And that’s why we offer deep discounts on the 3 and 6 packs of
-          Endoterec because we want to make it as easy as possible for you to
-          get the maximum benefits.
+          And that’s why we offer deep discounts on the 3 and 6 packs of Gluco
+          Guardian because we want to make it as easy as possible for you to get
+          the maximum benefits.
         </p>
         <p>
           If a 3 or 6 pack is out of your reach or you’d prefer to start with a
@@ -139,16 +138,14 @@ const faqItems = [
     answer: (
       <>
         <p>
-          The more results we see, the stronger we believe Endoterec has the
-          power to completely support your sexual health. It’s true, though,
-          that nothing works for 100% of the people who try it as each body
-          works in its own way.
+          The more results we see, the more we believe that Gluco Guardian has
+          the power to improve your quality of life completely.
         </p>
         <p>
-          That’s why every bottle of Endoterec comes with an ironclad 60-day
-          money back guarantee. If, for any reason, you aren’t fully satisfied
-          with the results, you can just return what you haven’t used for a
-          full, no question asked refund.
+          That’s why every bottle of Gluco Guardian comes with an ironclad
+          60-day money back guarantee. If, for any reason, you aren’t fully
+          satisfied with the results, you can just return what you haven’t used
+          for a full, no question asked refund.
         </p>
       </>
     ),
@@ -159,18 +156,18 @@ const faqItems = [
     answer: (
       <>
         <p>
-          To enjoy Endoterec and begin your new journey to a life full of
+          To enjoy Gluco Guardian and begin your new journey to a life full of
           vitality, energy and happiness, simply click on your best option
           below. On the next page, enter your details and confirm your order.
         </p>
         <p>
           Your order will be sent to our friendly warehouse team who will
           prepare it for you and send you a shipping notification. You can get
-          started with Endoterec in a few short days!
+          started with Gluco Guardian in a few short days!
         </p>
         <p>
-          Click on your best option below to take advantage while Endoterec is
-          still available for you.
+          Click on your best option below to take advantage while Gluco Guardian
+          is still available for you.
         </p>
       </>
     ),

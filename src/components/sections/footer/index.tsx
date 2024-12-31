@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="w-full text-gray-200">
       <div className="container mx-auto max-w-6xl flex flex-col items-center text-center">
-        <h2 className="text-xl font-semibold mb-4">ENDOTEREC©</h2>
+        <h2 className="text-xl font-semibold mb-4">GLUCO GUARDIAN©</h2>
 
         <nav className="mb-4 space-x-2 text-sm">
           <Link href="/return-policy" className="hover:text-gray-400">

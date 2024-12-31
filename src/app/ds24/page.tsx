@@ -37,7 +37,7 @@ export default function Home() {
       subscribeTotal: 162.84,
       quantity: 3,
       bestWhat: "Most Popular",
-      daysSupply: 90
+      daysSupply: 90,
     },
     {
       price: 49,
@@ -47,7 +47,7 @@ export default function Home() {
       subscribeTotal: 264.6,
       quantity: 6,
       bestWhat: "Best Value",
-      daysSupply: 180
+      daysSupply: 180,
     },
     {
       price: 89,
@@ -56,13 +56,13 @@ export default function Home() {
       subscribeBottle: 84.55,
       subscribeTotal: 84.55,
       quantity: 1,
-      daysSupply: 30
+      daysSupply: 30,
     },
   ];
-  
+
   return (
     <>
-      <MainPageLoader/>
+      <MainPageLoader />
       <Header />
       <div id="portal"></div>
       <main
@@ -100,8 +100,16 @@ export default function Home() {
 
         <div className="bg-background pb-10" id="checkout">
           <Container className="py-8">
-            <CheckoutSection images={images} items={items} onePurchaseLinks={onePurchaseLinks} />
-            <CheckoutDesktop images={images} items={items} onePurchaseLinks={onePurchaseLinks} />
+            <CheckoutSection
+              images={images}
+              items={items}
+              onePurchaseLinks={onePurchaseLinks}
+            />
+            <CheckoutDesktop
+              images={images}
+              items={items}
+              onePurchaseLinks={onePurchaseLinks}
+            />
           </Container>
         </div>
 
@@ -138,15 +146,15 @@ export default function Home() {
             <div className="px-8">
               <p className="text-sm text-gray-400 max-w-2xl mb-4 mx-auto">
                 Disclaimer: This official website is the only authorized place
-                to purchase Endoterec! We are not responsible for purchases made
-                from unknown and unreliable sites. Avoid piracy and cheap,
+                to purchase Gluco Guardian! We are not responsible for purchases
+                made from unknown and unreliable sites. Avoid piracy and cheap,
                 illegal imitations.
               </p>
 
               <p className="text-sm text-gray-400">
                 Copyright © 2023,{" "}
                 <Link href="/" className="text-[#3B82F6] hover:text-[#60A5FA]">
-                  Endoterec
+                  Gluco Guardian
                 </Link>
                 .
               </p>
@@ -155,7 +163,7 @@ export default function Home() {
         </div>
       </main>
       <TopBadge />
-      <BottomBadge/>
+      <BottomBadge />
     </>
   );
 }
