@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { OrderButton } from "../../order-button";
 import { BenefitsList } from "./_components/benefits-list";
 
@@ -9,11 +10,10 @@ export function HeroSection() {
     >
       <div>
         <h1
-          className="text-3xl text-center leading-10
+          className="text-4xl text-center leading-10
         lg:py-12"
         >
-          The <b className="text-brandLight">Natural Secret</b> Behind Stronger,
-          Longer-Lasting Erections!
+          The <b className="text-brandLight">Top-Ranked</b> <br/>Blood Sugar Solution
         </h1>
         <BenefitsList
           className="sr-only 
@@ -24,20 +24,8 @@ export function HeroSection() {
         className="relative flex flex-col items-center
       lg:self-end"
       >
-        <img
-          src="pill_1.svg"
-          alt="Pill far"
-          className="absolute left-[-26px] animate-float 
-        lg:left-16"
-        />
-        <img
-          src="pill_2.svg"
-          alt="Pill near"
-          className="absolute right-[-26px] bottom-14 animate-float delay-1000 
-        lg:right-16"
-        />
-        <img
-          src="hero.png"
+        <Image
+          src="/hero.png"
           alt="Endoterec Bottles"
           width={364}
           height={364}

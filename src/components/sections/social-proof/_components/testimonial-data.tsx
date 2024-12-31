@@ -10,9 +10,9 @@ export const testimonials: ITestimonial[] = [
   {
     quote: (
       <p className="text-base leading-relaxed">
-        I felt anxious about my performance, but Endoterec changed everything.
-        It improved my endurance, gave me consistent erections, and boosted my
-        confidence. Now, my romantic life has completely transformed!
+        I am extremely happy with the results! My blood sugar levels are stable,
+        and my energy has increased. This product is exceptional and combines
+        all the benefits I was looking for in plants, vitamins, and minerals.
       </p>
     ),
     author: "Charlie Williams",
@@ -23,10 +23,9 @@ export const testimonials: ITestimonial[] = [
   {
     quote: (
       <p className="text-base leading-relaxed">
-        Endoterec eliminated the struggle of unwinding after work. A daily
-        capsule in my coffee gave me instant firm erections and helped me
-        match my wife’s energy in the bedroom. This transformation has brought
-        us immense joy.
+        I am impressed with this product! It works just as well as a blood sugar
+        support supplement I used for years, but at a much lower cost. Thank you
+        for offering a high-quality solution at a more affordable price.
       </p>
     ),
     author: "Tom Stevenson",
@@ -37,12 +36,13 @@ export const testimonials: ITestimonial[] = [
   {
     quote: (
       <p className="text-base leading-relaxed">
-        Balancing work and intimacy was tough, but Endoterec changed that. A
-        daily capsule helped me achieve firm erections instantly, and now I
-        match my wife’s energy. Our relationship has never been better!
+        In just three months, Gluco Guardian has delivered amazing results! My
+        blood sugar is significantly lower, and the value is outstanding. It
+        outperforms even pricier, less effective products. I highly recommend
+        it!
       </p>
     ),
-    author: "James Richards",
+    author: "Sarah Smith",
     location: "Wyoming, USA",
     image: "/proof2.jpg",
     rating: 5,

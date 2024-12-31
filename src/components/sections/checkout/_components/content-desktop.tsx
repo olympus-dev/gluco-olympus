@@ -70,7 +70,7 @@ export default function CheckoutDesktop({ images, items, onePurchaseLinks, isPri
       <CardHeader className="text-center">
         <CardTitle className="text-3xl font-bold">
           Claim Your{" "}
-          <span className={isPrimeBoostUpsell ? "text-red-600" : "text-blue-600"}>Discounted {isPrimeBoostUpsell ? "PrimeBoost" : "Endoterec©"}</span>
+          <span className={isPrimeBoostUpsell ? "text-red-600" : "text-blue-600"}>Discounted {isPrimeBoostUpsell ? "PrimeBoost" : "Gluco Guardian©"}</span>
         </CardTitle>
         <p className="text-xl mt-2 font-semibold">Below While Stocks Last!</p>
       </CardHeader>

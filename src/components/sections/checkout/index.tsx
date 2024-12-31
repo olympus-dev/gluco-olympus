@@ -30,7 +30,7 @@ export default function CheckoutSection({ isAlternative = false, images, items, 
       <Subtitle className="pb-4">
         Claim Your
         <br />
-        <span className={isPrimeBoostUpsell ? "text-red-600" : "text-blue-600"}>Discounted {isPrimeBoostUpsell ? "PrimeBoost" : "Endoterec©"}</span>
+        <span className={isPrimeBoostUpsell ? "text-red-600" : "text-blue-600"}>Discounted {isPrimeBoostUpsell ? "PrimeBoost" : "Gluco Guardian©"}</span>
         <br />
         { isAlternative ? offerEndsMessage : "Below While Stocks Last!" }
         <Separator className="h-[2.5px] w-44 mx-auto mt-2 bg-brand" />

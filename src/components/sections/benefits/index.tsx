@@ -5,18 +5,15 @@ export function BenefitsSection() {
   return (
     <section id="benefits">
       <Subtitle>
-        How <span className="text-brandLight">Endoterec©</span>
+        How <span className="text-brandLight">Gluco Guardian©</span>
         <br /> works?
       </Subtitle>
       <p className="font-medium text-center py-8">
-        Endoterec is a{" "}
-        <span className="font-bold">powerful natural supplement{" "}</span>
+        <span className="font-bold">Gluco Guardian</span> is a powerful,{" "}
+        <span className="font-bold">natural supplement</span> carefully
         formulated with{" "}
-        <span className="font-bold">
-          high-quality ingredients that target the root causes of low potency
-          and decreased sexual desire
-        </span>
-        .
+        <span className="font-bold">high-quality ingredients</span> that target
+        the root causes of imbalanced glucose levels and low energy.
         <br />
         <br />
         Here’s what happens when you start using it:
@@ -28,44 +25,44 @@ export function BenefitsSection() {
       >
         <BenefitItem
           imgPath="/heart.svg"
-          title="Boosts Blood Flow"
-          description="The active components in the formula enhance blood circulation, especially in strategic areas. This means firmer, stronger, and longer-lasting erections, without failure."
+          title="Supports Healthy Blood Sugar Levels"
+          description="The powerful ingredients in the formula help regulate glucose, keeping your levels stable throughout the day for improved well-being."
         />
         <BenefitItem
           imgPath="/graph.svg"
-          title="Increases Natural Testosterone Production"
-          description="The formula includes extracts that stimulate testosterone production, the key hormone for male vitality. With higher levels, you experience a significant boost in libido and energy."
+          title="Boosts Natural Energy and Vitality"
+          description="Gluco Guardian’s natural components work to increase your stamina and reduce fatigue, helping you stay active and energized."
         />
         <BenefitItem
           imgPath="/stress.svg"
-          title="Combats Stress and Fatigue"
-          description="Adaptogenic ingredients help reduce stress and fatigue, factors that often negatively impact performance. This brings back your energy, confidence, and mental clarity."
+          title="Enhances Metabolic Function"
+          description="The formula promotes better metabolism, aiding your body’s ability to process sugars efficiently and naturally."
         />
         <div className="hidden lg:flex justify-center max-h-[363px] col-span-3 gap-4">
           <BenefitItem
             imgPath="/health.svg"
-            title="Improves Sexual and Vascular Health"
-            description="The combination of natural ingredients directly supports the health of blood vessels and overall vitality, providing fast and noticeable results."
+            title="Strengthens Blood Vessel and Circulatory Health"
+            description="Carefully selected ingredients support vascular health, improving blood flow and overall cardiovascular well-being."
             className="max-w-[373px]"
           />
           <BenefitItem
             imgPath="/natural.svg"
             title="100% Natural and Safe Formula"
-            description="The active components in the formula enhance blood circulation, especially in strategic areas. This means firmer, stronger, and longer-lasting erections, without failure."
+            description="Crafted with premium, plant-based ingredients, Gluco Guardian is free from chemicals and side effects—your natural path to optimal health!"
             className="md:col-span-2 md:mx-auto md:max-w-[365px]
           lg:col-span-1 lg:max-w-[373px]"
           />
         </div>
         <BenefitItem
           imgPath="/health.svg"
-          title="Improves Sexual and Vascular Health"
-          description="The combination of natural ingredients directly supports the health of blood vessels and overall vitality, providing fast and noticeable results."
+          title="Strengthens Blood Vessel and Circulatory Health"
+          description="Carefully selected ingredients support vascular health, improving blood flow and overall cardiovascular well-being."
           className="lg:hidden"
         />
         <BenefitItem
           imgPath="/natural.svg"
           title="100% Natural and Safe Formula"
-          description="The active components in the formula enhance blood circulation, especially in strategic areas. This means firmer, stronger, and longer-lasting erections, without failure."
+          description="Crafted with premium, plant-based ingredients, Gluco Guardian is free from chemicals and side effects—your natural path to optimal health!"
           className="md:col-span-2 md:mx-auto md:max-w-[365px]
           lg:col-span-1 lg:max-w-fit lg:hidden"
         />

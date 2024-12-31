@@ -51,8 +51,8 @@ function generateRandomState(): string {
 
 function generateRandomSale(): string {
   const sale = [
-    "purchased 3 bottles of Endoterec!",
-    "purchased 6 bottles of Endoterec!",
+    "purchased 3 bottles of Gluco Guardian!",
+    "purchased 6 bottles of Gluco Guardian!",
   ];
 
   return sale[Math.floor(Math.random() * 2)];
@@ -84,7 +84,7 @@ export const BottlesProvider = ({ children }: { children: ReactNode }) => {
       }
 
       if (notificationRef.current) {
-        fetch("https://randomuser.me/api/?gender=male&nat=us")
+        fetch("https://randomuser.me/api/?nat=us")
           .then((response) => response.json())
           .then((data) => {
             const personName = `${

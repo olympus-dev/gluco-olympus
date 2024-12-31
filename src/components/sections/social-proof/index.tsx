@@ -10,7 +10,7 @@ export function SocialProofSection() {
           <img src="/testimonials.svg" alt="testimonials" className="max-w-full" />
         </div>
         <Subtitle className="leading-6 max-w-fit mx-auto lg:text-4xl">
-          Real <span className="text-brandLight">Endoterec©</span> Users, Real
+          Real <span className="text-brandLight">Gluco Guardian©</span> Users, Real
           Life-Changing Results.
         </Subtitle>
       </div>

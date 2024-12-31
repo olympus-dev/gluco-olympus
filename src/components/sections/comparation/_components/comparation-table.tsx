@@ -16,22 +16,22 @@ import { Subtitle } from "@/components/subtitle";
 export default function Component() {
   const features = [
     {
-      name: "Improved Erection",
+      name: "Improved Blood Sugar Levels",
       endoterec: true,
       competitors: true,
     },
     {
-      name: "Increases Duration in Bed",
+      name: "Boosts Energy & Vitality",
       endoterec: true,
       competitors: false,
     },
     {
-      name: "Boosts Vitality",
+      name: "Supports Metabolism",
       endoterec: true,
       competitors: false,
     },
     {
-      name: "Relieves Stress and Promotes Relaxation",
+      name: "Relieves Stress and Enhances Focus",
       endoterec: true,
       competitors: false,
     },
@@ -47,7 +47,7 @@ export default function Component() {
       <Card className="w-full max-w-3xl mx-auto overflow-hidden border-0 shadow-xl">
         <div className="bg-gradient-to-r from-blue-700 to-blue-600 p-6 text-white">
           <Subtitle>
-            Why <span>Endoterec©</span>
+            Why <span>Gluco Guardian©</span>
             <br />
             Stands Out
           </Subtitle>
@@ -60,7 +60,7 @@ export default function Component() {
             <TableRow className="bg-gradient-to-r from-purple-50 to-blue-50">
               <TableHead className="w-[50%] py-6 text-base font-medium text-gray-700"></TableHead>
               <TableHead className="text-center py-6 text-base font-bold text-brand">
-                Endoterec©
+                Gluco©
               </TableHead>
               <TableHead className="text-center py-6 text-base font-medium text-gray-700">
                 Competitors

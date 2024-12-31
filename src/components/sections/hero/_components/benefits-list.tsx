@@ -26,20 +26,19 @@ export function BenefitsList({ className }: BenefitsListProps) {
     >
       <CheckBenefits>
         <p>
-          <b>Stronger</b> and <b>Longer-Lasting Erections</b>, No More
-          Frustrations
+          <b>Balanced</b> and <b>Stable</b> Blood Sugar Levels, <b>No More Worries</b>
         </p>
       </CheckBenefits>
       <Separator />
       <CheckBenefits>
         <p>
-          <b>Boost in Male Potency</b> and Performance
+          <b>Boost in Energy</b> and Overall <b>Health</b>
         </p>
       </CheckBenefits>
       <Separator />
       <CheckBenefits>
         <p>
-          <b>Restored and Elevated Male Confidence</b>
+          <b>Restored and Elevated Confidence in Your Wellness</b>
         </p>
       </CheckBenefits>
       <Separator />
@@ -51,13 +50,13 @@ export function BenefitsList({ className }: BenefitsListProps) {
       <Separator />
       <CheckBenefits>
         <p>
-          <b>Increased Libido</b> and Sexual Desire
+          <b>Enhanced Vitality</b> and Daily Stamina
         </p>
       </CheckBenefits>
       <Separator />
       <CheckBenefits>
         <p>
-          <b>100% Natural Ingredient</b>, Safe and Proven
+          <b>100% Natural Ingredients</b>, Safe and Proven
         </p>
       </CheckBenefits>
     </div>

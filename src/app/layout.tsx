@@ -12,9 +12,9 @@ const konkhmerSleokchher = Konkhmer_Sleokchher({
 });
 
 export const metadata: Metadata = {
-  title: "Endoterec©",
+  title: "Gluco Guardian©",
   description:
-    "The Herbal Science Breakthrough to Maximize Men's Sexual Performance",
+    "The Top-Ranked Blood Sugar Solution",
 };
 
 export default function RootLayout({
