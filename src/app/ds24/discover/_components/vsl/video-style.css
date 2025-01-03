@@ -9,10 +9,10 @@
     /* width: 400px !important; */
     /* height: 500px !important; */
     height: 100% !important;
-    position: relative;
-    width: 80% !important;
-    max-height: 750px !important;
+    width: 100% !important;
+    max-height: 656px !important;
     overflow: hidden;
+    position: relative;
     align-self: baseline;
   }
 
