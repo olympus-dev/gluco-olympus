@@ -7,7 +7,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import "../reveal/_components/vsl/video-style.css";
+import "../reveal/_components/vsl-section/video-style.css";
 import CheckoutSection from "@/components/sections/checkout";
 import CheckoutDesktop from "@/components/sections/checkout/_components/content-desktop";
 import { ItemProps } from "@/components/sections/checkout/_components/content-items";
