@@ -19,7 +19,7 @@ export function VslSection() {
     }
 
     const handleTimeUpdate = () => {
-      const targetTime = 3014; // 50 minutos e 14 segundos
+      const targetTime = 1800; // 30 minutos e 0 segundos
 
       if (Math.floor(videoRef.current!.currentTime) >= targetTime) {
         turnOn();
@@ -41,7 +41,7 @@ export function VslSection() {
     return new Promise<void>((resolve) => {
       const script = document.createElement("script");
       script.src =
-        "https://scripts.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/players/67731973e548d24d0424c7cd/player.js";
+        "https://scripts.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/players/677c4aa8cc0f15daf49857e9/player.js";
       script.async = true;
 
       script.onload = () => {
@@ -118,7 +118,7 @@ export function VslSection() {
           lg:border-2 lg:border-yellow-300 lg:rounded-[25px] lg:p-2"
           >
             <div
-              id="vid_67731973e548d24d0424c7cd"
+              id="vid_677c4aa8cc0f15daf49857e9"
               style={{
                 position: "relative",
                 width: "100%",

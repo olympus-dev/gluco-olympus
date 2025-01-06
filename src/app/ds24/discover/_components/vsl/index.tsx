@@ -41,7 +41,7 @@ export function VslSection() {
     return new Promise<void>((resolve) => {
       const script = document.createElement("script");
       script.src =
-        "https://scripts.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/players/67731c0f1aaa74b67916f69d/player.js";
+        "https://scripts.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/players/677c4aa8cc0f15daf49857e9/player.js";
       script.async = true;
 
       script.onload = () => {
@@ -107,7 +107,7 @@ export function VslSection() {
           lg:border-2 lg:border-yellow-300 lg:rounded-[25px] p-2"
           >
             <div
-              id="vid_67731c0f1aaa74b67916f69d"
+              id="vid_677c4aa8cc0f15daf49857e9"
               style={{
                 position: "relative",
                 width: "100%",

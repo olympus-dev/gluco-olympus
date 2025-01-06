@@ -1,5 +1,5 @@
 import { Container } from "@/components/container";
-import { VslSection } from "./_components/vsl";
+import { VslSection } from "./_components/vsl-section";
 import Head from "next/head";
 import Footer from "@/components/sections/footer";
 import Link from "next/link";
