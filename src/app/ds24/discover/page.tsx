@@ -5,10 +5,12 @@ import Footer from "@/components/sections/footer";
 import Link from "next/link";
 import { BottomBadge } from "@/components/digi-badge/bottom-badge";
 import { TopBadge } from "@/components/digi-badge/top-badge";
+import MainProductsLoader from "@/utils/main-products-script";
 
 export default function VslPage() {
   return (
     <>
+      <MainProductsLoader/>
       <Head>
         <link
           rel="preload"
