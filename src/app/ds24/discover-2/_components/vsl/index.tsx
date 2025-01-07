@@ -1,14 +1,14 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 
 import { useBottles } from "@/hooks/bottles";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import "./video-style.css";
 import { Container } from "@/components/container";
 import { Helmet } from "react-helmet";
 
 export function VslSection() {
   const { turnOff } = useBottles();
-  const [windowWidth, setWindowWidth] = useState(0);
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   function insertVideo() {
@@ -34,7 +34,6 @@ export function VslSection() {
 
   useEffect(() => {
     turnOff();
-    setWindowWidth(window.innerWidth);
 
     insertVideo();
   }, []);
