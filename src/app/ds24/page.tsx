@@ -24,9 +24,9 @@ import { TopBadge } from "@/components/digi-badge/top-badge";
 export default function Home() {
   const images: string[] = ["3-bottles.png", "6-bottles.png", "1-bottle.png"];
   const onePurchaseLinks: string[] = [
-    "https://www.checkout-ds24.com/product/581467", // 3 bottles
-    "https://www.checkout-ds24.com/product/581468", // 6 bottles
-    "https://www.checkout-ds24.com/product/581466", // 1 bottles
+    "https://www.checkout-ds24.com/product/589405", // 3 bottles
+    "https://www.checkout-ds24.com/product/589406", // 6 bottles
+    "https://www.checkout-ds24.com/product/589404", // 1 bottles
   ];
   const items: ItemProps[] = [
     {

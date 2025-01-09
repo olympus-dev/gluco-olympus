@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useEffect } from "react";
 
@@ -14,7 +14,7 @@ export default function MainProductsLoader() {
     script.onload = () => {
       if (typeof digistorePromocode === "function") {
         digistorePromocode({
-          product_id: 561718,
+          product_id: 589404,
           adjust_all_urls: true,
           adjust_domain: true,
         });

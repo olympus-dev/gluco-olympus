@@ -24,9 +24,9 @@ interface IDtcProps {
 export default function Dtc({ withFooter = true }: IDtcProps) {
   const images: string[] = ["3-bottles.png", "6-bottles.png", "1-bottle.png"];
   const onePurchaseLinks: string[] = [
-    "https://www.checkout-ds24.com/product/561719", // 3 bottles
-    "https://www.checkout-ds24.com/product/561720", // 6 bottles
-    "https://www.checkout-ds24.com/product/561718", // 1 bottles
+    "https://www.checkout-ds24.com/product/589405", // 3 bottles
+    "https://www.checkout-ds24.com/product/589406", // 6 bottles
+    "https://www.checkout-ds24.com/product/589404", // 1 bottles
   ];
   const items: ItemProps[] = [
     {
@@ -147,9 +147,9 @@ export default function Dtc({ withFooter = true }: IDtcProps) {
               <div className="px-8">
                 <p className="text-sm text-gray-400 max-w-2xl mb-4 mx-auto">
                   Disclaimer: This official website is the only authorized place
-                  to purchase Gluco Guardian! We are not responsible for purchases
-                  made from unknown and unreliable sites. Avoid piracy and
-                  cheap, illegal imitations.
+                  to purchase Gluco Guardian! We are not responsible for
+                  purchases made from unknown and unreliable sites. Avoid piracy
+                  and cheap, illegal imitations.
                 </p>
 
                 <p className="text-sm text-gray-400">
@@ -165,8 +165,8 @@ export default function Dtc({ withFooter = true }: IDtcProps) {
               </div>
             </div>
             <div className="text-black">
-            <TopBadge />
-            <BottomBadge />
+              <TopBadge />
+              <BottomBadge />
             </div>
           </div>
         )}
