@@ -359,7 +359,7 @@ export default function Upsell() {
               allergies, are pregnant or diagnosed with chronic conditions, it
               is strongly recommended that you consult your doctor immediately
               and before taking any pills or supplements. Individual results may
-              vary depending on the case. Copyright © 2023 Endoterec. All Rights
+              vary depending on the case. Copyright © 2025 Endoterec. All Rights
               Reserved.
             </p>
             <p>

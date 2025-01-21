@@ -1,0 +1,44 @@
+@media (min-width: 1000px) {
+  #vid_673649b32eb080000b6d8a8c {
+    border: none;
+  }
+
+  .vsl-video {
+    display: flex !important;
+    justify-content: center !important;
+    /* width: 400px !important; */
+    /* height: 500px !important; */
+    height: 100% !important;
+    position: relative;
+    width: 80% !important;
+    max-height: 750px !important;
+    overflow: hidden;
+    align-self: baseline;
+  }
+
+  .vsl-video svg {
+    /* width: 100% !important; */
+    /* height: 100% !important; */
+  }
+
+  .smartplayer-mobile-container {
+    max-width: 100% !important;
+  }
+
+  [class*="smartplayer"] {
+    /* width: 100% !important; */
+    /* height: 100% !important; */
+  }
+
+  .timer-hide {
+    display: none;
+  }
+
+  .desktop-only {
+    display: block;
+  }
+
+  .mobile-only {
+    display: none;
+  }
+}

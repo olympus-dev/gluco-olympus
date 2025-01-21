@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Container } from "@/components/container";
 import { VslSection } from "./_components/vsl-section";
@@ -12,7 +12,7 @@ import MainProductsLoader from "@/utils/main-products-script";
 export default function VslPage() {
   return (
     <>
-      <MainProductsLoader/>
+      <MainProductsLoader />
       <Head>
         <link
           rel="preload"
@@ -55,13 +55,13 @@ export default function VslPage() {
           <div className="px-8">
             <p className="text-sm text-gray-400 max-w-2xl mb-4 mx-auto">
               Disclaimer: This official website is the only authorized place to
-              purchase Gluco Guardian! We are not responsible for purchases made from
-              unknown and unreliable sites. Avoid piracy and cheap, illegal
+              purchase Gluco Guardian! We are not responsible for purchases made
+              from unknown and unreliable sites. Avoid piracy and cheap, illegal
               imitations.
             </p>
 
             <p className="text-sm text-gray-400">
-              Copyright © 2023,{" "}
+              Copyright © 2025,{" "}
               <Link href="/" className="text-[#3B82F6] hover:text-[#60A5FA]">
                 Gluco Guardian
               </Link>

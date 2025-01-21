@@ -14,17 +14,17 @@ export default function Disclaimer() {
         <section>
           <h1 className="text-5xl text-center mt-16">Disclaimer</h1>
           <p className="px-6 mt-16 leading-loose md:px-0">
-            The Gluco Guardian site (the "Site") is an online information service,
-            subject to your compliance with the terms and conditions set forth
-            below. PLEASE READ THIS DOCUMENT CAREFULLY BEFORE ACCESSING OR USING
-            THE SITE. BY ACCESSING OR USING THE SITE, YOU AGREE TO BE BOUND BY
-            THE TERMS AND CONDITIONS SET FORTH BELOW. IF YOU DO NOT WISH TO BE
-            BOUND BY THESE TERMS AND CONDITIONS, YOU MAY NOT ACCESS OR USE THE
-            SITE. Gluco Guardian MAY MODIFY THIS AGREEMENT AT ANY TIME, AND SUCH
-            MODIFICATIONS SHALL BE EFFECTIVE IMMEDIATELY UPON POSTING OF THE
-            MODIFIED AGREEMENT ON THE SITE. YOU AGREE TO REVIEW THE AGREEMENT
-            PERIODICALLY TO BE AWARE OF SUCH MODIFICATIONS AND YOUR OF THE
-            MODIFIED AGREEMENT.
+            The Gluco Guardian site (the "Site") is an online information
+            service, subject to your compliance with the terms and conditions
+            set forth below. PLEASE READ THIS DOCUMENT CAREFULLY BEFORE
+            ACCESSING OR USING THE SITE. BY ACCESSING OR USING THE SITE, YOU
+            AGREE TO BE BOUND BY THE TERMS AND CONDITIONS SET FORTH BELOW. IF
+            YOU DO NOT WISH TO BE BOUND BY THESE TERMS AND CONDITIONS, YOU MAY
+            NOT ACCESS OR USE THE SITE. Gluco Guardian MAY MODIFY THIS AGREEMENT
+            AT ANY TIME, AND SUCH MODIFICATIONS SHALL BE EFFECTIVE IMMEDIATELY
+            UPON POSTING OF THE MODIFIED AGREEMENT ON THE SITE. YOU AGREE TO
+            REVIEW THE AGREEMENT PERIODICALLY TO BE AWARE OF SUCH MODIFICATIONS
+            AND YOUR OF THE MODIFIED AGREEMENT.
           </p>
         </section>
 
@@ -49,14 +49,14 @@ export default function Disclaimer() {
             other information (including, without limitation, ideas contained
             therein for new or improved products and services) you submit to any
             public areas of the Site (such as bulletin boards, forums and
-            newsgroups) or by e-mail to Gluco Guardian by all means and in any media
-            now known or hereafter developed. You also grant to Gluco Guardian the
-            right to use your name in connection with the submitted materials
-            and other information as well as in connection with all advertising,
-            marketing and promotional material related thereto. You agree that
-            you shall have no recourse against Gluco Guardian for any alleged or
-            actual infringement or misappropriation of any proprietary right in
-            your communications to Gluco Guardian.
+            newsgroups) or by e-mail to Gluco Guardian by all means and in any
+            media now known or hereafter developed. You also grant to Gluco
+            Guardian the right to use your name in connection with the submitted
+            materials and other information as well as in connection with all
+            advertising, marketing and promotional material related thereto. You
+            agree that you shall have no recourse against Gluco Guardian for any
+            alleged or actual infringement or misappropriation of any
+            proprietary right in your communications to Gluco Guardian.
           </p>
         </section>
 
@@ -64,9 +64,9 @@ export default function Disclaimer() {
           <h1 className="px-6 text-4xl mt-6 md:px-0">TRADEMARKS.</h1>
           <p className="px-6 mt-4 leading-loose md:px-0">
             Publications, products, content or services referenced herein or on
-            the Site are the exclusive trademarks or service marks of Gluco Guardian.
-            Other product and company names mentioned in the Site may be the
-            trademarks of their respective owners.
+            the Site are the exclusive trademarks or service marks of Gluco
+            Guardian. Other product and company names mentioned in the Site may
+            be the trademarks of their respective owners.
           </p>
         </section>
 
@@ -74,39 +74,40 @@ export default function Disclaimer() {
           <h1 className="px-6 text-4xl mt-6 md:px-0">2. Use of the Site.</h1>
           <p className="px-6 mt-8 leading-loose md:px-0">
             You understand that, except for information, products or services
-            clearly identified as being supplied by Gluco Guardian, Gluco Guardian does
-            not operate, control or endorse any information, products or
-            services on the Internet in any way. Except for Gluco Guardian -
-            identified information, products or services, all information,
-            products and services offered through the Site or on the Internet
-            generally are offered by third parties, which are not affiliated
-            with Gluco Guardian. You also understand that Gluco Guardian cannot and does
-            not guarantee or warrant that files available for downloading
-            through the Site will be free of infection or viruses, worms, Trojan
-            horses or other code that manifest contaminating or destructive
-            properties. You are responsible for implementing sufficient
-            procedures and checkpoints to satisfy your particular requirements
-            for accuracy of data input and output, and for maintaining a means
-            external to the Site for the reconstruction of any lost data. YOU
-            ASSUME TOTAL RESPONSIBILITY AND RISK FOR YOUR USE OF THE SITE AND
-            THE INTERNET. Gluco Guardian PROVIDES THE SITE AND RELATED INFORMATION
-            "AS IS" AND DOES NOT MAKE ANY EXPRESS OR IMPLIED WARRANTIES,
-            REPRESENTATIONS OR ENDORSEMENTS WHATSOEVER (INCLUDING WITHOUT
-            LIMITATION WARRANTIES OF TITLE OR NONINFRINGEMENT, OR THE IMPLIED
-            WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE)
-            WITH REGARD TO THE SERVICE, ANY MERCHANDISE INFORMATION OR SERVICE
-            PROVIDED THROUGH THE SERVICE OR ON THE INTERNET GENERALLY, AND
-            Gluco Guardian SHALL NOT BE LIABLE FOR ANY COST OR DAMAGE ARISING EITHER
-            DIRECTLY OR INDIRECTLY FROM ANY SUCH TRANSACTION. IT IS SOLELY YOUR
-            RESPONSIBILITY TO EVALUATE THE ACCURACY, COMPLETENESS AND USEFULNESS
-            OF ALL OPINIONS, ADVICE, SERVICES, MERCHANDISE AND OTHER INFORMATION
-            PROVIDED THROUGH THE SERVICE OR ON THE INTERNET GENERALLY. DOES NOT
-            WARRANT THAT THE SERVICE WILL BE UNINTERRUPTED OR ERROR-FREE OR THAT
-            DEFECTS IN THE SERVICE WILL BE CORRECTED. YOU UNDERSTAND FURTHER
-            THAT THE PURE NATURE OF THE INTERNET CONTAINS UNEDITED MATERIALS
-            SOME OF WHICH ARE SEXUALLY EXPLICIT OR MAY BE OFFENSIVE TO YOU. YOUR
-            ACCESS TO SUCH MATERIALS IS AT YOUR RISK. Gluco Guardian HAS NO CONTROL
-            OVER AND ACCEPTS NO RESPONSIBILITY WHATSOEVER FOR SUCH MATERIALS.
+            clearly identified as being supplied by Gluco Guardian, Gluco
+            Guardian does not operate, control or endorse any information,
+            products or services on the Internet in any way. Except for Gluco
+            Guardian - identified information, products or services, all
+            information, products and services offered through the Site or on
+            the Internet generally are offered by third parties, which are not
+            affiliated with Gluco Guardian. You also understand that Gluco
+            Guardian cannot and does not guarantee or warrant that files
+            available for downloading through the Site will be free of infection
+            or viruses, worms, Trojan horses or other code that manifest
+            contaminating or destructive properties. You are responsible for
+            implementing sufficient procedures and checkpoints to satisfy your
+            particular requirements for accuracy of data input and output, and
+            for maintaining a means external to the Site for the reconstruction
+            of any lost data. YOU ASSUME TOTAL RESPONSIBILITY AND RISK FOR YOUR
+            USE OF THE SITE AND THE INTERNET. Gluco Guardian PROVIDES THE SITE
+            AND RELATED INFORMATION "AS IS" AND DOES NOT MAKE ANY EXPRESS OR
+            IMPLIED WARRANTIES, REPRESENTATIONS OR ENDORSEMENTS WHATSOEVER
+            (INCLUDING WITHOUT LIMITATION WARRANTIES OF TITLE OR
+            NONINFRINGEMENT, OR THE IMPLIED WARRANTIES OF MERCHANTABILITY OR
+            FITNESS FOR A PARTICULAR PURPOSE) WITH REGARD TO THE SERVICE, ANY
+            MERCHANDISE INFORMATION OR SERVICE PROVIDED THROUGH THE SERVICE OR
+            ON THE INTERNET GENERALLY, AND Gluco Guardian SHALL NOT BE LIABLE
+            FOR ANY COST OR DAMAGE ARISING EITHER DIRECTLY OR INDIRECTLY FROM
+            ANY SUCH TRANSACTION. IT IS SOLELY YOUR RESPONSIBILITY TO EVALUATE
+            THE ACCURACY, COMPLETENESS AND USEFULNESS OF ALL OPINIONS, ADVICE,
+            SERVICES, MERCHANDISE AND OTHER INFORMATION PROVIDED THROUGH THE
+            SERVICE OR ON THE INTERNET GENERALLY. DOES NOT WARRANT THAT THE
+            SERVICE WILL BE UNINTERRUPTED OR ERROR-FREE OR THAT DEFECTS IN THE
+            SERVICE WILL BE CORRECTED. YOU UNDERSTAND FURTHER THAT THE PURE
+            NATURE OF THE INTERNET CONTAINS UNEDITED MATERIALS SOME OF WHICH ARE
+            SEXUALLY EXPLICIT OR MAY BE OFFENSIVE TO YOU. YOUR ACCESS TO SUCH
+            MATERIALS IS AT YOUR RISK. Gluco Guardian HAS NO CONTROL OVER AND
+            ACCEPTS NO RESPONSIBILITY WHATSOEVER FOR SUCH MATERIALS.
           </p>
         </section>
 
@@ -132,11 +133,11 @@ export default function Disclaimer() {
             BY LAW. Gluco Guardian makes no representations whatsoever about any
             other web site which you may access through this one or which may
             link to this Site. When you access a non- Daily Health web site,
-            please understand that it is independent from Gluco Guardian, and that
-            Gluco Guardian has no control over the content on that web site. In
-            addition, a link to a Gluco Guardian web site does not mean that
-            Gluco Guardian endorses or accepts any responsibility for the content, or
-            the use, of such web site.
+            please understand that it is independent from Gluco Guardian, and
+            that Gluco Guardian has no control over the content on that web
+            site. In addition, a link to a Gluco Guardian web site does not mean
+            that Gluco Guardian endorses or accepts any responsibility for the
+            content, or the use, of such web site.
           </p>
         </section>
 
@@ -159,9 +160,9 @@ export default function Disclaimer() {
           </h1>
           <p className="px-6 mt-8 leading-loose md:px-0">
             The provisions of paragraphs 2 (Use of the Service), and 3
-            (Indemnification) are for the benefit of Gluco Guardian and its officers,
-            directors, employees, agents, licensors, suppliers, and any third
-            party information providers to the Service. Each of these
+            (Indemnification) are for the benefit of Gluco Guardian and its
+            officers, directors, employees, agents, licensors, suppliers, and
+            any third party information providers to the Service. Each of these
             individuals or entities shall have the right to assert and enforce
             those provisions directly against you on its own behalf.
           </p>
@@ -212,8 +213,8 @@ export default function Disclaimer() {
             diagnose, treat, cure or prevent any disease.
           </p>
           <p className="px-6 mt-4 text-sm md:px-0">
-            © Gluco Guardian Research 2024 All Rights Reserved. 7780 49th St North
-            Box 513 Pinellas Park FL 33718
+            © Gluco Guardian Research 2025 All Rights Reserved. 7780 49th St
+            North Box 513 Pinellas Park FL 33718
           </p>
         </div>
       </footer>

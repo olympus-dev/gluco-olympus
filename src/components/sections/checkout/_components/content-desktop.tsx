@@ -55,13 +55,18 @@ function ButtonCustom({ quantity, bestWhat, selected, htmlFor }: ButtonProps) {
 }
 
 interface ICheckoutDesktopProps {
-  items: ItemProps[],
+  items: ItemProps[];
   onePurchaseLinks: string[];
   images: string[];
-  isPrimeBoostUpsell?: boolean;
+  isRevitaSleepUpsell?: boolean;
 }
 
-export default function CheckoutDesktop({ images, items, onePurchaseLinks, isPrimeBoostUpsell = false }: ICheckoutDesktopProps) {
+export default function CheckoutDesktop({
+  images,
+  items,
+  onePurchaseLinks,
+  isRevitaSleepUpsell = false,
+}: ICheckoutDesktopProps) {
   const [selectedPackage, setSelectedPackage] = useState("6");
   const { remainingBottles } = useBottles();
 
@@ -70,7 +75,11 @@ export default function CheckoutDesktop({ images, items, onePurchaseLinks, isPri
       <CardHeader className="text-center">
         <CardTitle className="text-3xl font-bold">
           Claim Your{" "}
-          <span className={isPrimeBoostUpsell ? "text-red-600" : "text-blue-600"}>Discounted {isPrimeBoostUpsell ? "PrimeBoost" : "Gluco Guardian©"}</span>
+          <span
+            className={isRevitaSleepUpsell ? "text-blue-600" : "text-blue-600"}
+          >
+            Discounted {isRevitaSleepUpsell ? "RevitaSleep" : "Gluco Guardian©"}
+          </span>
         </CardTitle>
         <p className="text-xl mt-2 font-semibold">Below While Stocks Last!</p>
       </CardHeader>
@@ -83,7 +92,8 @@ export default function CheckoutDesktop({ images, items, onePurchaseLinks, isPri
                   ? images[1]
                   : selectedPackage === "3"
                   ? images[0]
-                  : images[2]}`}
+                  : images[2]
+              }`}
               alt="Endoterec Bottles"
               width={400}
               height={400}
@@ -195,7 +205,8 @@ export default function CheckoutDesktop({ images, items, onePurchaseLinks, isPri
           asChild
         >
           <a
-            href={selectedPackage === "6"
+            href={
+              selectedPackage === "6"
                 ? onePurchaseLinks[1]
                 : selectedPackage === "3"
                 ? onePurchaseLinks[0]

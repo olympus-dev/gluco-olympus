@@ -2,18 +2,17 @@
 "use client";
 
 import { Container } from "@/components/container";
+import CheckoutSection from "@/components/sections/checkout";
+import CheckoutDesktop from "@/components/sections/checkout/_components/content-desktop";
+import { ItemProps } from "@/components/sections/checkout/_components/content-items";
 import { useBottles } from "@/hooks/bottles";
+import UpsellDownsellLoader from "@/utils/downsell-upsell-script";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { BgBadge } from "../_components/bg-badge";
 import "../reveal/_components/vsl-section/video-style.css";
-import CheckoutSection from "@/components/sections/checkout";
-import CheckoutDesktop from "@/components/sections/checkout/_components/content-desktop";
-import { ItemProps } from "@/components/sections/checkout/_components/content-items";
-import { BottomBadge } from "@/components/digi-badge/bottom-badge";
-import { TopBadge } from "@/components/digi-badge/top-badge";
-import UpsellDownsellLoader from "@/utils/downsell-upsell-script";
 
 interface IVideoProps {
   src: string;
@@ -38,9 +37,9 @@ export default function Upsell() {
   ];
 
   const onePurchaseLinks: string[] = [
-    "https://www.checkout-ds24.com/answer/yes?template=light&product=581480", // 3 bottles
-    "https://www.checkout-ds24.com/answer/yes?template=light&product=581482", // 6 bottles
-    "https://www.checkout-ds24.com/answer/yes?template=light&product=581479", // 1 bottle
+    "LinkBuygoodsUpsell2.3bottles", // 3 bottles
+    "LinkBuygoodsUpsell2.6bottles", // 6 bottles
+    "LinkBuygoodsUpsell12.bottle", // 1 bottle
   ];
 
   const items: ItemProps[] = [
@@ -85,10 +84,10 @@ export default function Upsell() {
       } as IVideoProps);
     } else {
       setVslVideo({
-        backdrop: "backdrop_6751bf5970ca8d7e4fa49e1d",
-        id: "vid_6751bf5970ca8d7e4fa49e1d",
-        src: "https://scripts.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/players/6751bf5970ca8d7e4fa49e1d/player.js",
-        thumb: "thumb_6751bf5970ca8d7e4fa49e1d",
+        backdrop: "backdrop_6785327a5a17fcddc002cd93",
+        id: "vid_6785327a5a17fcddc002cd93",
+        src: "https://scripts.converteai.net/bbdb9907-ae9e-49fa-8d8b-b1d3886ec07c/players/6785327a5a17fcddc002cd93/player.js",
+        thumb: "thumb_6785327a5a17fcddc002cd93",
       } as IVideoProps);
     }
   }
@@ -203,7 +202,7 @@ export default function Upsell() {
         className="pb-16 lg:py-16 bg-repeat-round bg-fixed overflow-hidden
         lg:bg-contain"
         style={{
-          backgroundImage: 'url("/bg-red.jpg")',
+          backgroundImage: 'url("/bg-light-blue.jpg")',
         }}
       >
         <Container className="bg-background rounded-lg px-2">
@@ -240,7 +239,7 @@ export default function Upsell() {
             </ul>
             <h1
               className={`text-center mt-8 text-2xl lg:text-4xl ${
-                urlPath === "/exclusive-offer" ? "text-brand" : "text-red-600"
+                urlPath === "/exclusive-offer" ? "text-brand" : "text-blue-600"
               }`}
             >
               Your Order Is Not Complete Yet
@@ -251,7 +250,7 @@ export default function Upsell() {
             {/* VIdeo */}
             <div
               id="video-section"
-              className={`flex flex-col gap-8 vsl-video max-w-[550px] mx-auto my-4 lg:border-2 lg:rounded-[25px] lg:p-2 lg:border-red-600`}
+              className={`flex flex-col gap-8 vsl-video max-w-[550px] mx-auto my-4 lg:border-2 lg:rounded-[25px] lg:p-2 lg:border-blue-600`}
             >
               <div
                 id={vslVideo.id}
@@ -410,9 +409,8 @@ export default function Upsell() {
             </p>
           </div>
         </Container>
+        <BgBadge />
       </main>
-      <TopBadge />
-      <BottomBadge />
     </>
   );
 }

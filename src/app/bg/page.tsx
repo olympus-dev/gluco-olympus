@@ -18,15 +18,14 @@ import Footer from "@/components/sections/footer";
 import Image from "next/image";
 import Link from "next/link";
 import MainPageLoader from "@/utils/main-products-script";
-import { BottomBadge } from "@/components/digi-badge/bottom-badge";
-import { TopBadge } from "@/components/digi-badge/top-badge";
+import { BgBadge } from "./_components/bg-badge";
 
 export default function Home() {
   const images: string[] = ["3-bottles.png", "6-bottles.png", "1-bottle.png"];
   const onePurchaseLinks: string[] = [
-    "https://www.checkout-ds24.com/product/589405", // 3 bottles
-    "https://www.checkout-ds24.com/product/589406", // 6 bottles
-    "https://www.checkout-ds24.com/product/589404", // 1 bottles
+    "https://buygoods.com/secure/checkout.html?account_id=9099&product_codename=glu3&redirect=aHR0cHM6Ly9nZXRnbHVjb2d1YXJkaWFuLmNvbS9vdG8xLw==", // 3 bottles
+    "https://buygoods.com/secure/checkout.html?account_id=9099&product_codename=glu6&redirect=aHR0cHM6Ly9nZXRnbHVjb2d1YXJkaWFuLmNvbS9vdG8xLw==", // 6 bottles
+    "https://buygoods.com/secure/checkout.html?account_id=9099&product_codename=glu1&redirect=aHR0cHM6Ly9nZXRnbHVjb2d1YXJkaWFuLmNvbS9vdG8xLw==", // 1 bottles
   ];
   const items: ItemProps[] = [
     {
@@ -144,13 +143,6 @@ export default function Home() {
           </Container>
           <div className="text-center bg-[#020817] py-8 relative">
             <div className="px-8">
-              <p className="text-sm text-gray-400 max-w-2xl mb-4 mx-auto">
-                Disclaimer: This official website is the only authorized place
-                to purchase Gluco Guardian! We are not responsible for purchases
-                made from unknown and unreliable sites. Avoid piracy and cheap,
-                illegal imitations.
-              </p>
-
               <p className="text-sm text-gray-400">
                 Copyright © 2025,{" "}
                 <Link href="/" className="text-[#3B82F6] hover:text-[#60A5FA]">
@@ -161,9 +153,8 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <BgBadge />
       </main>
-      <TopBadge />
-      <BottomBadge />
     </>
   );
 }

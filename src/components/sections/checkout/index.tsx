@@ -11,15 +11,21 @@ type ICheckoutSectionProps = {
   onePurchaseLinks: ContentItemsProps["onePurchaseLinks"];
   images: ContentItemsProps["images"];
   isAlternative?: boolean;
-  isPrimeBoostUpsell?: boolean;
-}
+  isRevitaSleepUpsell?: boolean;
+};
 
-export default function CheckoutSection({ isAlternative = false, images, items, onePurchaseLinks, isPrimeBoostUpsell = false }: ICheckoutSectionProps) {
+export default function CheckoutSection({
+  isAlternative = false,
+  images,
+  items,
+  onePurchaseLinks,
+  isRevitaSleepUpsell = false,
+}: ICheckoutSectionProps) {
   const [subscribeMode, setSubscribeMode] = React.useState(true);
 
   const currentDate = new Date();
   const day = currentDate.getDate();
-  const month = currentDate.toLocaleString('en-US', { month: 'long' });
+  const month = currentDate.toLocaleString("en-US", { month: "long" });
   const offerEndsMessage = `Offer ends on ${day} of ${month}`;
   const handleSubscribeMode = () => {
     setSubscribeMode(!subscribeMode);
@@ -30,9 +36,13 @@ export default function CheckoutSection({ isAlternative = false, images, items, 
       <Subtitle className="pb-4">
         Claim Your
         <br />
-        <span className={isPrimeBoostUpsell ? "text-red-600" : "text-blue-600"}>Discounted {isPrimeBoostUpsell ? "PrimeBoost" : "Gluco Guardian©"}</span>
+        <span
+          className={isRevitaSleepUpsell ? "text-blue-600" : "text-blue-600"}
+        >
+          Discounted {isRevitaSleepUpsell ? "RevitaSleep" : "Gluco Guardian©"}
+        </span>
         <br />
-        { isAlternative ? offerEndsMessage : "Below While Stocks Last!" }
+        {isAlternative ? offerEndsMessage : "Below While Stocks Last!"}
         <Separator className="h-[2.5px] w-44 mx-auto mt-2 bg-brand" />
       </Subtitle>
       <Tabs
@@ -40,7 +50,11 @@ export default function CheckoutSection({ isAlternative = false, images, items, 
         className="w-full"
         onValueChange={handleSubscribeMode}
       >
-          <ContentItems images={images} items={items} onePurchaseLinks={onePurchaseLinks} />
+        <ContentItems
+          images={images}
+          items={items}
+          onePurchaseLinks={onePurchaseLinks}
+        />
       </Tabs>
     </section>
   );

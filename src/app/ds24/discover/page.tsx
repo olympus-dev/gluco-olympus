@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Container } from "@/components/container";
 import { VslSection } from "./_components/vsl";
@@ -12,7 +12,7 @@ import MainProductsLoader from "@/utils/main-products-script";
 export default function VslPage() {
   return (
     <>
-      <MainProductsLoader/>
+      <MainProductsLoader />
       <Head>
         <link
           rel="preload"
@@ -61,7 +61,7 @@ export default function VslPage() {
             </p>
 
             <p className="text-sm text-gray-400">
-              Copyright © 2023,{" "}
+              Copyright © 2025,{" "}
               <Link href="/" className="text-[#3B82F6] hover:text-[#60A5FA]">
                 Gluco Guardian
               </Link>
